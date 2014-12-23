@@ -55,7 +55,6 @@ class LoadTemplateData extends AbstractFixture implements OrderedFixtureInterfac
         $generic->setVersion(1);
         $generic->setName('Homepage Template');
         $generic->setLanguage('fr');
-        $generic->setStatus($this->getReference('status-published'));
         $generic->setDeleted(false);
         $generic->setBoDirection('h');
         $generic->addArea($header);
@@ -94,7 +93,6 @@ class LoadTemplateData extends AbstractFixture implements OrderedFixtureInterfac
         $full->setVersion(1);
         $full->setName('Full Template');
         $full->setLanguage('fr');
-        $full->setStatus($this->getReference('status-published'));
         $full->setBoDirection('h');
         $full->setDeleted(false);
         $full->addArea($header);
