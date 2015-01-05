@@ -29,11 +29,11 @@ interface ContentRepositoryInterface
     public function findOneByContentId($contentId);
 
     /**
-     * @param string $keyword
+     * @param string $keywords
      *
      * @return array
      */
-    public function findByKeyword($keyword);
+    public function findByKeywords($keywords);
 
     /**
      * @param string $contentType
