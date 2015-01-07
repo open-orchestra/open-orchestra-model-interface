@@ -24,14 +24,6 @@ interface ContentRepositoryInterface
     public function testUnicityInContext($name);
 
     /**
-     * @param string      $contentType
-     * @param string|null $keywords
-     *
-     * @return mixed
-     */
-    public function findByKeyword($keyword);
-
-    /**
      * @param string $contentId
      *
      * @return ContentInterface
@@ -49,7 +41,7 @@ interface ContentRepositoryInterface
      * @param string $contentId
      * @param string $language
      *
-     * @return mixed
+     * @return ContentInterface|null
      */
     public function findOneByContentIdAndLanguage($contentId, $language);
 
@@ -57,7 +49,7 @@ interface ContentRepositoryInterface
      * @param string      $contentId
      * @param string|null $language
      *
-     * @return mixed
+     * @return array
      */
     public function findByContentIdAndLanguage($contentId, $language = null);
 
@@ -66,7 +58,7 @@ interface ContentRepositoryInterface
      * @param string|null $language
      * @param int|null    $version
      *
-     * @return mixed
+     * @return ContentInterface|null
      */
     public function findOneByContentIdAndLanguageAndVersion($contentId, $language = null, $version = null);
 
@@ -75,7 +67,7 @@ interface ContentRepositoryInterface
      * @param string|null $language
      * @param int|null    $version
      *
-     * @return mixed
+     * @return array
      */
     public function findByContentIdAndLanguageAndVersion($contentId, $language = null, $version = false);
 }
