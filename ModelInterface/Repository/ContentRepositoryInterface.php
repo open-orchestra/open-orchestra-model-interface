@@ -61,13 +61,4 @@ interface ContentRepositoryInterface
      * @return ContentInterface|null
      */
     public function findOneByContentIdAndLanguageAndVersion($contentId, $language = null, $version = null);
-
-    /**
-     * @param string      $contentId
-     * @param string|null $language
-     * @param int|null    $version
-     *
-     * @return array
-     */
-    public function findByContentIdAndLanguageAndVersion($contentId, $language = null, $version = false);
 }
