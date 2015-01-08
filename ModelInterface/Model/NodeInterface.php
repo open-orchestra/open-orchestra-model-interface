@@ -253,4 +253,14 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
      * @param string $role
      */
     public function setRole($role);
+
+    /**
+     * @return int
+     */
+    public function getOrder();
+
+    /**
+     * @param int $order
+     */
+    public function setOrder($order);
 }
