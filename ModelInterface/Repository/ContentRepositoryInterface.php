@@ -17,6 +17,11 @@ interface ContentRepositoryInterface
     public function findAllNews();
 
     /**
+     * @return array list of news
+     */
+    public function findAll();
+
+    /**
      * @param string $name
      *
      * @return boolean
