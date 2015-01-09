@@ -98,16 +98,6 @@ interface ContentInterface extends StatusableInterface, TimestampableInterface, 
     public function getName();
 
     /**
-     * @param string $siteId
-     */
-    public function setSiteId($siteId);
-
-    /**
-     * @return string
-     */
-    public function getSiteId();
-
-    /**
      * @param int $version
      */
     public function setVersion($version);

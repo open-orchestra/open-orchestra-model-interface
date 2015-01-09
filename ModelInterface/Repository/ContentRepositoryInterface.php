@@ -17,9 +17,11 @@ interface ContentRepositoryInterface
     public function findAllNews();
 
     /**
-     * @return array
+     * @param string $name
+     *
+     * @return boolean
      */
-    public function findAll();
+    public function testUnicityInContext($name);
 
     /**
      * @param string $contentId
@@ -29,10 +31,9 @@ interface ContentRepositoryInterface
     public function findOneByContentId($contentId);
 
     /**
-     * @param string      $contentType
-     * @param string|null $keywords
+     * @param string $contentType
      *
-     * @return mixed
+     * @return array
      */
     public function findByContentTypeAndKeywords($contentType = '', $keywords = null);
 
@@ -40,7 +41,24 @@ interface ContentRepositoryInterface
      * @param string $contentId
      * @param string $language
      *
-     * @return ContentInterface
+     * @return ContentInterface|null
      */
     public function findOneByContentIdAndLanguage($contentId, $language);
+
+    /**
+     * @param string      $contentId
+     * @param string|null $language
+     *
+     * @return array
+     */
+    public function findByContentIdAndLanguage($contentId, $language = null);
+
+    /**
+     * @param string      $contentId
+     * @param string|null $language
+     * @param int|null    $version
+     *
+     * @return ContentInterface|null
+     */
+    public function findOneByContentIdAndLanguageAndVersion($contentId, $language = null, $version = null);
 }
