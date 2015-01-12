@@ -105,6 +105,13 @@ interface NodeRepositoryInterface
     public function findLastVersionBySiteId($type = NodeInterface::TYPE_DEFAULT);
 
     /**
+     * @param string $type
+     *
+     * @return array
+     */
+    public function findLastVersionByDeletedAndSiteId($type = NodeInterface::TYPE_DEFAULT);
+
+    /**
      * @param string $nodeId
      *
      * @throws \Doctrine\ODM\MongoDB\MongoDBException
