@@ -66,4 +66,9 @@ interface ContentRepositoryInterface
      * @return ContentInterface|null
      */
     public function findOneByContentIdAndLanguageAndVersion($contentId, $language = null, $version = null);
+
+    /**
+     * @return array
+     */
+    public function findAllDeleted();
 }
