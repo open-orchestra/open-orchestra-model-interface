@@ -71,7 +71,7 @@ interface NodeRepositoryInterface
     /**
      * @param string $parentId
      *
-     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     * @throws \Exception
      *
      * @return mixed
      */
@@ -91,7 +91,7 @@ interface NodeRepositoryInterface
      * @param string|null $language
      * @param string|null $siteId
      *
-     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     * @throws \Exception
      *
      * @return mixed
      */
@@ -114,7 +114,7 @@ interface NodeRepositoryInterface
     /**
      * @param string $nodeId
      *
-     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     * @throws \Exception
      *
      * @return mixed
      */
