@@ -36,6 +36,34 @@ interface BlockInterface
     public function getLabel();
 
     /**
+     * Set class
+     *
+     * @param string $class
+     */
+    public function setClass($class);
+
+    /**
+     * Get class
+     *
+     * @return string $class
+     */
+    public function getClass();
+
+    /**
+     * Set id
+     *
+     * @param string $id
+     */
+    public function setId($id);
+
+    /**
+     * Get id
+     *
+     * @return string $id
+     */
+    public function getId();
+
+    /**
      * Set attributes
      *
      * @param array $attributes
