@@ -9,6 +9,9 @@ use PHPOrchestra\ModelInterface\Model\ContentInterface;
  */
 interface ContentRepositoryInterface
 {
+    const CHOICE_AND = 'choice_and';
+    const CHOICE_OR = 'choice_or';
+
     /**
      * Get all content if the contentType is "news"
      *
@@ -37,10 +40,12 @@ interface ContentRepositoryInterface
 
     /**
      * @param string $contentType
+     * @param string $choiceType
+     * @param string $keywords
      *
      * @return array
      */
-    public function findByContentTypeAndKeywords($contentType = '', $keywords = null);
+    public function findByContentTypeAndChoiceTypeAndKeywords($contentType = '', $choiceType = self::CHOICE_AND, $keywords = null);
 
     /**
      * @param string $contentId
