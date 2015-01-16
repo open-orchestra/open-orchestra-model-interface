@@ -177,6 +177,34 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
     public function getTemplateId();
 
     /**
+     * Set sitemapChangefreq
+     *
+     * @param string $sitemapChangefreq
+     */
+    public function setSitemapChangefreq($sitemapChangefreq);
+
+    /**
+     * Get sitemapChangefreq
+     *
+     * @return string $sitemapChangefreq
+     */
+    public function getSitemapChangefreq();
+
+    /**
+     * Set sitemapPriority
+     *
+     * @param string $sitemapPriority
+     */
+    public function setSitemapPriority($sitemapPriority);
+
+    /**
+     * Get sitemapPriority
+     *
+     * @return string $sitemapPriority
+     */
+    public function getSitemapPriority();
+
+     /**
      * Set theme
      *
      * @param string $theme
@@ -190,7 +218,7 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
      */
     public function getTheme();
 
-    /**
+/**
      * @param BlockInterface $block
      *
      * @return bool|int|mixed|string
