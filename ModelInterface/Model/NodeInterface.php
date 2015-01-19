@@ -14,6 +14,8 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
     const TYPE_GENERAL = 'general';
     const ROOT_NODE_ID = 'root';
     const TRANSVERSE_NODE_ID = 'transverse';
+    const CHANGE_FREQ_DEFAULT = 'never';
+    const PRIORITY_DEFAULT = '0.5';
 
     /**
      * Get id
