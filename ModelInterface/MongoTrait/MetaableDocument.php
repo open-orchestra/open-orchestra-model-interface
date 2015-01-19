@@ -2,7 +2,7 @@
 
 namespace PHPOrchestra\ModelInterface\MongoTrait;
 
-use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 
 /**
  * Trait MetaableDocument
@@ -12,28 +12,28 @@ trait MetaableDocument
     /**
      * @var string $metaKeywords
      *
-     * @MongoDB\Field(type="string")
+     * @ODM\Field(type="string")
      */
     protected $metaKeywords;
 
     /**
      * @var string $metaDescription
      *
-     * @MongoDB\Field(type="string")
+     * @ODM\Field(type="string")
      */
     protected $metaDescription;
 
     /**
      * @var boolean metaIndex
      *
-     * @MongoDB\Field(type="boolean")
+     * @ODM\Field(type="boolean")
      */
     protected $metaIndex = false;
 
     /**
      * @var boolean metaFollow
      *
-     * @MongoDB\Field(type="boolean")
+     * @ODM\Field(type="boolean")
      */
     protected $metaFollow = false;
 
