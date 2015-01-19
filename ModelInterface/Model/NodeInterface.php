@@ -8,7 +8,7 @@ use Doctrine\Common\Collections\Collection;
 /**
  * Interface NodeInterface
  */
-interface NodeInterface extends AreaContainerInterface, BlockContainerInterface, StatusableInterface, BlameableInterface, TimestampableInterface
+interface NodeInterface extends AreaContainerInterface, BlockContainerInterface, StatusableInterface, BlameableInterface, TimestampableInterface, MetaableInterface
 {
     const TYPE_DEFAULT = 'page';
     const TYPE_GENERAL = 'general';
@@ -147,46 +147,6 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
      * @return string $language
      */
     public function getLanguage();
-
-    /**
-     * @param string $metaKeywords
-     */
-    public function setMetaKeywords($metaKeywords);
-
-    /**
-     * @return string
-    */
-    public function getMetaKeywords();
-
-    /**
-     * @param string $metaDescription
-    */
-    public function setMetaDescription($metaDescription);
-
-    /**
-     * @return string
-    */
-    public function getMetaDescription();
-
-    /**
-     * @param boolean $metaIndex
-    */
-    public function setMetaIndex($metaIndex);
-
-    /**
-     * @return boolean
-    */
-    public function getMetaIndex();
-
-    /**
-     * @param boolean $metaFollow
-    */
-    public function setMetaFollow($metaFollow);
-
-    /**
-     * @return boolean
-    */
-    public function getMetaFollow();
 
     /**
      * Set deleted
