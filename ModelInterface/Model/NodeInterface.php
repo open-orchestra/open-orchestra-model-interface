@@ -220,7 +220,7 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
      */
     public function getTheme();
 
-/**
+    /**
      * @param BlockInterface $block
      *
      * @return bool|int|mixed|string
