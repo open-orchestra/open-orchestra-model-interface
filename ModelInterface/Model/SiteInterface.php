@@ -8,7 +8,7 @@ use PHPOrchestra\ModelInterface\Model\ThemeInterface;
 /**
  * Interface SiteInterface
  */
-interface SiteInterface
+interface SiteInterface extends MetaableInterface
 {
     /**
      * @param string $alias
