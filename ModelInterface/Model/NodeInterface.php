@@ -14,6 +14,8 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
     const TYPE_GENERAL = 'general';
     const ROOT_NODE_ID = 'root';
     const TRANSVERSE_NODE_ID = 'transverse';
+    const CHANGE_FREQ_DEFAULT = 'never';
+    const PRIORITY_DEFAULT = '0.5';
 
     /**
      * Get id
@@ -177,6 +179,34 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
     public function getTemplateId();
 
     /**
+     * Set sitemapChangefreq
+     *
+     * @param string $sitemapChangefreq
+     */
+    public function setSitemapChangefreq($sitemapChangefreq);
+
+    /**
+     * Get sitemapChangefreq
+     *
+     * @return string $sitemapChangefreq
+     */
+    public function getSitemapChangefreq();
+
+    /**
+     * Set sitemapPriority
+     *
+     * @param string $sitemapPriority
+     */
+    public function setSitemapPriority($sitemapPriority);
+
+    /**
+     * Get sitemapPriority
+     *
+     * @return string $sitemapPriority
+     */
+    public function getSitemapPriority();
+
+     /**
      * Set theme
      *
      * @param string $theme
