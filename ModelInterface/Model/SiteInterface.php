@@ -10,6 +10,8 @@ use PHPOrchestra\ModelInterface\Model\ThemeInterface;
  */
 interface SiteInterface extends MetaableInterface
 {
+    const ROBOTS_TXT_DEFAULT = "User-agent: *\nAllow: /";
+
     /**
      * @param string $alias
      */
@@ -107,4 +109,18 @@ interface SiteInterface extends MetaableInterface
      * @return ThemeInterface $theme
      */
     public function getTheme();
+
+    /**
+     * Set robotsTxt
+     *
+     * @param string $robotsTxt
+     */
+    public function setRobotsTxt($robotsTxt);
+
+    /**
+     * Get robotsTxt
+     *
+     * @return string $robotsTxt
+     */
+    public function getRobotsTxt();
 }
