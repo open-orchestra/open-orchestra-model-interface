@@ -73,6 +73,13 @@ interface ContentRepositoryInterface
     public function findOneByContentIdAndLanguageAndVersion($contentId, $language = null, $version = null);
 
     /**
+     * @param string $contentType
+     *
+     * @return array
+     */
+    public function findByContentTypeInLastVersion($contentType = null);
+
+    /**
      * @return array
      */
     public function findAllDeleted();
