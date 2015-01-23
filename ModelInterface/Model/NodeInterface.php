@@ -95,6 +95,16 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
     public function getPath();
 
     /**
+     * @param string $routePattern
+     */
+    public function setRoutePattern($routePattern);
+
+    /**
+     * @return string
+     */
+    public function getRoutePattern();
+
+    /**
      * Set alias
      *
      * @param string $alias
