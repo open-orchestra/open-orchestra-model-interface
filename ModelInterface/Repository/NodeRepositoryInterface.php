@@ -119,4 +119,13 @@ interface NodeRepositoryInterface
      * @return mixed
      */
     public function findByNodeIdAndSiteId($nodeId);
+
+    /**
+     * @param string $type
+     *
+     * @throws \Exception
+     *
+     * @return array
+     */
+    public function findByNodeType($type = NodeInterface::TYPE_DEFAULT);
 }
