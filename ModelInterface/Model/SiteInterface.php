@@ -8,7 +8,7 @@ use PHPOrchestra\ModelInterface\Model\ThemeInterface;
 /**
  * Interface SiteInterface
  */
-interface SiteInterface extends MetaableInterface
+interface SiteInterface extends MetaableInterface, SitemapableInterface
 {
     const ROBOTS_TXT_DEFAULT = "User-agent: *\nAllow: /";
 
