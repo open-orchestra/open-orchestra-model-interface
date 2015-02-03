@@ -27,4 +27,4 @@ class RoleEvent extends Event
     {
         return $this->role;
     }
-} 
+}
