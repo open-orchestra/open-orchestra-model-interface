@@ -3,6 +3,7 @@
 namespace PHPOrchestra\ModelInterface\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use PHPOrchestra\ModelInterface\Model\ThemeInterface;
 
 /**
@@ -13,14 +14,19 @@ interface SiteInterface extends MetaableInterface, SitemapableInterface
     const ROBOTS_TXT_DEFAULT = "User-agent: *\nAllow: /";
 
     /**
-     * @param string $alias
-     */
-    public function setAlias($alias);
-
-    /**
      * @return string
      */
-    public function getAlias();
+    public function getId();
+
+    /**
+     * @param SiteAliasInterface $alias
+     */
+    public function addAlias(SiteAliasInterface $alias);
+
+    /**
+     * @return Collection
+     */
+    public function getAliases();
 
     /**
      * @param string $block
@@ -36,41 +42,6 @@ interface SiteInterface extends MetaableInterface, SitemapableInterface
      * @return array
      */
     public function getBlocks();
-
-    /**
-     * @param string $defaultLanguage
-     */
-    public function setDefaultLanguage($defaultLanguage);
-
-    /**
-     * @return string
-     */
-    public function getDefaultLanguage();
-
-    /**
-     * @param string $domain
-     */
-    public function setDomain($domain);
-
-    /**
-     * @return string
-     */
-    public function getDomain();
-
-    /**
-     * @return string
-     */
-    public function getId();
-
-    /**
-     * @param array $languages
-     */
-    public function setLanguages($languages);
-
-    /**
-     * @return array
-     */
-    public function getLanguages();
 
     /**
      * @param string $siteId
@@ -95,6 +66,20 @@ interface SiteInterface extends MetaableInterface, SitemapableInterface
      * @return boolean $deleted
      */
     public function getDeleted();
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     */
+    public function setName($name);
+
+    /**
+     * Get name
+     *
+     * @return string $name
+     */
+    public function getName();
 
     /**
      * Set theme
@@ -123,4 +108,18 @@ interface SiteInterface extends MetaableInterface, SitemapableInterface
      * @return string $robotsTxt
      */
     public function getRobotsTxt();
+
+    /**
+     * Get all languages of the site
+     *
+     * @return array
+     */
+    public function getLanguages();
+
+    /**
+     * Return one of the defailt site language
+     *
+     * @return string
+     */
+    public function getDefaultLanguage();
 }

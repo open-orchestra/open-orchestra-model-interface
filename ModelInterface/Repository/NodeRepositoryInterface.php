@@ -99,10 +99,11 @@ interface NodeRepositoryInterface
 
     /**
      * @param string $type
+     * @param string $siteId
      *
      * @return array
      */
-    public function findLastVersionBySiteId($type = NodeInterface::TYPE_DEFAULT);
+    public function findLastVersionBySiteId($type = NodeInterface::TYPE_DEFAULT, $siteId = null);
 
     /**
      * @param string $type
@@ -128,4 +129,12 @@ interface NodeRepositoryInterface
      * @return array
      */
     public function findByNodeType($type = NodeInterface::TYPE_DEFAULT);
+
+    /**
+     * @param string $language
+     * @param string $siteId
+     *
+     * @return array
+     */
+    public function findLastPublishedVersionByLanguageAndSiteId($language, $siteId);
 }
