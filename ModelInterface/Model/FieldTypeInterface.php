@@ -3,7 +3,6 @@
 namespace PHPOrchestra\ModelInterface\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use PHPOrchestra\ModelBundle\Document\TranslatedValue;
 
 /**
  * Interface FieldTypeInterface
@@ -25,14 +24,14 @@ Interface FieldTypeInterface extends TranslatedValueContainerInterface
     public function getFieldId();
 
     /**
-     * @param TranslatedValue $label
+     * @param TranslatedValueInterface $label
      */
-    public function addLabel(TranslatedValue $label);
+    public function addLabel(TranslatedValueInterface $label);
 
     /**
-     * @param TranslatedValue $label
+     * @param TranslatedValueInterface $label
      */
-    public function removeLabel(TranslatedValue $label);
+    public function removeLabel(TranslatedValueInterface $label);
 
     /**
      * Get Label
