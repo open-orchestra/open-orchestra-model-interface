@@ -8,14 +8,14 @@ namespace PHPOrchestra\ModelInterface\Model;
 interface SiteAliasInterface
 {
     /**
-     * @param string $defaultLanguage
+     * @param string $language
      */
-    public function setDefaultLanguage($defaultLanguage);
+    public function setLanguage($language);
 
     /**
      * @return string
      */
-    public function getDefaultLanguage();
+    public function getLanguage();
 
     /**
      * @param string $domain
@@ -28,12 +28,22 @@ interface SiteAliasInterface
     public function getDomain();
 
     /**
-     * @param array $languages
+     * @param string $prefix
      */
-    public function setLanguages($languages);
+    public function setPrefix($prefix);
 
     /**
-     * @return array
+     * @return string
      */
-    public function getLanguages();
+    public function getPrefix();
+
+    /**
+     * @return boolean
+     */
+    public function isMain();
+
+    /**
+     * @param bool $main
+     */
+    public function setMain($main);
 }

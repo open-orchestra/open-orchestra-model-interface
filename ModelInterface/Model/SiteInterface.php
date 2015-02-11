@@ -29,6 +29,11 @@ interface SiteInterface extends MetaableInterface, SitemapableInterface
     public function getAliases();
 
     /**
+     * @return SiteAliasInterface
+     */
+    public function getMainAlias();
+
+    /**
      * @param string $block
      */
     public function addBlock($block);
