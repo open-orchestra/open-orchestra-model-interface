@@ -11,14 +11,14 @@ interface NodeRepositoryInterface
 {
     /**
      * @param string $parentId
-     * @param string $alias
+     * @param string $routePattern
      * @param string $siteId
      *
      * @deprecated Used in dynamic routing only
      *
      * @return mixed
      */
-    public function findOneByParendIdAndAliasAndSiteId($parentId, $alias, $siteId);
+    public function findOneByParendIdAndRoutePatternAndSiteId($parentId, $routePattern, $siteId);
 
     /**
      * @param string $id
@@ -35,10 +35,11 @@ interface NodeRepositoryInterface
     /**
      * @param string      $nodeId
      * @param string|null $language
+     * @param string|null $siteId
      *
      * @return mixed
      */
-    public function findOneByNodeIdAndLanguageWithPublishedAndLastVersionAndSiteId($nodeId, $language = null);
+    public function findOneByNodeIdAndLanguageWithPublishedAndLastVersionAndSiteId($nodeId, $language = null, $siteId = null);
 
     /**
      * @param string $nodeId
