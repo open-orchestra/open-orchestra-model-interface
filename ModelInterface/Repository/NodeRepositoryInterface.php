@@ -101,6 +101,17 @@ interface NodeRepositoryInterface
     public function findByNodeIdAndLanguageAndSiteId($nodeId, $language = null, $siteId = null);
 
     /**
+     * @param string      $nodeId
+     * @param string|null $language
+     * @param string|null $siteId
+     *
+     * @throws \Exception
+     *
+     * @return mixed
+     */
+    public function findByNodeIdAndLanguageAndSiteIdAndPublishedOrderedByVersion($nodeId, $language = null, $siteId = null);
+
+    /**
      * @param string $type
      * @param string $siteId
      *
