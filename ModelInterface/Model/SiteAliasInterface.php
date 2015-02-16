@@ -5,7 +5,7 @@ namespace PHPOrchestra\ModelInterface\Model;
 /**
  * Interface SiteAliasInterface
  */
-interface SiteAliasInterface
+interface SiteAliasInterface extends SchemeAbilityInterface
 {
     /**
      * @param string $language
