@@ -12,6 +12,8 @@ use PHPOrchestra\ModelInterface\Model\ThemeInterface;
 interface SiteInterface extends MetaableInterface, SitemapableInterface
 {
     const ROBOTS_TXT_DEFAULT = "User-agent: *\nAllow: /";
+    const CHANGE_FREQ_DEFAULT = 'never';
+    const PRIORITY_DEFAULT = '0.5';
 
     /**
      * @return string

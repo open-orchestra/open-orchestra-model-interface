@@ -9,9 +9,6 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 interface SitemapableInterface
 {
-    const CHANGE_FREQ_DEFAULT = 'never';
-    const PRIORITY_DEFAULT = '0.5';
-
     /**
      * Set sitemapChangefreq
      *

@@ -15,14 +15,14 @@ trait SitemapableDocument
      *
      * @ODM\Field(type="string")
      */
-    protected $sitemapChangefreq = SitemapableInterface::CHANGE_FREQ_DEFAULT;
+    protected $sitemapChangefreq;
 
     /**
      * @var string $sitemapPriority
      *
      * @ODM\Field(type="string")
      */
-    protected $sitemapPriority = SitemapableInterface::PRIORITY_DEFAULT;
+    protected $sitemapPriority;
 
     /**
      * Set sitemapChangefreq
