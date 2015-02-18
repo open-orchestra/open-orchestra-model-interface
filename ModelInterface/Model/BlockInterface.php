@@ -71,6 +71,12 @@ interface BlockInterface
     public function setAttributes(array $attributes);
 
     /**
+     * @param string $name
+     * @param string $value
+     */
+    public function addAttribute($name, $value);
+
+    /**
      * Get attributes
      *
      * @return array $attributes
