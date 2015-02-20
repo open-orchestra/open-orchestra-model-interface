@@ -84,6 +84,13 @@ interface BlockInterface
     public function getAttributes();
 
     /**
+     * @param string $name
+     *
+     * @return string|null
+     */
+    public function getAttribute($name);
+
+    /**
      * @return array
      */
     public function getAreas();
