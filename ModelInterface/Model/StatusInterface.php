@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\Model;
+namespace OpenOrchestra\ModelInterface\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use PHPOrchestra\ModelBundle\Document\Role;
+use OpenOrchestra\ModelBundle\Document\Role;
 
 /**
  * interface StatusInterface

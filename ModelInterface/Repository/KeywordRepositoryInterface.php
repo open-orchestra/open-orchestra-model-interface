@@ -1,7 +1,7 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\Repository;
-use PHPOrchestra\ModelInterface\Model\KeywordInterface;
+namespace OpenOrchestra\ModelInterface\Repository;
+use OpenOrchestra\ModelInterface\Model\KeywordInterface;
 
 /**
  * Interface KeywordRepositoryInterface

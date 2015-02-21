@@ -1,7 +1,7 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\Repository;
-use PHPOrchestra\ModelInterface\Model\RedirectionInterface;
+namespace OpenOrchestra\ModelInterface\Repository;
+use OpenOrchestra\ModelInterface\Model\RedirectionInterface;
 
 /**
  * Interface RedirectionRepositoryInterface

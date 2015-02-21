@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\Event;
+namespace OpenOrchestra\ModelInterface\Event;
 
-use PHPOrchestra\ModelInterface\Model\KeywordInterface;
+use OpenOrchestra\ModelInterface\Model\KeywordInterface;
 use Symfony\Component\EventDispatcher\Event;
 
 /**

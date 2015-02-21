@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\MongoTrait;
+namespace OpenOrchestra\ModelInterface\MongoTrait;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use PHPOrchestra\ModelInterface\Model\KeywordInterface;
+use OpenOrchestra\ModelInterface\Model\KeywordInterface;
 
 /**
  * Trait KeywordableDocument
@@ -13,7 +13,7 @@ trait KeywordableDocument
     /**
      * @var ArrayCollection
      *
-     * @ODM\EmbedMany(targetDocument="PHPOrchestra\ModelBundle\Document\EmbedKeyword")
+     * @ODM\EmbedMany(targetDocument="OpenOrchestra\ModelBundle\Document\EmbedKeyword")
      */
     protected $keywords;
 

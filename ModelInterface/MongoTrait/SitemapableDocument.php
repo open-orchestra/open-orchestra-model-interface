@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\MongoTrait;
+namespace OpenOrchestra\ModelInterface\MongoTrait;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
-use PHPOrchestra\ModelInterface\Model\SitemapableInterface;
+use OpenOrchestra\ModelInterface\Model\SitemapableInterface;
 
 /**
  * Trait SitemapableDocument

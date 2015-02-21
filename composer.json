@@ -1,5 +1,6 @@
 {
-    "name": "itkg/phporchestra-model-interface",
+    "name": "itkg/open-orchestra-model-interface",
+    "description": "Describe all entity and repository to implement for the whole OpenOrchestra project",
     "license": "MIT",
     "authors": [
         {
@@ -23,8 +24,8 @@
     },
     "autoload": {
         "psr-0": {
-            "PHPOrchestra\\ModelInterface": ""
+            "OpenOrchestra\\ModelInterface": ""
         }
     },
-    "target-dir": "PHPOrchestra"
+    "target-dir": "OpenOrchestra"
 }

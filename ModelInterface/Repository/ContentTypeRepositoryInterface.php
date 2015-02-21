@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\Repository;
+namespace OpenOrchestra\ModelInterface\Repository;
 
 /**
  * Interface ContentTypeRepositoryInterface

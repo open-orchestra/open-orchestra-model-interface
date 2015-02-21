@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\Form\Type;
+namespace OpenOrchestra\ModelInterface\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 

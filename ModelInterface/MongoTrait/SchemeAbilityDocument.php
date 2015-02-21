@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\MongoTrait;
+namespace OpenOrchestra\ModelInterface\MongoTrait;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 

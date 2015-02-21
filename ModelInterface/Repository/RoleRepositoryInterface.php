@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\Repository;
-use PHPOrchestra\ModelInterface\Model\StatusInterface;
-use PHPOrchestra\ModelInterface\Model\RoleInterface;
+namespace OpenOrchestra\ModelInterface\Repository;
+use OpenOrchestra\ModelInterface\Model\StatusInterface;
+use OpenOrchestra\ModelInterface\Model\RoleInterface;
 
 /**
  * Interface RoleRepositoryInterface
