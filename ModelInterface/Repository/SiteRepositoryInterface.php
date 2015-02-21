@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\Repository;
+namespace OpenOrchestra\ModelInterface\Repository;
 
-use PHPOrchestra\ModelInterface\Model\SiteInterface;
+use OpenOrchestra\ModelInterface\Model\SiteInterface;
 
 /**
  * Interface SiteRepositoryInterface

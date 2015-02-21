@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\Model;
+namespace OpenOrchestra\ModelInterface\Model;
 
 /**
  * Interface BlockInterface

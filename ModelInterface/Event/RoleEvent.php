@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\Event;
+namespace OpenOrchestra\ModelInterface\Event;
 
-use PHPOrchestra\ModelInterface\Model\RoleInterface;
+use OpenOrchestra\ModelInterface\Model\RoleInterface;
 use Symfony\Component\EventDispatcher\Event;
 
 /**

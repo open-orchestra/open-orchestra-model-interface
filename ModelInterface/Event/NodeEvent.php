@@ -1,10 +1,10 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\Event;
+namespace OpenOrchestra\ModelInterface\Event;
 
-use PHPOrchestra\ModelInterface\Model\AreaInterface;
-use PHPOrchestra\ModelInterface\Model\BlockInterface;
-use PHPOrchestra\ModelInterface\Model\NodeInterface;
+use OpenOrchestra\ModelInterface\Model\AreaInterface;
+use OpenOrchestra\ModelInterface\Model\BlockInterface;
+use OpenOrchestra\ModelInterface\Model\NodeInterface;
 use Symfony\Component\EventDispatcher\Event;
 
 /**

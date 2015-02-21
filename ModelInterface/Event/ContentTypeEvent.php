@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\Event;
+namespace OpenOrchestra\ModelInterface\Event;
 
-use PHPOrchestra\ModelInterface\Model\ContentTypeInterface;
+use OpenOrchestra\ModelInterface\Model\ContentTypeInterface;
 use Symfony\Component\EventDispatcher\Event;
 
 /**

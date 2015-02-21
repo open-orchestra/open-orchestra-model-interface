@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface;
+namespace OpenOrchestra\ModelInterface;
 
 /**
  * Class StatusEvents

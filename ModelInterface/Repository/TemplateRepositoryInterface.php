@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPOrchestra\ModelInterface\Repository;
+namespace OpenOrchestra\ModelInterface\Repository;
 
-use PHPOrchestra\ModelInterface\Model\AreaInterface;
-use PHPOrchestra\ModelInterface\Model\TemplateInterface;
+use OpenOrchestra\ModelInterface\Model\AreaInterface;
+use OpenOrchestra\ModelInterface\Model\TemplateInterface;
 
 /**
  * Interface TemplateRepositoryInterface
