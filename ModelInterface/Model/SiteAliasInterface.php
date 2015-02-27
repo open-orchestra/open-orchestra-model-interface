@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface SiteAliasInterface
  */
-interface SiteAliasInterface extends SchemeAbilityInterface
+interface SiteAliasInterface extends SchemeableInterface
 {
     /**
      * @param string $language

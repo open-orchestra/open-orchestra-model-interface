@@ -5,9 +5,9 @@ namespace OpenOrchestra\ModelInterface\MongoTrait;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 
 /**
- * Trait MetaableDocument
+ * Trait Metaable
  */
-trait MetaableDocument
+trait Metaable
 {
     /**
      * @var string $metaKeywords

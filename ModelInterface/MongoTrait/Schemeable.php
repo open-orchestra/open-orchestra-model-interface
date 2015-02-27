@@ -5,9 +5,9 @@ namespace OpenOrchestra\ModelInterface\MongoTrait;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 
 /**
- * Trait SchemeAbilityDocument
+ * Trait Schemeable
  */
-trait SchemeAbilityDocument
+trait Schemeable
 {
     /**
      * @var string $scheme
