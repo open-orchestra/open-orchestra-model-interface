@@ -6,9 +6,9 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 use OpenOrchestra\ModelInterface\Model\SitemapableInterface;
 
 /**
- * Trait SitemapableDocument
+ * Trait Sitemapable
  */
-trait SitemapableDocument
+trait Sitemapable
 {
     /**
      * @var string $sitemapChangefreq

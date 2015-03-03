@@ -3,9 +3,9 @@
 namespace OpenOrchestra\ModelInterface\Model;
 
 /**
- * interface SchemeAbilityInterface
+ * interface SchemeableInterface
  */
-interface SchemeAbilityInterface
+interface SchemeableInterface
 {
     const SCHEME_DEFAULT = 'default';
     const SCHEME_HTTP = 'http';

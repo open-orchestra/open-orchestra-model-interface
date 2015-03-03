@@ -6,9 +6,9 @@ use Doctrine\Common\Collections\ArrayCollection;
 use OpenOrchestra\ModelInterface\Model\KeywordInterface;
 
 /**
- * Trait KeywordableDocument
+ * Trait Keywordable
  */
-trait KeywordableDocument
+trait Keywordable
 {
     /**
      * @var ArrayCollection
