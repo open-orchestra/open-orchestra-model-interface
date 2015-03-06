@@ -287,4 +287,9 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
      * @param int $order
      */
     public function setOrder($order);
+
+    /**
+     * @return boolean
+     */
+    public function isEditable();
 }
