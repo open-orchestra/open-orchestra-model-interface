@@ -64,6 +64,16 @@ interface BlockInterface
     public function getId();
 
     /**
+     * @param int $maxAge
+     */
+    public function setMaxAge($maxAge);
+
+    /**
+     * @return int $maxAge
+     */
+    public function getMaxAge();
+
+    /**
      * Set attributes
      *
      * @param array $attributes
