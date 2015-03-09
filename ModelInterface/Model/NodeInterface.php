@@ -8,7 +8,7 @@ use Doctrine\Common\Collections\Collection;
 /**
  * Interface NodeInterface
  */
-interface NodeInterface extends AreaContainerInterface, BlockContainerInterface, StatusableInterface, BlameableInterface, TimestampableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface
+interface NodeInterface extends AreaContainerInterface, BlockContainerInterface, StatusableInterface, BlameableInterface, TimestampableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface, CacheableInterface
 {
     const TYPE_DEFAULT = 'page';
     const TYPE_GENERAL = 'general';
