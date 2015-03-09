@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface BlockInterface
  */
-interface BlockInterface
+interface BlockInterface extends CacheableInterface
 {
     /**
      * Set component
@@ -62,16 +62,6 @@ interface BlockInterface
      * @return string $id
      */
     public function getId();
-
-    /**
-     * @param int $maxAge
-     */
-    public function setMaxAge($maxAge);
-
-    /**
-     * @return int $maxAge
-     */
-    public function getMaxAge();
 
     /**
      * Set attributes
