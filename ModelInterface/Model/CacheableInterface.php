@@ -7,6 +7,19 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface CacheableInterface
 {
+    const CACHE_PRIVATE = 'private';
+    const CACHE_PUBLIC = 'public';
+
+    /**
+     * @param string $status
+     */
+    public function setCacheStatus($status);
+
+    /**
+     * @return string $status
+     */
+    public function getCacheStatus();
+
     /**
      * @param int $maxAge
      */
