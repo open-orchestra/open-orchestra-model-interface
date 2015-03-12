@@ -17,29 +17,6 @@ trait Cacheable
     protected $maxAge;
 
     /**
-     * @var string $string
-     *
-     * @ODM\Field(type="string")
-     */
-    protected $cacheStatus = CacheableInterface::CACHE_PRIVATE;
-
-    /**
-     * @return string
-     */
-    public function getCacheStatus()
-    {
-        return $this->cacheStatus;
-    }
-
-    /**
-     * @param string $status
-     */
-    public function setCacheStatus($status)
-    {
-        $this->cacheStatus = $cacheStatus;
-    }
-
-    /**
      * @return int
      */
     public function getMaxAge()

@@ -11,16 +11,6 @@ interface CacheableInterface
     const CACHE_PUBLIC = 'public';
 
     /**
-     * @param string $status
-     */
-    public function setCacheStatus($status);
-
-    /**
-     * @return string $status
-     */
-    public function getCacheStatus();
-
-    /**
      * @param int $maxAge
      */
     public function setMaxAge($maxAge);
