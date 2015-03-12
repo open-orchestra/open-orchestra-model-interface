@@ -2,8 +2,6 @@
 
 namespace OpenOrchestra\ModelInterface\MongoTrait;
 
-use OpenOrchestra\ModelInterface\Model\CacheableInterface;
-
 /**
  * Class Cacheable
  */
