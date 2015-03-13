@@ -7,6 +7,9 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface CacheableInterface
 {
+    const CACHE_PRIVATE = 'private';
+    const CACHE_PUBLIC = 'public';
+
     /**
      * @param int $maxAge
      */
