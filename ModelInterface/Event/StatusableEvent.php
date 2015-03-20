@@ -6,7 +6,7 @@ use OpenOrchestra\ModelInterface\Model\StatusableInterface;
 use Symfony\Component\EventDispatcher\Event;
 
 /**
- * Class StatusEvent
+ * Class StatusableEvent
  */
 class StatusableEvent extends Event
 {
