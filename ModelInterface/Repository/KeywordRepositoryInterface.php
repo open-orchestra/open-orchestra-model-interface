@@ -1,6 +1,7 @@
 <?php
 
 namespace OpenOrchestra\ModelInterface\Repository;
+
 use OpenOrchestra\ModelInterface\Model\KeywordInterface;
 
 /**
@@ -16,7 +17,7 @@ interface KeywordRepositoryInterface
     /**
      * @return mixed
      */
-    public function getDocumentManager();
+    public function getManager();
 
     /**
      * @param string $label
