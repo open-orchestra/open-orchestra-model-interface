@@ -2,10 +2,12 @@
 
 namespace OpenOrchestra\ModelInterface\Model;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * Interface RoleInterface
  */
-interface RoleInterface
+interface RoleInterface extends TranslatedValueContainerInterface
 {
     /**
      * @return mixed
@@ -41,4 +43,26 @@ interface RoleInterface
      * @param StatusInterface $fromStatus
      */
     public function setFromStatus(StatusInterface $fromStatus);
+
+    /**
+     * @param TranslatedValueInterface $description
+     */
+    public function addDescription(TranslatedValueInterface $description);
+
+    /**
+     * @param TranslatedValueInterface $description
+     */
+    public function removeDescription(TranslatedValueInterface $description);
+
+    /**
+     * @param string $language
+     *
+     * @return string
+     */
+    public function getDescription($language = 'en');
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getDescriptions();
 }
