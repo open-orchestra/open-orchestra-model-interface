@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * interface AreaInterface
  */
-interface AreaInterface extends AreaContainerInterface, HtmlClassContainerInterface
+interface AreaInterface extends ReadAreaInterface
 {
     /**
      * Set label
