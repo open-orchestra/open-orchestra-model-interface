@@ -8,7 +8,7 @@ use Doctrine\Common\Collections\Collection;
 /**
  * Interface NodeInterface
  */
-interface NodeInterface extends AreaContainerInterface, BlockContainerInterface, StatusableInterface, BlameableInterface, TimestampableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface, CacheableInterface
+interface NodeInterface extends ReadNodeInterface, AreaContainerInterface, BlockContainerInterface, StatusableInterface, BlameableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface, CacheableInterface
 {
     const TYPE_DEFAULT = 'page';
     const TYPE_GENERAL = 'general';
@@ -16,25 +16,11 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
     const TRANSVERSE_NODE_ID = 'transverse';
 
     /**
-     * Get id
-     *
-     * @return string $id
-     */
-    public function getId();
-
-    /**
      * Set nodeId
      *
      * @param int $nodeId
      */
     public function setNodeId($nodeId);
-
-    /**
-     * Get nodeId
-     *
-     * @return int $nodeId
-     */
-    public function getNodeId();
 
     /**
      * Set nodeType
@@ -58,13 +44,6 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
     public function setSiteId($siteId);
 
     /**
-     * Get siteId
-     *
-     * @return string $siteId
-     */
-    public function getSiteId();
-
-    /**
      * Set parentId
      *
      * @param string $parentId
@@ -72,16 +51,11 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
     public function setParentId($parentId);
 
     /**
-     * Get parentId
-     *
-     * @return string $parentId
-     */
-    public function getParentId();
-
-    /**
      * Set path
      *
      * @param string $path
+     *
+     * @deprecated
      */
     public function setPath($path);
 
@@ -89,6 +63,8 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
      * Get path
      *
      * @return string $path
+     *
+     * @deprecated
      */
     public function getPath();
 
@@ -98,23 +74,11 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
     public function setRoutePattern($routePattern);
 
     /**
-     * @return string
-     */
-    public function getRoutePattern();
-
-    /**
      * Set name
      *
      * @param string $name
      */
     public function setName($name);
-
-    /**
-     * Get name
-     *
-     * @return string $name
-     */
-    public function getName();
 
     /**
      * Set version
@@ -136,13 +100,6 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
      * @param string $language
      */
     public function setLanguage($language);
-
-    /**
-     * Get language
-     *
-     * @return string $language
-     */
-    public function getLanguage();
 
     /**
      * Set deleted
@@ -172,47 +129,12 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
      */
     public function getTemplateId();
 
-    /**
-     * Set sitemapChangefreq
-     *
-     * @param string $sitemapChangefreq
-     */
-    public function setSitemapChangefreq($sitemapChangefreq);
-
-    /**
-     * Get sitemapChangefreq
-     *
-     * @return string $sitemapChangefreq
-     */
-    public function getSitemapChangefreq();
-
-    /**
-     * Set sitemapPriority
-     *
-     * @param string $sitemapPriority
-     */
-    public function setSitemapPriority($sitemapPriority);
-
-    /**
-     * Get sitemapPriority
-     *
-     * @return string $sitemapPriority
-     */
-    public function getSitemapPriority();
-
      /**
      * Set theme
      *
      * @param string $theme
      */
     public function setTheme($theme);
-
-    /**
-     * Get theme
-     *
-     * @return string $theme
-     */
-    public function getTheme();
 
     /**
      * @param BlockInterface $block
@@ -226,13 +148,6 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
      * @param BlockInterface $block
      */
     public function setBlock($key, BlockInterface $block);
-
-    /**
-     * @param int $key
-     *
-     * @return BlockInterface
-     */
-    public function getBlock($key);
 
     /**
      * Set blocks
@@ -255,8 +170,15 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
 
     /**
      * @return boolean
+     *
+     * @deprecated use isInFooter
      */
     public function getInFooter();
+
+    /**
+     * @return boolean
+     */
+    public function isInFooter();
 
     /**
      * @param boolean $inMenu
@@ -265,13 +187,15 @@ interface NodeInterface extends AreaContainerInterface, BlockContainerInterface,
 
     /**
      * @return boolean
+     *
+     * @deprecated use isInMenu
      */
     public function getInMenu();
 
     /**
-     * @return string
+     * @return boolean
      */
-    public function getRole();
+    public function isInMenu();
 
     /**
      * @param string $role
