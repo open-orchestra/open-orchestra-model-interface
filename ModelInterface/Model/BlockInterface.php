@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface BlockInterface
  */
-interface BlockInterface extends CacheableInterface
+interface BlockInterface extends ReadBlockInterface
 {
     /**
      * Set component
@@ -13,13 +13,6 @@ interface BlockInterface extends CacheableInterface
      * @param string $component
      */
     public function setComponent($component);
-
-    /**
-     * Get component
-     *
-     * @return string $component
-     */
-    public function getComponent();
 
     /**
      * Set label
@@ -43,25 +36,11 @@ interface BlockInterface extends CacheableInterface
     public function setClass($class);
 
     /**
-     * Get class
-     *
-     * @return string $class
-     */
-    public function getClass();
-
-    /**
      * Set id
      *
      * @param string $id
      */
     public function setId($id);
-
-    /**
-     * Get id
-     *
-     * @return string $id
-     */
-    public function getId();
 
     /**
      * Set attributes
@@ -75,20 +54,6 @@ interface BlockInterface extends CacheableInterface
      * @param string $value
      */
     public function addAttribute($name, $value);
-
-    /**
-     * Get attributes
-     *
-     * @return array $attributes
-     */
-    public function getAttributes();
-
-    /**
-     * @param string $name
-     *
-     * @return string|null
-     */
-    public function getAttribute($name);
 
     /**
      * @return array
