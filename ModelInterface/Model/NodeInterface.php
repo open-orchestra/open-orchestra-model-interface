@@ -203,11 +203,6 @@ interface NodeInterface extends ReadNodeInterface, AreaContainerInterface, Block
     public function setRole($role);
 
     /**
-     * @return int
-     */
-    public function getOrder();
-
-    /**
      * @param int $order
      */
     public function setOrder($order);
