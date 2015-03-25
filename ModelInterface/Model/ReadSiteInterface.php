@@ -26,7 +26,7 @@ interface ReadSiteInterface extends MetaableInterface, ReadSitemapableInterface
     public function getAliases();
 
     /**
-     * @return SiteAliasInterface
+     * @return ReadSiteAliasInterface
      */
     public function getMainAlias();
 
