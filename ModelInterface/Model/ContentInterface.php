@@ -8,20 +8,8 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * Interface ContentInterface
  */
-interface ContentInterface extends StatusableInterface, TimestampableInterface, BlameableInterface, KeywordableInterface
+interface ContentInterface extends ReadContentInterface, StatusableInterface, TimestampableInterface, BlameableInterface
 {
-    /**
-     * @return ArrayCollection
-     */
-    public function getAttributes();
-
-    /**
-     * @param string $name
-     *
-     * @return ContentAttributeInterface|null
-     */
-    public function getAttributeByName($name);
-
     /**
      * @param ContentAttributeInterface $attribute
      */
@@ -83,27 +71,12 @@ interface ContentInterface extends StatusableInterface, TimestampableInterface, 
     public function setLanguage($language);
 
     /**
-     * @return string
-     */
-    public function getLanguage();
-
-    /**
      * @param string $name
      */
     public function setName($name);
 
     /**
-     * @return string
-     */
-    public function getName();
-
-    /**
      * @param int $version
      */
     public function setVersion($version);
-
-    /**
-     * @return int
-     */
-    public function getVersion();
 }
