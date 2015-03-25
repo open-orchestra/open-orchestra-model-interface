@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface ContentAttributeInterface
  */
-interface ContentAttributeInterface
+interface ContentAttributeInterface extends ReadContentAttributeInterface
 {
     /**
      * @param string $name
@@ -13,17 +13,7 @@ interface ContentAttributeInterface
     public function setName($name);
 
     /**
-     * @return string
-     */
-    public function getName();
-
-    /**
      * @param string $value
      */
     public function setValue($value);
-
-    /**
-     * @return string
-     */
-    public function getValue();
 }

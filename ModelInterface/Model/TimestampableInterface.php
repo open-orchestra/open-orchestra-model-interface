@@ -1,6 +1,7 @@
 <?php
 
 namespace OpenOrchestra\ModelInterface\Model;
+
 use DateTime;
 
 /**
