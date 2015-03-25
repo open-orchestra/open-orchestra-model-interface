@@ -9,31 +9,12 @@ use OpenOrchestra\ModelInterface\Model\ThemeInterface;
 /**
  * Interface SiteInterface
  */
-interface SiteInterface extends MetaableInterface, SitemapableInterface
+interface SiteInterface extends ReadSiteInterface, SitemapableInterface
 {
-    const ROBOTS_TXT_DEFAULT = "User-agent: *\nAllow: /";
-    const CHANGE_FREQ_DEFAULT = 'never';
-    const PRIORITY_DEFAULT = '0.5';
-
-    /**
-     * @return string
-     */
-    public function getId();
-
     /**
      * @param SiteAliasInterface $alias
      */
     public function addAlias(SiteAliasInterface $alias);
-
-    /**
-     * @return Collection
-     */
-    public function getAliases();
-
-    /**
-     * @return SiteAliasInterface
-     */
-    public function getMainAlias();
 
     /**
      * @param string $block
@@ -54,11 +35,6 @@ interface SiteInterface extends MetaableInterface, SitemapableInterface
      * @param string $siteId
      */
     public function setSiteId($siteId);
-
-    /**
-     * @return string
-     */
-    public function getSiteId();
 
     /**
      * Set deleted
@@ -82,13 +58,6 @@ interface SiteInterface extends MetaableInterface, SitemapableInterface
     public function setName($name);
 
     /**
-     * Get name
-     *
-     * @return string $name
-     */
-    public function getName();
-
-    /**
      * Set theme
      *
      * @param ThemeInterface $theme
@@ -96,37 +65,9 @@ interface SiteInterface extends MetaableInterface, SitemapableInterface
     public function setTheme(ThemeInterface $theme);
 
     /**
-     * Get theme
-     *
-     * @return ThemeInterface $theme
-     */
-    public function getTheme();
-
-    /**
      * Set robotsTxt
      *
      * @param string $robotsTxt
      */
     public function setRobotsTxt($robotsTxt);
-
-    /**
-     * Get robotsTxt
-     *
-     * @return string $robotsTxt
-     */
-    public function getRobotsTxt();
-
-    /**
-     * Get all languages of the site
-     *
-     * @return array
-     */
-    public function getLanguages();
-
-    /**
-     * Return one of the defailt site language
-     *
-     * @return string
-     */
-    public function getDefaultLanguage();
 }
