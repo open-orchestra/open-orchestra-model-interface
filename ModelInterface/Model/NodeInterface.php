@@ -14,6 +14,7 @@ interface NodeInterface extends ReadNodeInterface, AreaContainerInterface, Block
     const TYPE_GENERAL = 'general';
     const ROOT_NODE_ID = 'root';
     const TRANSVERSE_NODE_ID = 'transverse';
+    const MAX_AGE = 1000;
 
     /**
      * Set nodeId
