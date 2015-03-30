@@ -1,7 +1,7 @@
 {
     "name": "itkg/open-orchestra-model-interface",
     "description": "Describe all entity and repository to implement for the whole OpenOrchestra project",
-    "license": "MIT",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Nicolas Thal",
