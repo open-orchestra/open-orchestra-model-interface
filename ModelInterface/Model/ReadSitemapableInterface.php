@@ -2,8 +2,6 @@
 
 namespace OpenOrchestra\ModelInterface\Model;
 
-use Doctrine\Common\Collections\ArrayCollection;
-
 /**
  * interface ReadSitemapableInterface
  */

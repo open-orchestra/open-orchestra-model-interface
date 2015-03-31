@@ -2,9 +2,6 @@
 
 namespace OpenOrchestra\ModelInterface\MongoTrait;
 
-use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
-use OpenOrchestra\ModelInterface\Model\SitemapableInterface;
-
 /**
  * Trait Sitemapable
  */
