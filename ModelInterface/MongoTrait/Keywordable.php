@@ -2,7 +2,6 @@
 
 namespace OpenOrchestra\ModelInterface\MongoTrait;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use OpenOrchestra\ModelInterface\Model\KeywordInterface;
 
 /**

@@ -2,8 +2,6 @@
 
 namespace OpenOrchestra\ModelInterface\Event;
 
-use OpenOrchestra\ModelInterface\Model\AreaInterface;
-use OpenOrchestra\ModelInterface\Model\BlockInterface;
 use OpenOrchestra\ModelInterface\Model\NodeInterface;
 use Symfony\Component\EventDispatcher\Event;
 
