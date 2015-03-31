@@ -7,11 +7,8 @@ use OpenOrchestra\ModelInterface\Model\ContentInterface;
 /**
  * Interface ContentRepositoryInterface
  */
-interface ContentRepositoryInterface
+interface ContentRepositoryInterface extends ReadContentRepositoryInterface
 {
-    const CHOICE_AND = 'choice_and';
-    const CHOICE_OR = 'choice_or';
-
     /**
      * Get all content if the contentType is "news"
      *
@@ -30,22 +27,6 @@ interface ContentRepositoryInterface
      * @return boolean
      */
     public function testUnicityInContext($name);
-
-    /**
-     * @param string $contentId
-     *
-     * @return ContentInterface
-     */
-    public function findOneByContentId($contentId);
-
-    /**
-     * @param string $contentType
-     * @param string $choiceType
-     * @param string $keywords
-     *
-     * @return array
-     */
-    public function findByContentTypeAndChoiceTypeAndKeywords($contentType = '', $choiceType = self::CHOICE_AND, $keywords = null);
 
     /**
      * @param string $contentId
