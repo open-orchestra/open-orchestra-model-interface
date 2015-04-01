@@ -2,7 +2,7 @@
 
 namespace OpenOrchestra\ModelInterface\Repository;
 
-use OpenOrchestra\ModelInterface\Model\SiteInterface;
+use OpenOrchestra\ModelInterface\Model\ReadSiteInterface;
 
 /**
  * Interface SiteRepositoryInterface
@@ -12,7 +12,7 @@ interface SiteRepositoryInterface
     /**
      * @param string $siteId
      *
-     * @return SiteInterface
+     * @return ReadSiteInterface
      */
     public function findOneBySiteId($siteId);
 
@@ -22,4 +22,11 @@ interface SiteRepositoryInterface
      * @return array
      */
     public function findByDeleted($deleted);
+
+    /**
+     * @param string $domain
+     *
+     * @return ReadSiteInterface
+     */
+    public function findByAliasDomain($domain);
 }

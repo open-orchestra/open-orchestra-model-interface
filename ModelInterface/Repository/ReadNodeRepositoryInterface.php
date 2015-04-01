@@ -1,6 +1,7 @@
 <?php
 
 namespace OpenOrchestra\ModelInterface\Repository;
+use OpenOrchestra\ModelInterface\Model\ReadNodeInterface;
 
 /**
  * Interface ReadNodeRepositoryInterface
@@ -12,7 +13,7 @@ interface ReadNodeRepositoryInterface
      * @param string|null $language
      * @param string|null $siteId
      *
-     * @return mixed
+     * @return ReadNodeInterface
      */
     public function findOneByNodeIdAndLanguageWithPublishedAndLastVersionAndSiteId($nodeId, $language = null, $siteId = null);
 
@@ -20,7 +21,7 @@ interface ReadNodeRepositoryInterface
      * @param string $language
      * @param string $siteId
      *
-     * @return array
+     * @return ReadNodeInterface
      */
     public function findLastPublishedVersionByLanguageAndSiteId($language, $siteId);
 
@@ -46,4 +47,9 @@ interface ReadNodeRepositoryInterface
      * @return array
      */
     public function getSubMenu($nodeId, $nbLevel, $language = null);
+
+    /**
+     * @return ReadNodeInterface
+     */
+    public function findLastPublished();
 }
