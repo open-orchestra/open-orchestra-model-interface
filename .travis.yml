@@ -7,7 +7,6 @@ sudo: false
 
 before_install:
   - phpenv config-add .travis.php.ini
-  - composer self-update
 
 install:
   - composer install --no-progress --prefer-dist
