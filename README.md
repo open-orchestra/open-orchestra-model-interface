@@ -1,7 +1,7 @@
-phporchestra-model-bundle
+open-orchestra-model-bundle
 =========================
 
-The php orchestra model bundle
+The Open Orchestra model bundle
 
 | Service       | Badge         |
 | ------------- |:-------------:|
