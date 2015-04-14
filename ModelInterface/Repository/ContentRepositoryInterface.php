@@ -29,6 +29,21 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
     public function testUnicityInContext($name);
 
     /**
+    * @param string $contentId
+    *
+    * @return ContentInterface
+    */
+    public function findOneByContentId($contentId);
+    
+    /**
+     * @param string $contentId
+     * @param string|null $language
+     *
+     * @return ContentInterface
+     */
+    public function findLastPublishedVersionByContentIdAndLanguage($contentId, $language = null);
+
+    /**
      * @param string $contentId
      * @param string $language
      *
