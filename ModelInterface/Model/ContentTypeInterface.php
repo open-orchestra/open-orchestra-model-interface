@@ -30,6 +30,16 @@ interface ContentTypeInterface extends FieldTypeContainerInterface, StatusableIn
     public function getDeleted();
 
     /**
+     * @param string $template
+     */
+    public function setTemplate($template);
+
+    /**
+     * @return string
+     */
+    public function getTemplate();
+
+    /**
      * @param FieldTypeInterface $fields
      */
     public function setFields(FieldTypeInterface $fields);
