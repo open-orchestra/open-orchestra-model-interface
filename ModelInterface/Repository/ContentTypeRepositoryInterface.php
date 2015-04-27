@@ -11,7 +11,7 @@ interface ContentTypeRepositoryInterface
      * @param string   $contentType
      * @param int|null $version
      *
-     * @return array|null|object
+     * @return object|null
      */
     public function findOneByContentTypeIdAndVersion($contentType, $version = null);
 
@@ -24,4 +24,12 @@ interface ContentTypeRepositoryInterface
      * @return array
      */
     public function findAll();
+
+    /**
+     * @param string   $contentType
+     * @param int|null $version
+     *
+     * @return object|null
+     */
+    public function findOneByContentTypeIdInLastVersion($contentType);
 }
