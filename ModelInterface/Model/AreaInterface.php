@@ -66,12 +66,16 @@ interface AreaInterface extends ReadAreaInterface
     /**
      * Set classes
      *
+     * @deprecated use setHtmlClass instead
+     *
      * @param array $classes
      */
     public function setClasses(array $classes);
 
     /**
      * Get classes
+     *
+     * @deprecated use getHtmlClass instead
      *
      * @return array $classes
      */
