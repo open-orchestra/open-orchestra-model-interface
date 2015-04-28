@@ -105,6 +105,11 @@ Interface FieldTypeInterface extends TranslatedValueContainerInterface
     public function hasOption($key);
 
     /**
+     * clear Options
+     */
+    public function clearOptions();
+
+    /**
      * @return ArrayCollection
      */
     public function getOptions();
