@@ -8,6 +8,16 @@ namespace OpenOrchestra\ModelInterface\Repository;
 interface ContentTypeRepositoryInterface
 {
     /**
+     * @deprecated use findOneByContentTypeIdInLastVersion to get the last version
+     *
+     * @param string   $contentType
+     * @param int|null $version
+     *
+     * @return object|null
+     */
+    public function findOneByContentTypeIdAndVersion($contentType, $version = null);
+
+    /**
      * @return array
      */
     public function findAllByDeletedInLastVersion();
