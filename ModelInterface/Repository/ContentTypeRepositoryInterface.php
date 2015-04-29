@@ -2,6 +2,8 @@
 
 namespace OpenOrchestra\ModelInterface\Repository;
 
+use OpenOrchestra\ModelInterface\Model\ContentTypeInterface;
+
 /**
  * Interface ContentTypeRepositoryInterface
  */
@@ -29,9 +31,8 @@ interface ContentTypeRepositoryInterface
 
     /**
      * @param string   $contentType
-     * @param int|null $version
      *
-     * @return object|null
+     * @return ContentTypeInterface
      */
     public function findOneByContentTypeIdInLastVersion($contentType);
 }
