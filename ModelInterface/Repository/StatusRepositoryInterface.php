@@ -27,4 +27,9 @@ interface StatusRepositoryInterface
      * @return StatusInterface
      */
     public function find($id);
+
+    /**
+     * @return StatusInterface
+     */
+    public function findOneByEditable();
 }
