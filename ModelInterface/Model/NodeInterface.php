@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\Collection;
 /**
  * Interface NodeInterface
  */
-interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, StatusableInterface, BlameableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface
+interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, StatusableInterface, BlameableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface, VersionnableInterface
 {
     const TYPE_DEFAULT = 'page';
     const TYPE_GENERAL = 'general';
@@ -79,20 +79,6 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
      * @param string $name
      */
     public function setName($name);
-
-    /**
-     * Set version
-     *
-     * @param int $version
-     */
-    public function setVersion($version);
-
-    /**
-     * Get version
-     *
-     * @return int $version
-     */
-    public function getVersion();
 
     /**
      * Set language
