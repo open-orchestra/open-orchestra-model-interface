@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface TemplateInterface
  */
-interface TemplateInterface extends AreaContainerInterface, BlockContainerInterface
+interface TemplateInterface extends AreaContainerInterface, BlockContainerInterface, VersionnableInterface
 {
     /**
      * @param string $boDirection
@@ -61,16 +61,6 @@ interface TemplateInterface extends AreaContainerInterface, BlockContainerInterf
      * @return string
      */
     public function getTemplateId();
-
-    /**
-     * @param int $version
-     */
-    public function setVersion($version);
-
-    /**
-     * @return int
-     */
-    public function getVersion();
 
     /**
      * @param string $language

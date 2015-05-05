@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * Interface ContentTypeInterface
  */
-interface ContentTypeInterface extends FieldTypeContainerInterface, TranslatedValueContainerInterface, BlameableInterface, TimestampableInterface
+interface ContentTypeInterface extends FieldTypeContainerInterface, TranslatedValueContainerInterface, BlameableInterface, TimestampableInterface, VersionnableInterface
 {
     /**
      * @param string $contentTypeId
@@ -70,14 +70,4 @@ interface ContentTypeInterface extends FieldTypeContainerInterface, TranslatedVa
      * @return ArrayCollection
      */
     public function getNames();
-
-    /**
-     * @param int $version
-     */
-    public function setVersion($version);
-
-    /**
-     * @return int
-     */
-    public function getVersion();
 }
