@@ -120,4 +120,12 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @return array
      */
     public function findByParentIdAndRoutePatternAndNotNodeId($parentId, $routePattern, $nodeId);
+
+    /**
+     * @param string      $nodeId
+     *
+     * @return mixed
+     */
+    public function findOneByNodeIdAndLanguageAndVersionAndSiteId($nodeId);
+
 }
