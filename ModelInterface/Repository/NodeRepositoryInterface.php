@@ -95,6 +95,14 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
     public function findLastVersionByDeletedAndSiteId($type = NodeInterface::TYPE_DEFAULT);
 
     /**
+     * @param string      $path
+     * @param string|null $siteId
+     *
+     * @return mixed
+     */
+    public function findChildsByPath($path, $siteId = null);
+
+    /**
      * @param string $nodeId
      *
      * @throws \Exception
