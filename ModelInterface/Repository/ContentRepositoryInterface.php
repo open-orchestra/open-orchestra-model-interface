@@ -43,7 +43,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      *
      * @return ContentInterface
      */
-    public function findLastPublishedVersionByContentIdAndLanguage($contentId, $language = null);
+    public function findLastPublishedVersionByContentIdAndLanguage($contentId, $language);
 
     /**
      * @param string $contentId
@@ -55,20 +55,20 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
 
     /**
      * @param string      $contentId
-     * @param string|null $language
+     * @param string $language
      *
      * @return array
      */
-    public function findByContentIdAndLanguage($contentId, $language = null);
+    public function findByContentIdAndLanguage($contentId, $language);
 
     /**
      * @param string      $contentId
-     * @param string|null $language
+     * @param string $language
      * @param int|null    $version
      *
      * @return ContentInterface|null
      */
-    public function findOneByContentIdAndLanguageAndVersion($contentId, $language = null, $version = null);
+    public function findOneByContentIdAndLanguageAndVersion($contentId, $language, $version = null);
 
     /**
      * @param string $contentType
