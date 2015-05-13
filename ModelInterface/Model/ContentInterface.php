@@ -6,7 +6,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface ContentInterface
  */
-interface ContentInterface extends ReadContentInterface, StatusableInterface, TimestampableInterface, BlameableInterface, VersionnableInterface
+interface ContentInterface extends ReadContentInterface, StatusableInterface, TimestampableInterface, BlameableInterface, VersionableInterface
 {
     /**
      * @param ContentAttributeInterface $attribute
