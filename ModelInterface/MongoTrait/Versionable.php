@@ -2,7 +2,6 @@
 
 namespace OpenOrchestra\ModelInterface\MongoTrait;
 
-
 /**
  * Trait Versionable
  */
