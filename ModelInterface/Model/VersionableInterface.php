@@ -3,11 +3,9 @@
 namespace OpenOrchestra\ModelInterface\Model;
 
 /**
- * Interface VersionnableInterface
- *
- * @deprecated Use VersionableInterface instead, will be removed in 0.2.3
+ * Interface VersionableInterface
  */
-interface VersionnableInterface extends VersionableInterface
+interface VersionableInterface
 {
     /**
      * @param int $version

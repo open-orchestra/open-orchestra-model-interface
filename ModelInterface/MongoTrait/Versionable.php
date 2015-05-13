@@ -2,12 +2,11 @@
 
 namespace OpenOrchestra\ModelInterface\MongoTrait;
 
+
 /**
- * Trait Versionnable
- *
- * @deprecated Use Versionnable instead, will be removed in 0.2.3
+ * Trait Versionable
  */
-trait Versionnable
+trait Versionable
 {
     /**
      * @var int $version
