@@ -36,10 +36,10 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
     * @return ContentInterface
     */
     public function findOneByContentId($contentId);
-    
+
     /**
      * @param string $contentId
-     * @param string|null $language
+     * @param string $language
      *
      * @return ContentInterface
      */
