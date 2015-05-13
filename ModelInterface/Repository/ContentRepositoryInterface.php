@@ -54,7 +54,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
     public function findOneByContentIdAndLanguage($contentId, $language);
 
     /**
-     * @param string      $contentId
+     * @param string $contentId
      * @param string $language
      *
      * @return array
@@ -63,7 +63,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
 
     /**
      * @param string      $contentId
-     * @param string $language
+     * @param string      $language
      * @param int|null    $version
      *
      * @return ContentInterface|null
