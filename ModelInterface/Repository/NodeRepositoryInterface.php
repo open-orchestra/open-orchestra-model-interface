@@ -50,18 +50,18 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
     public function findByParentIdAndSiteId($parentId, $siteId);
 
     /**
-     * @param string      $nodeId
-     * @param string      $language
-     * @param string      $siteId
+     * @param string $nodeId
+     * @param string $language
+     * @param string $siteId
      *
      * @return mixed
      */
     public function findOneByNodeIdAndLanguageAndSiteIdAndLastVersion($nodeId, $language, $siteId);
 
     /**
-     * @param string      $nodeId
-     * @param string      $language
-     * @param string      $siteId
+     * @param string $nodeId
+     * @param string $language
+     * @param string $siteId
      *
      * @throws \Exception
      *
@@ -70,9 +70,9 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
     public function findByNodeIdAndLanguageAndSiteId($nodeId, $language, $siteId);
 
     /**
-     * @param string      $nodeId
-     * @param string      $language
-     * @param string      $siteId
+     * @param string $nodeId
+     * @param string $language
+     * @param string $siteId
      *
      * @throws \Exception
      *
@@ -107,9 +107,9 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
     public function findChildsByPath($path, $siteId = null);
 
     /**
-     * @param string      $path
-     * @param string      $siteId
-     * @param string      $language
+     * @param string $path
+     * @param string $siteId
+     * @param string $language
      *
      * @return mixed
      */

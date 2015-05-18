@@ -9,9 +9,9 @@ use OpenOrchestra\ModelInterface\Model\ReadNodeInterface;
 interface ReadNodeRepositoryInterface
 {
     /**
-     * @param string      $nodeId
-     * @param string      $language
-     * @param string      $siteId
+     * @param string $nodeId
+     * @param string $language
+     * @param string $siteId
      *
      * @return ReadNodeInterface
      */
