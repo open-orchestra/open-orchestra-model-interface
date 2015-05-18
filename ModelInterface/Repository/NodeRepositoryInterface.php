@@ -41,60 +41,64 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
 
     /**
      * @param string $parentId
-     *
-     * @throws \Exception
-     *
-     * @return mixed
-     */
-    public function findByParentIdAndSiteId($parentId);
-
-    /**
-     * @param string      $nodeId
-     * @param string|null $language
-     * @param string|null $siteId
-     *
-     * @return mixed
-     */
-    public function findOneByNodeIdAndLanguageAndSiteIdAndLastVersion($nodeId, $language = null, $siteId = null);
-
-    /**
-     * @param string      $nodeId
-     * @param string|null $language
-     * @param string|null $siteId
-     *
-     * @throws \Exception
-     *
-     * @return mixed
-     */
-    public function findByNodeIdAndLanguageAndSiteId($nodeId, $language = null, $siteId = null);
-
-    /**
-     * @param string      $nodeId
-     * @param string|null $language
-     * @param string|null $siteId
-     *
-     * @throws \Exception
-     *
-     * @return mixed
-     */
-    public function findByNodeIdAndLanguageAndSiteIdAndPublishedOrderedByVersion($nodeId, $language = null, $siteId = null);
-
-    /**
-     * @param string $type
      * @param string $siteId
      *
-     * @return array
+     * @throws \Exception
+     *
+     * @return mixed
      */
-    public function findLastVersionBySiteId($type = NodeInterface::TYPE_DEFAULT, $siteId = null);
+    public function findByParentIdAndSiteId($parentId, $siteId);
 
     /**
+     * @param string      $nodeId
+     * @param string      $language
+     * @param string      $siteId
+     *
+     * @return mixed
+     */
+    public function findOneByNodeIdAndLanguageAndSiteIdAndLastVersion($nodeId, $language, $siteId);
+
+    /**
+     * @param string      $nodeId
+     * @param string      $language
+     * @param string      $siteId
+     *
+     * @throws \Exception
+     *
+     * @return mixed
+     */
+    public function findByNodeIdAndLanguageAndSiteId($nodeId, $language, $siteId);
+
+    /**
+     * @param string      $nodeId
+     * @param string      $language
+     * @param string      $siteId
+     *
+     * @throws \Exception
+     *
+     * @return mixed
+     */
+    public function findByNodeIdAndLanguageAndSiteIdAndPublishedOrderedByVersion($nodeId, $language, $siteId);
+
+    /**
+     * @param string $siteId
      * @param string $type
      *
      * @return array
      */
-    public function findLastVersionByDeletedAndSiteId($type = NodeInterface::TYPE_DEFAULT);
+    public function findLastVersionBySiteId($siteId, $type = NodeInterface::TYPE_DEFAULT);
 
     /**
+     * @param string $siteId
+     * @param string $type
+     *
+     * @return array
+     */
+    public function findLastVersionByDeletedAndSiteId($siteId, $type = NodeInterface::TYPE_DEFAULT);
+
+    /**
+     * @deprecated use findChildsByPathAndSiteIdAndLanguage
+     *
      * @param string      $path
      * @param string|null $siteId
      *
@@ -103,13 +107,23 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
     public function findChildsByPath($path, $siteId = null);
 
     /**
+     * @param string      $path
+     * @param string      $siteId
+     * @param string      $language
+     *
+     * @return mixed
+     */
+    public function findChildsByPathAndSiteIdAndLanguage($path, $siteId, $language);
+
+    /**
      * @param string $nodeId
+     * @param string $siteId
      *
      * @throws \Exception
      *
      * @return mixed
      */
-    public function findByNodeIdAndSiteId($nodeId);
+    public function findByNodeIdAndSiteId($nodeId, $siteId);
 
     /**
      * @param string $type
@@ -121,6 +135,8 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
     public function findByNodeType($type = NodeInterface::TYPE_DEFAULT);
 
     /**
+     * @deprecated use findByParentIdAndRoutePatternAndNotNodeIdAndSiteId
+     *
      * @param string $parentId
      * @param string $routePattern
      * @param string $nodeId
@@ -130,10 +146,24 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
     public function findByParentIdAndRoutePatternAndNotNodeId($parentId, $routePattern, $nodeId);
 
     /**
+     *
+     * @param string $parentId
+     * @param string $routePattern
+     * @param string $nodeId
+     * @param string $siteId
+     *
+     * @return array
+     */
+    public function findByParentIdAndRoutePatternAndNotNodeIdAndSiteId($parentId, $routePattern, $nodeId, $siteId);
+
+    /**
      * @param string      $nodeId
+     * @param string      $language
+     * @param string      $siteId
+     * @param int|null    $version
      *
      * @return mixed
      */
-    public function findOneByNodeIdAndLanguageAndVersionAndSiteId($nodeId);
+    public function findOneByNodeIdAndLanguageAndVersionAndSiteId($nodeId, $language, $siteId, $version = null);
 
 }
