@@ -62,7 +62,7 @@ interface ReadSiteInterface extends MetaableInterface, ReadSitemapableInterface
     public function getLanguages();
 
     /**
-     * Return one of the defailt site language
+     * Return one of the default site language
      *
      * @return string
      */
