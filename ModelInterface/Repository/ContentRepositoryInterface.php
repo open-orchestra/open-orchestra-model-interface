@@ -10,15 +10,6 @@ use OpenOrchestra\ModelInterface\Model\ContentInterface;
 interface ContentRepositoryInterface extends ReadContentRepositoryInterface
 {
     /**
-     * Get all content if the contentType is "news"
-     *
-     * @deprecated This will be removed in the 0.2.1 version
-     *
-     * @return array list of news
-     */
-    public function findAllNews();
-
-    /**
      * @return array list of news
      */
     public function findAll();

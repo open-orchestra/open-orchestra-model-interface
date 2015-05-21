@@ -97,16 +97,6 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
     public function findLastVersionByDeletedAndSiteId($siteId, $type = NodeInterface::TYPE_DEFAULT);
 
     /**
-     * @deprecated use findChildsByPathAndSiteIdAndLanguage
-     *
-     * @param string      $path
-     * @param string|null $siteId
-     *
-     * @return mixed
-     */
-    public function findChildsByPath($path, $siteId = null);
-
-    /**
      * @param string $path
      * @param string $siteId
      * @param string $language
@@ -133,17 +123,6 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @return array
      */
     public function findByNodeType($type = NodeInterface::TYPE_DEFAULT);
-
-    /**
-     * @deprecated use findByParentIdAndRoutePatternAndNotNodeIdAndSiteId
-     *
-     * @param string $parentId
-     * @param string $routePattern
-     * @param string $nodeId
-     *
-     * @return array
-     */
-    public function findByParentIdAndRoutePatternAndNotNodeId($parentId, $routePattern, $nodeId);
 
     /**
      *
