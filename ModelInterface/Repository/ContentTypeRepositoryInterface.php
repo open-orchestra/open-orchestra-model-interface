@@ -35,4 +35,11 @@ interface ContentTypeRepositoryInterface
      * @return ContentTypeInterface
      */
     public function findOneByContentTypeIdInLastVersion($contentType);
+
+    /**
+     * @param string $id
+     *
+     * @return ContentTypeInterface
+     */
+    public function find($id);
 }
