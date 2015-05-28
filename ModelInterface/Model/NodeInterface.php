@@ -9,10 +9,6 @@ use Doctrine\Common\Collections\Collection;
  */
 interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, StatusableInterface, BlameableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface, VersionableInterface
 {
-    /**
-     * @deprecated use TYPE_TRANSVERSE instead, will be removed in 0.2.5
-     */
-    const TYPE_GENERAL = 'general';
     const TYPE_TRANSVERSE = 'general';
     const TYPE_DEFAULT = 'page';
     const ROOT_NODE_ID = 'root';
