@@ -15,7 +15,7 @@
 
     <testsuites>
         <testsuite name="unit">
-            <directory>*Bundle/Tests</directory>
+            <directory>*Interface/Tests</directory>
         </testsuite>
     </testsuites>
 
