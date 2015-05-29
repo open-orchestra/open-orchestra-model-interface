@@ -74,6 +74,18 @@ Interface FieldTypeInterface extends TranslatedValueContainerInterface
     public function getSearchable();
 
     /**
+     * Set Listable
+     *
+     * @param boolean $listable
+     */
+    public function setListable($listable);
+
+    /**
+     * @return boolean
+     */
+    public function getListable();
+
+    /**
      * Set Type
      *
      * @param string $type
