@@ -12,15 +12,15 @@ use OpenOrchestra\ModelInterface\Model\StatusInterface;
 class StatusableEvent extends Event
 {
     protected $statusableElement;
-    protected $fromStatus;
+    protected $toStatus;
 
     /**
      * @param StatusableInterface $statusableElement
      */
-    public function __construct(StatusableInterface $statusableElement, StatusInterface $fromStatus)
+    public function __construct(StatusableInterface $statusableElement, StatusInterface $toStatus)
     {
         $this->statusableElement = $statusableElement;
-        $this->fromStatus = $fromStatus;
+        $this->toStatus = $toStatus;
     }
 
     /**
@@ -34,8 +34,8 @@ class StatusableEvent extends Event
     /**
      * @return StatusInterface
      */
-    public function getFromStatus()
+    public function getToStatus()
     {
-        return $this->fromStatus;
+        return $this->toStatus;
     }
 }
