@@ -6,6 +6,8 @@ use Symfony\Component\Form\AbstractType;
 
 /**
  * Class AbstractOrchestraRoleType
+ *
+ * @deprecated will be removed in 0.2.6
  */
 abstract class AbstractOrchestraRoleType extends AbstractType
 {
