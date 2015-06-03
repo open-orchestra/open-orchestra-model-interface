@@ -24,6 +24,36 @@ interface SiteRepositoryInterface
     public function findByDeleted($deleted);
 
     /**
+     * @param boolean     $deleted
+     * @param array|null  $reference
+     * @param array|null  $columns
+     * @param string|null $search
+     * @param array|null  $order
+     * @param int|null    $skip
+     * @param int|null    $limit
+     *
+     * @return array
+     */
+    public function findByDeletedForPaginateAndSearch($deleted, $reference = null, $columns = null, $search = null, $order = null, $skip = null, $limit = null);
+
+    /**
+     * @param boolean $deleted
+     *
+     * @return int
+     */
+    public function countByDeleted($deleted);
+
+    /**
+     * @param boolean      $deleted
+     * @param array|null   $columns
+     * @param array|null   $reference
+     * @param array|null   $search
+     *
+     * @return int
+     */
+    public function countByDeletedFilterSearch($deleted, $reference, $columns = null, $search = null);
+
+    /**
      * @param string $domain
      *
      * @return ReadSiteInterface
