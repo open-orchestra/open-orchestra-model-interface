@@ -7,7 +7,7 @@ use OpenOrchestra\ModelInterface\Model\KeywordInterface;
 /**
  * Interface KeywordRepositoryInterface
  */
-interface KeywordRepositoryInterface
+interface KeywordRepositoryInterface extends PaginateRepositoryInterface
 {
     /**
      * @return array

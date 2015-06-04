@@ -7,7 +7,7 @@ use OpenOrchestra\ModelInterface\Model\RoleInterface;
 /**
  * Interface RoleRepositoryInterface
  */
-interface RoleRepositoryInterface
+interface RoleRepositoryInterface extends PaginateRepositoryInterface
 {
     /**
      * Find the role that connect fromStatus to toStatus

@@ -6,7 +6,7 @@ use OpenOrchestra\ModelInterface\Model\RedirectionInterface;
 /**
  * Interface RedirectionRepositoryInterface
  */
-interface RedirectionRepositoryInterface
+interface RedirectionRepositoryInterface extends PaginateRepositoryInterface
 {
     /**
      * @return array

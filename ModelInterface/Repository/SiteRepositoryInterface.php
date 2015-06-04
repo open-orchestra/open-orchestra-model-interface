@@ -25,7 +25,7 @@ interface SiteRepositoryInterface
 
     /**
      * @param boolean     $deleted
-     * @param array|null  $reference
+     * @param array|null  $descriptionEntity
      * @param array|null  $columns
      * @param string|null $search
      * @param array|null  $order
@@ -34,7 +34,7 @@ interface SiteRepositoryInterface
      *
      * @return array
      */
-    public function findByDeletedForPaginateAndSearch($deleted, $reference = null, $columns = null, $search = null, $order = null, $skip = null, $limit = null);
+    public function findByDeletedForPaginateAndSearch($deleted, $descriptionEntity = null, $columns = null, $search = null, $order = null, $skip = null, $limit = null);
 
     /**
      * @param boolean $deleted
@@ -45,13 +45,13 @@ interface SiteRepositoryInterface
 
     /**
      * @param boolean      $deleted
+     * @param array|null   $descriptionEntity
      * @param array|null   $columns
-     * @param array|null   $reference
      * @param array|null   $search
      *
      * @return int
      */
-    public function countByDeletedFilterSearch($deleted, $reference, $columns = null, $search = null);
+    public function countByDeletedFilterSearch($deleted, $descriptionEntity = null, $columns = null, $search = null);
 
     /**
      * @param string $domain
