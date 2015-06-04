@@ -44,10 +44,10 @@ interface SiteRepositoryInterface
     public function countByDeleted($deleted);
 
     /**
-     * @param boolean      $deleted
-     * @param array|null   $descriptionEntity
-     * @param array|null   $columns
-     * @param array|null   $search
+     * @param boolean    $deleted
+     * @param array|null $descriptionEntity
+     * @param array|null $columns
+     * @param array|null $search
      *
      * @return int
      */

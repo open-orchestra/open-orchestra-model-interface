@@ -20,9 +20,9 @@ interface PaginateRepositoryInterface
     public function findForPaginateAndSearch($descriptionEntity = null, $columns = null, $search = null, $order = null, $skip = null, $limit = null);
 
     /**
-     * @param array|null   $columns
-     * @param array|null   $descriptionEntity
-     * @param array|null   $search
+     * @param array|null $columns
+     * @param array|null $descriptionEntity
+     * @param array|null $search
      *
      * @return int
      */
