@@ -91,7 +91,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      *
      * @return int
      */
-    public function countByContentTypeInLastVersionFilterSearch($contentType = null, $descriptionEntity = null, $columns = null, $search = null);
+    public function countByContentTypeInLastVersionWithSearchFilter($contentType = null, $descriptionEntity = null, $columns = null, $search = null);
 
     /**
      * @param string|null $contentType

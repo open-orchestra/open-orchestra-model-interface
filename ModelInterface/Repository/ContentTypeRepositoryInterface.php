@@ -43,7 +43,7 @@ interface ContentTypeRepositoryInterface
      *
      * @return int
      */
-    public function countByDeletedInLastVersionForPaginateAndSearch($descriptionEntity = null, $columns = null, $search = null);
+    public function countByDeletedInLastVersionWithSearchFilter($descriptionEntity = null, $columns = null, $search = null);
 
     /**
      * @return int

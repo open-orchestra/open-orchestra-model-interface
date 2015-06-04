@@ -51,7 +51,7 @@ interface SiteRepositoryInterface
      *
      * @return int
      */
-    public function countByDeletedFilterSearch($deleted, $descriptionEntity = null, $columns = null, $search = null);
+    public function countByDeletedWithSearchFilter($deleted, $descriptionEntity = null, $columns = null, $search = null);
 
     /**
      * @param string $domain
