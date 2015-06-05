@@ -62,11 +62,43 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
     public function findOneByContentIdAndLanguageAndVersion($contentId, $language, $version = null);
 
     /**
+     * @deprecated use findByContentTypeInLastVersionForPaginateAndSearch
+     *
      * @param string $contentType
      *
      * @return array
      */
     public function findByContentTypeInLastVersion($contentType = null);
+
+    /**
+     * @param string|null $contentType
+     * @param array|null  $descriptionEntity
+     * @param array|null  $columns
+     * @param string|null $search
+     * @param array|null  $order
+     * @param int|null    $skip
+     * @param int|null    $limit
+     *
+     * @return array
+     */
+    public function findByContentTypeInLastVersionForPaginateAndSearch($contentType = null, $descriptionEntity = null, $columns = null, $search = null, $order = null, $skip = null, $limit = null);
+
+    /**
+     * @param string|null $contentType
+     * @param array|null  $descriptionEntity
+     * @param array|null  $columns
+     * @param string|null $search
+     *
+     * @return int
+     */
+    public function countByContentTypeInLastVersionWithSearchFilter($contentType = null, $descriptionEntity = null, $columns = null, $search = null);
+
+    /**
+     * @param string|null $contentType
+     *
+     * @return int
+     */
+    public function countByContentTypeInLastVersion($contentType = null);
 
     /**
      * @return array

@@ -7,7 +7,7 @@ use OpenOrchestra\ModelInterface\Model\StatusInterface;
 /**
  * Interface StatusRepositoryInterface
  */
-interface StatusRepositoryInterface
+interface StatusRepositoryInterface extends PaginateRepositoryInterface
 {
     /**
      * @return StatusInterface
