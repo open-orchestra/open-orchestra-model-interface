@@ -19,7 +19,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      *
      * @return boolean
      */
-    public function testUnicityInContext($name);
+    public function testUniquenessInContext($name);
 
     /**
     * @param string $contentId

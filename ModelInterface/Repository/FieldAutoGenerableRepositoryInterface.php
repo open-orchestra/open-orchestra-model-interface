@@ -10,6 +10,6 @@ interface FieldAutoGenerableRepositoryInterface
     /**
      * @param string $name
      */
-    public function testUnicityInContext($name);
+    public function testUniquenessInContext($name);
 
 }
