@@ -31,4 +31,9 @@ interface ReadContentInterface extends KeywordableInterface
      * @return string
      */
     public function getName();
+
+    /**
+     * @param string
+     */
+    public function getSiteId();
 }

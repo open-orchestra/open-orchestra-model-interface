@@ -6,7 +6,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface ContentInterface
  */
-interface ContentInterface extends ReadContentInterface, StatusableInterface, TimestampableInterface, BlameableInterface, VersionableInterface
+interface ContentInterface extends ReadContentInterface, StatusableInterface, TimestampableInterface, BlameableInterface, VersionableInterface, SiteLinkableInterface
 {
     /**
      * @param ContentAttributeInterface $attribute
@@ -72,4 +72,11 @@ interface ContentInterface extends ReadContentInterface, StatusableInterface, Ti
      * @param string $name
      */
     public function setName($name);
+
+    /**
+     * Set siteId
+     *
+     * @param String $siteId
+     */
+    public function setSiteId($siteId);
 }
