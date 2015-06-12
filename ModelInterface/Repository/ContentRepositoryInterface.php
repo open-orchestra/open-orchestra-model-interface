@@ -79,9 +79,25 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @param int|null    $skip
      * @param int|null    $limit
      *
+     * @deprecated, use findByContentTypeInLastVersionForPaginateAndSearchAndSiteId instead
+     *
      * @return array
      */
     public function findByContentTypeInLastVersionForPaginateAndSearch($contentType = null, $descriptionEntity = null, $columns = null, $search = null, $order = null, $skip = null, $limit = null);
+
+    /**
+     * @param string|null $contentType
+     * @param array|null  $descriptionEntity
+     * @param array|null  $columns
+     * @param string|null $search
+     * @param string|null $siteId
+     * @param array|null  $order
+     * @param int|null    $skip
+     * @param int|null    $limit
+     *
+     * @return array
+     */
+    public function findByContentTypeInLastVersionForPaginateAndSearchAndSiteId($contentType = null, $descriptionEntity = null, $columns = null, $search = null, $siteId = null, $order = null, $skip = null, $limit = null);
 
     /**
      * @param string|null $contentType
