@@ -10,21 +10,21 @@ trait SiteLinkable
     /**
      * @ODM\Field(type="boolean")
      */
-    protected $siteLinked = false;
+    protected $linkedToSite = false;
 
     /**
      * @return boolean
      */
-    public function isSiteLinked()
+    public function isLinkedToSite()
     {
-        return $this->siteLinked;
+        return $this->linkedToSite;
     }
 
     /**
-     * @param boolean $siteLinked
+     * @param boolean $linkedToSite
      */
-    public function setSiteLinked($siteLinked)
+    public function setLinkedToSite($linkedToSite)
     {
-        $this->siteLinked = $siteLinked;
+        $this->linkedToSite = $linkedToSite;
     }
 }

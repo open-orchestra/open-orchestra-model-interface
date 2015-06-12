@@ -10,10 +10,10 @@ interface SiteLinkableInterface
     /**
      * @return boolean
      */
-    public function isSiteLinked();
+    public function isLinkedToSite();
 
     /**
-     * @param boolean $siteLinked
+     * @param boolean $linkedToSite
      */
-    public function setSiteLinked($siteLinked);
+    public function setLinkedToSite($linkedToSite);
 }
