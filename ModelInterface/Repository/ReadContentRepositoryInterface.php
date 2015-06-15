@@ -28,4 +28,12 @@ interface ReadContentRepositoryInterface
      * @return array
      */
     public function findByContentTypeAndChoiceTypeAndKeywordsAndLanguage($language, $contentType = '', $choiceType = self::CHOICE_AND, $keywords = null);
+
+    /**
+     * @param string $contentId
+     * @param string $language
+     *
+     * @return ContentInterface
+     */
+    public function findLastPublishedVersionByContentIdAndLanguage($contentId, $language);
 }
