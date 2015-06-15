@@ -130,4 +130,14 @@ Interface FieldTypeInterface extends TranslatedValueContainerInterface
      * @return array
      */
     public function getFormOptions();
+
+    /**
+     * @return boolean
+     */
+    public function isTranslatable();
+
+    /**
+     * @param boolean $translatable
+     */
+    public function setTranslatable($translatable);
 }

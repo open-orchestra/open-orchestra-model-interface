@@ -53,6 +53,13 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
     public function findByContentIdAndLanguage($contentId, $language);
 
     /**
+     * @param string $contentId
+     *
+     * @return array
+     */
+    public function findByContentId($contentId);
+
+    /**
      * @param string      $contentId
      * @param string      $language
      * @param int|null    $version
