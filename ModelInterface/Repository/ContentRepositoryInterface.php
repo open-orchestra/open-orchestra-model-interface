@@ -32,14 +32,6 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @param string $contentId
      * @param string $language
      *
-     * @return ContentInterface
-     */
-    public function findLastPublishedVersionByContentIdAndLanguage($contentId, $language);
-
-    /**
-     * @param string $contentId
-     * @param string $language
-     *
      * @return ContentInterface|null
      */
     public function findOneByContentIdAndLanguage($contentId, $language);
