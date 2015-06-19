@@ -14,7 +14,8 @@
         "doctrine/collections": "*"
     },
     "require-dev": {
-        "scrutinizer/ocular": "1.1.1",
+        "psr/log": "1.0.0",
+        "codeclimate/php-test-reporter": "dev-master",
         "jmikola/geojson": "1.0.1",
         "phpunit/phpunit" : "4.7.2",
         "phake/phake": "2.1.0"
