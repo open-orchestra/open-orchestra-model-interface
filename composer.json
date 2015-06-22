@@ -11,7 +11,8 @@
     "minimum-stability": "dev",
     "require": {
         "symfony/form": "*",
-        "doctrine/collections": "*"
+        "doctrine/collections": "*",
+        "doctrine/annotations": "*"
     },
     "require-dev": {
         "psr/log": "1.0.0",
