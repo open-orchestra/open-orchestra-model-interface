@@ -34,6 +34,18 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @return array
+     */
+    public function provideSource()
+    {
+        $parameters0 = array('sourceField' => 'name');
+
+        return array(
+            array($parameters0, 'getName'),
+        );
+    }
+
+    /**
      * @param array  $parameters
      * @param string $exception
      *
@@ -44,70 +56,6 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
         $document = new Document($parameters);
         $this->setExpectedException($exception);
         $document->getSource($this->node);
-    }
-
-    /**
-     * @param array  $parameters
-     * @param string $expectedResult
-     *
-     * @dataProvider provideGetGenerated
-     */
-    public function testGetGenerated($parameters, $expectedResult)
-    {
-        $document = new Document($parameters);
-        $result = $document->getGenerated($this->node);
-        $this->assertSame($result, $expectedResult);
-    }
-
-    /**
-     * @param array  $parameters
-     * @param string $exception
-     *
-     * @dataProvider provideExceptionGetGenerated
-     */
-    public function testExceptionGetGenerated($parameters, $exception)
-    {
-        $document = new Document($parameters);
-        $this->setExpectedException($exception);
-        $document->getGenerated($this->node);
-    }
-
-    /**
-     * @param array  $parameters
-     * @param string $expectedResult
-     *
-     * @dataProvider provideSetGenerated
-     */
-    public function testSetGenerated($parameters, $expectedResult)
-    {
-        $document = new Document($parameters);
-        $result = $document->setGenerated($this->node);
-        $this->assertSame($result, $expectedResult);
-    }
-
-    /**
-     * @param array  $parameters
-     * @param string $exception
-     *
-     * @dataProvider provideExceptionSetGenerated
-     */
-    public function testExceptionSetGenerated($parameters, $exception)
-    {
-        $document = new Document($parameters);
-        $this->setExpectedException($exception);
-        $document->setGenerated($this->node);
-    }
-
-    /**
-     * @return array
-     */
-    public function provideSource()
-    {
-        $parameters0 = array('sourceField' => 'name');
-
-        return array(
-            array($parameters0, 'getName'),
-        );
     }
 
     /**
@@ -126,6 +74,19 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @param array  $parameters
+     * @param string $expectedResult
+     *
+     * @dataProvider provideGetGenerated
+     */
+    public function testGetGenerated($parameters, $expectedResult)
+    {
+        $document = new Document($parameters);
+        $result = $document->getGenerated($this->node);
+        $this->assertSame($result, $expectedResult);
+    }
+
+    /**
      * @return array
      */
     public function provideGetGenerated()
@@ -135,6 +96,19 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
         return array(
             array($parameters0, 'getNodeId'),
         );
+    }
+
+    /**
+     * @param array  $parameters
+     * @param string $exception
+     *
+     * @dataProvider provideExceptionGetGenerated
+     */
+    public function testExceptionGetGenerated($parameters, $exception)
+    {
+        $document = new Document($parameters);
+        $this->setExpectedException($exception);
+        $document->getGenerated($this->node);
     }
 
     /**
@@ -153,6 +127,19 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @param array  $parameters
+     * @param string $expectedResult
+     *
+     * @dataProvider provideSetGenerated
+     */
+    public function testSetGenerated($parameters, $expectedResult)
+    {
+        $document = new Document($parameters);
+        $result = $document->setGenerated($this->node);
+        $this->assertSame($result, $expectedResult);
+    }
+
+    /**
      * @return array
      */
     public function provideSetGenerated()
@@ -162,6 +149,19 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
         return array(
             array($parameters0, 'setNodeId'),
         );
+    }
+
+    /**
+     * @param array  $parameters
+     * @param string $exception
+     *
+     * @dataProvider provideExceptionSetGenerated
+     */
+    public function testExceptionSetGenerated($parameters, $exception)
+    {
+        $document = new Document($parameters);
+        $this->setExpectedException($exception);
+        $document->setGenerated($this->node);
     }
 
     /**
@@ -176,6 +176,30 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
         return array(
             array($parameters0, 'OpenOrchestra\ModelInterface\Exceptions\PropertyNotFoundException'),
             array($parameters1, 'OpenOrchestra\ModelInterface\Exceptions\MethodNotFoundException'),
+        );
+    }
+
+    /**
+     * @param array $parameters
+     *
+     * @dataProvider provideServiceNameAndTestMethod
+     */
+    public function testGetMethod($parameters)
+    {
+        $document = new Document($parameters);
+
+        $this->assertSame($parameters['serviceName'], $document->getServiceName());
+        $this->assertSame($parameters['testMethod'], $document->getTestMethod());
+    }
+
+    /**
+     * @return array
+     */
+    public function provideServiceNameAndTestMethod()
+    {
+        return array(
+            array(array('serviceName' => 'foo', 'testMethod' => 'bar')),
+            array(array('serviceName' => 'bar', 'testMethod' => 'foo')),
         );
     }
 }
