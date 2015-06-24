@@ -21,28 +21,12 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @param array  $parameters
-     * @param string $expectedResult
-     *
-     * @dataProvider provideSource
+     * Test getSource
      */
-    public function testGetSource($parameters, $expectedResult)
+    public function testGetSource()
     {
-        $document = new Document($parameters);
-        $result = $document->getSource($this->node);
-        $this->assertSame($result, $expectedResult);
-    }
-
-    /**
-     * @return array
-     */
-    public function provideSource()
-    {
-        $parameters0 = array('sourceField' => 'name');
-
-        return array(
-            array($parameters0, 'getName'),
-        );
+        $document = new Document(array('sourceField' => 'name'));
+        $this->assertSame('getName', $document->getSource($this->node));
     }
 
     /**
@@ -74,28 +58,12 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @param array  $parameters
-     * @param string $expectedResult
-     *
-     * @dataProvider provideGetGenerated
+     * Test getGenerated
      */
-    public function testGetGenerated($parameters, $expectedResult)
+    public function testGetGenerated()
     {
-        $document = new Document($parameters);
-        $result = $document->getGenerated($this->node);
-        $this->assertSame($result, $expectedResult);
-    }
-
-    /**
-     * @return array
-     */
-    public function provideGetGenerated()
-    {
-        $parameters0 = array('generatedField' => 'nodeId');
-
-        return array(
-            array($parameters0, 'getNodeId'),
-        );
+        $document = new Document(array('generatedField' => 'nodeId'));
+        $this->assertSame('getNodeId', $document->getGenerated($this->node));
     }
 
     /**
@@ -127,28 +95,12 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @param array  $parameters
-     * @param string $expectedResult
-     *
-     * @dataProvider provideSetGenerated
+     * Test setGenerated
      */
-    public function testSetGenerated($parameters, $expectedResult)
+    public function testSetGenerated()
     {
-        $document = new Document($parameters);
-        $result = $document->setGenerated($this->node);
-        $this->assertSame($result, $expectedResult);
-    }
-
-    /**
-     * @return array
-     */
-    public function provideSetGenerated()
-    {
-        $parameters0 = array('generatedField' => 'nodeId');
-
-        return array(
-            array($parameters0, 'setNodeId'),
-        );
+        $document = new Document(array('generatedField' => 'nodeId'));
+        $this->assertSame('setNodeId', $document->setGenerated($this->node));
     }
 
     /**
