@@ -74,4 +74,13 @@ interface ReadSiteInterface extends MetaableInterface, ReadSitemapableInterface
      * @return int
      */
     public function getMainAliasId();
+
+    /**
+     * Return alias id for given language
+     *
+     * @param string $language
+     *
+     * @return int
+     */
+    public function getAliasIdForLanguage($language);
 }
