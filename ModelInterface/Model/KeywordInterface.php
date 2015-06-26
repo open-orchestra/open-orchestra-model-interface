@@ -20,5 +20,5 @@ interface KeywordInterface
     /**
      * @param string $label
      */
-    public function setLabel($name);
+    public function setLabel($label);
 }

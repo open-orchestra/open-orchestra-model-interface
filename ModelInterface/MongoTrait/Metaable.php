@@ -68,7 +68,7 @@ trait Metaable
     }
 
     /**
-     * @param boolean $index
+     * @param boolean $metaIndex
      */
     public function setMetaIndex($metaIndex)
     {
@@ -84,7 +84,7 @@ trait Metaable
     }
 
     /**
-     * @param boolean $follow
+     * @param boolean $metaFollow
      */
     public function setMetaFollow($metaFollow)
     {

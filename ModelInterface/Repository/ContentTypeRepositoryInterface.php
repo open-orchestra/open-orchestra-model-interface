@@ -12,9 +12,16 @@ use OpenOrchestra\ModelInterface\Repository\Configuration\PaginateFinderConfigur
 interface ContentTypeRepositoryInterface
 {
     /**
+     * @deprecated will be removed in 0.3.0, use findAllDeletedInLastVersion instead
+     *
      * @return array
      */
     public function findAllByDeletedInLastVersion();
+
+    /**
+     * @return array
+     */
+    public function findAllDeletedInLastVersion();
 
     /**
      * @param array|null  $descriptionEntity
