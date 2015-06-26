@@ -12,7 +12,7 @@ use OpenOrchestra\ModelInterface\Repository\Configuration\PaginateFinderConfigur
 interface ContentTypeRepositoryInterface
 {
     /**
-     * @deprecated will be removed in 0.3.0, use findAllDeletedInLastVersion instead
+     * @deprecated will be removed in 0.3.0, use findAllNotDeletedInLastVersion instead
      *
      * @return array
      */
@@ -21,7 +21,7 @@ interface ContentTypeRepositoryInterface
     /**
      * @return array
      */
-    public function findAllDeletedInLastVersion();
+    public function findAllNotDeletedInLastVersion();
 
     /**
      * @param array|null  $descriptionEntity
@@ -31,7 +31,7 @@ interface ContentTypeRepositoryInterface
      * @param int|null    $skip
      * @param int|null    $limit
      *
-     * @deprecated will be removed in 0.3.0, use findAllDeletedInLastVersionForPaginateAndSearch instead
+     * @deprecated will be removed in 0.3.0, use findAllNotDeletedInLastVersionForPaginateAndSearch instead
      *
      * @return array
      */
@@ -42,14 +42,14 @@ interface ContentTypeRepositoryInterface
      *
      * @return array
      */
-    public function findAllDeletedInLastVersionForPaginate(PaginateFinderConfiguration $configuration);
+    public function findAllNotDeletedInLastVersionForPaginate(PaginateFinderConfiguration $configuration);
 
     /**
      * @param array|null  $descriptionEntity
      * @param array|null  $columns
      * @param string|null $search
      *
-     * @deprecated will be removed in 0.3.0, use countDeletedInLastVersionWithSearchFilter instead
+     * @deprecated will be removed in 0.3.0, use countNotDeletedInLastVersionWithSearchFilter instead
      *
      * @return int
      */
@@ -60,7 +60,7 @@ interface ContentTypeRepositoryInterface
      *
      * @return int
      */
-    public function countDeletedInLastVersionWithSearchFilter(FinderConfiguration $configuration);
+    public function countNotDeletedInLastVersionWithSearchFilter(FinderConfiguration $configuration);
 
     /**
      * @return int
