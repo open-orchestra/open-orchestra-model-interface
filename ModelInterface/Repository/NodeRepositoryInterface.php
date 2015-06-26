@@ -105,7 +105,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      *
      * @return array
      */
-    public function findNotDeletedInLastVersionBySiteId($siteId, $type = NodeInterface::TYPE_DEFAULT);
+    public function findDeletedInLastVersionBySiteId($siteId, $type = NodeInterface::TYPE_DEFAULT);
 
     /**
      * @param string $path
@@ -191,4 +191,5 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @return mixed
      */
     public function findOneByNodeIdAndLanguageAndSiteIdAndVersion($nodeId, $language, $siteId, $version = null);
+
 }
