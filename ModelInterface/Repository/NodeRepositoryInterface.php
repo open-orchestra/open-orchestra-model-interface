@@ -9,16 +9,6 @@ use OpenOrchestra\ModelInterface\Model\NodeInterface;
  */
 interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
 {
-    /**
-     * @param string $parentId
-     * @param string $routePattern
-     * @param string $siteId
-     *
-     * @deprecated Used in dynamic routing only
-     *
-     * @return mixed
-     */
-    public function findOneByParendIdAndRoutePatternAndSiteId($parentId, $routePattern, $siteId);
 
     /**
      * @param string $id
@@ -144,5 +134,4 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @return mixed
      */
     public function findOneByNodeIdAndLanguageAndVersionAndSiteId($nodeId, $language, $siteId, $version = null);
-
 }
