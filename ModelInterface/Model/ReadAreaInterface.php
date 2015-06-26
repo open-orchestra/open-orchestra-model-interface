@@ -13,13 +13,4 @@ interface ReadAreaInterface extends AreaContainerInterface, HtmlClassContainerIn
      * @return string $htmlId
      */
     public function getAreaId();
-
-    /**
-     * Get classes
-     *
-     * @deprecated use getHtmlClass instead
-     *
-     * @return array $classes
-     */
-    public function getClasses();
 }

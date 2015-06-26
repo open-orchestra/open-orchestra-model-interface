@@ -44,9 +44,20 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @param string $language
      * @param string $siteId
      *
+     ** @deprecated will be removed in 0.3.0, use findOneByNodeIdAndLanguageAndSiteIdInLastVersion instead
+     *
      * @return mixed
      */
     public function findOneByNodeIdAndLanguageAndSiteIdAndLastVersion($nodeId, $language, $siteId);
+
+    /**
+     * @param string $nodeId
+     * @param string $language
+     * @param string $siteId
+     *
+     * @return mixed
+     */
+    public function findOneByNodeIdAndLanguageAndSiteIdInLastVersion($nodeId, $language, $siteId);
 
     /**
      * @param string $nodeId
@@ -82,9 +93,30 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @param string $siteId
      * @param string $type
      *
+     * @deprecated will be removed in 0.3.0, use findDeletedInLastVersionBySiteId instead
+     *
      * @return array
      */
     public function findLastVersionByDeletedAndSiteId($siteId, $type = NodeInterface::TYPE_DEFAULT);
+
+    /**
+     * @param string $siteId
+     * @param string $type
+     *
+     * @return array
+     */
+    public function findDeletedInLastVersionBySiteId($siteId, $type = NodeInterface::TYPE_DEFAULT);
+
+    /**
+     * @param string $path
+     * @param string $siteId
+     * @param string $language
+     *
+     * @deprecated will be removed in 0.3.0, use findChildrenByPathAndSiteIdAndLanguage instead
+     *
+     * @return mixed
+     */
+    public function findChildsByPathAndSiteIdAndLanguage($path, $siteId, $language);
 
     /**
      * @param string $path
@@ -93,7 +125,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      *
      * @return mixed
      */
-    public function findChildsByPathAndSiteIdAndLanguage($path, $siteId, $language);
+    public function findChildrenByPathAndSiteIdAndLanguage($path, $siteId, $language);
 
     /**
      * @param string $nodeId
@@ -121,9 +153,22 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @param string $nodeId
      * @param string $siteId
      *
+     * @deprecated will be removed in 0.3.0, use findByParentIdAndRoutePatternAndNodeIdAndSiteId instead
+     *
      * @return array
      */
     public function findByParentIdAndRoutePatternAndNotNodeIdAndSiteId($parentId, $routePattern, $nodeId, $siteId);
+
+    /**
+     *
+     * @param string $parentId
+     * @param string $routePattern
+     * @param string $nodeId
+     * @param string $siteId
+     *
+     * @return array
+     */
+    public function findByParentIdAndRoutePatternAndNodeIdAndSiteId($parentId, $routePattern, $nodeId, $siteId);
 
     /**
      * @param string      $nodeId
@@ -131,7 +176,19 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @param string      $siteId
      * @param int|null    $version
      *
+     * @deprecated will be removed in 0.3.0, use findOneByNodeIdAndLanguageAndSiteIdAndVersion instead
+     *
      * @return mixed
      */
     public function findOneByNodeIdAndLanguageAndVersionAndSiteId($nodeId, $language, $siteId, $version = null);
+
+    /**
+     * @param string   $nodeId
+     * @param string   $language
+     * @param string   $siteId
+     * @param int|null $version
+     *
+     * @return mixed
+     */
+    public function findOneByNodeIdAndLanguageAndSiteIdAndVersion($nodeId, $language, $siteId, $version = null);
 }
