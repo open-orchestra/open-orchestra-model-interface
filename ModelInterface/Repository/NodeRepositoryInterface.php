@@ -100,7 +100,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @param string $siteId
      * @param string $type
      *
-     * @deprecated will be removed in 0.3.0, use findNotDeletedInLastVersionBySiteId instead
+     * @deprecated will be removed in 0.3.0, use findDeletedInLastVersionBySiteId instead
      *
      * @return array
      */
