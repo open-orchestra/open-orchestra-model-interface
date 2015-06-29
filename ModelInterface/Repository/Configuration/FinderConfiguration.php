@@ -37,9 +37,9 @@ class FinderConfiguration
     }
 
     /**
-     * @param array $descriptionEntity
+     * @param null|array $descriptionEntity
      */
-    public function setDescriptionEntity(array $descriptionEntity)
+    public function setDescriptionEntity($descriptionEntity)
     {
         $this->descriptionEntity = $descriptionEntity;
     }
@@ -53,9 +53,9 @@ class FinderConfiguration
     }
 
     /**
-     * @param array $columns
+     * @param null|array $columns
      */
-    public function setColumns(array $columns)
+    public function setColumns($columns)
     {
         $this->columns = $columns;
     }
