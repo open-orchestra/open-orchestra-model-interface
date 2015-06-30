@@ -23,6 +23,13 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
     public function findAll();
 
     /**
+     * @param string $entityId
+     *
+     * @return NodeInterface
+     */
+    public function findOneById($entityId);
+
+    /**
      * @param string $nodeId
      *
      * @return NodeInterface
