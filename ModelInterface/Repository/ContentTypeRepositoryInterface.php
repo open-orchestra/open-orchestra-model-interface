@@ -31,7 +31,7 @@ interface ContentTypeRepositoryInterface
      * @param int|null    $skip
      * @param int|null    $limit
      *
-     * @deprecated will be removed in 0.3.0, use findAllNotDeletedInLastVersionForPaginateAndSearch instead
+     * @deprecated will be removed in 0.3.0, use findAllNotDeletedInLastVersionForPaginate instead
      *
      * @return array
      */

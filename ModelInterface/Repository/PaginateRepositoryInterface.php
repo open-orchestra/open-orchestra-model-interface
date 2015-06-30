@@ -36,6 +36,8 @@ interface PaginateRepositoryInterface
      * @param string|null $columns
      * @param string|null $search
      *
+     * @deprecated will be removed in 0.3.0, use countWithFilter instead
+     *
      * @return mixed
      */
     public function countWithSearchFilter($descriptionEntity = null, $columns = null, $search = null);

@@ -20,9 +20,9 @@ class PaginateFinderConfiguration extends FinderConfiguration
     }
 
     /**
-     * @param array $order
+     * @param null|array $order
      */
-    public function setOrder(array $order)
+    public function setOrder($order)
     {
         $this->order = $order;
     }
