@@ -50,20 +50,6 @@ interface AreaInterface extends ReadAreaInterface
     public function getBoDirection();
 
     /**
-     * Set boPercent
-     *
-     * @param float $boPercent
-     */
-    public function setBoPercent($boPercent);
-
-    /**
-     * Get boPercent
-     *
-     * @return float $boPercent
-     */
-    public function getBoPercent();
-
-    /**
      * Set blocks
      *
      * @param array $blocks
