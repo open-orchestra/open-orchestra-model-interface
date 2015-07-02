@@ -7,6 +7,8 @@ use OpenOrchestra\ModelInterface\Model\TranslatedValueInterface;
 
 /**
  * Trait TranslatedValueFilter
+ *
+ * @deprecated will be removed in 0.3.0
  */
 trait TranslatedValueFilter
 {
