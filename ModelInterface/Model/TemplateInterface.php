@@ -61,14 +61,4 @@ interface TemplateInterface extends AreaContainerInterface, BlockContainerInterf
      * @return string
      */
     public function getTemplateId();
-
-    /**
-     * @param string $language
-     */
-    public function setLanguage($language);
-
-    /**
-     * @return string
-     */
-    public function getLanguage();
 }
