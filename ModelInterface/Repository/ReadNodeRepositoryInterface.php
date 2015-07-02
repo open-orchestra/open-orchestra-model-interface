@@ -13,11 +13,11 @@ interface ReadNodeRepositoryInterface
      * @param string $language
      * @param string $siteId
      *
-     * @deprecated will be removed in 0.3.0, use findOnePublishedByNodeIdAndLanguageAndSiteIdInLastVersion instead
+     * @deprecated will be removed in 0.3.0, use findLastOnePublishedByNodeIdAndSiteId instead
      *
      * @return ReadNodeInterface
      */
-    public function findOneByNodeIdAndLanguageWithPublishedAndLastVersionAndSiteId($nodeId, $language, $siteId);
+    public function findOneByNodeIdAndLanguageWithPublishedAndLastVersionAndSite($nodeId, $language, $siteId);
 
     /**
      * @param string $nodeId
@@ -26,11 +26,13 @@ interface ReadNodeRepositoryInterface
      *
      * @return mixed
      */
-    public function findOnePublishedByNodeIdAndLanguageAndSiteIdInLastVersion($nodeId, $language, $siteId);
+    public function findLastOnePublishedByNodeIdAndSite($nodeId, $language, $siteId);
 
     /**
      * @param string $language
      * @param string $siteId
+     *
+     * @deprecated will be removed in 0.3.0, use findLastPublishedByLanguageAndSite instead
      *
      * @return ReadNodeInterface
      */
@@ -39,6 +41,17 @@ interface ReadNodeRepositoryInterface
     /**
      * @param string $language
      * @param string $siteId
+     *
+     * @return ReadNodeInterface
+     */
+    public function findLastPublishedByLanguageAndSite($language, $siteId);
+
+
+    /**
+     * @param string $language
+     * @param string $siteId
+     *
+     * @deprecated will be removed in 0.3.0, use getFooterTreeByLanguageAndSite instead
      *
      * @return array
      */
@@ -50,7 +63,37 @@ interface ReadNodeRepositoryInterface
      *
      * @return array
      */
+    public function getFooterTreeByLanguageAndSite($language, $siteId);
+
+    /**
+     * @param string $language
+     * @param string $siteId
+     *
+     * @deprecated will be removed in 0.3.0, use getMenuTreeByLanguageAndSite instead
+     *
+     * @return array
+     */
     public function getMenuTreeByLanguageAndSiteId($language, $siteId);
+
+    /**
+     * @param string $language
+     * @param string $siteId
+     *
+     * @return array
+     */
+    public function getMenuTreeByLanguageAndSite($language, $siteId);
+
+    /**
+     * @param string $nodeId
+     * @param int    $nbLevel
+     * @param string $language
+     * @param string $siteId
+     *
+     * @deprecated will be removed in 0.3.0, use getSubMenuByNodeNbLevelAndLanguage instead
+     *
+     * @return array
+     */
+    public function getSubMenuByNodeIdAndNbLevelAndLanguageAndSiteId($nodeId, $nbLevel, $language, $siteId);
 
     /**
      * @param string $nodeId
@@ -60,7 +103,7 @@ interface ReadNodeRepositoryInterface
      *
      * @return array
      */
-    public function getSubMenuByNodeIdAndNbLevelAndLanguageAndSiteId($nodeId, $nbLevel, $language, $siteId);
+    public function getSubMenuByNodeIdNbLevelAndLanguage($nodeId, $nbLevel, $language, $siteId);
 
     /**
      * @return ReadNodeInterface

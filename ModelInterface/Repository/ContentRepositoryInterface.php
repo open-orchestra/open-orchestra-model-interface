@@ -58,9 +58,20 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @param string      $language
      * @param int|null    $version
      *
+     * @deprecated will be removed in 0.3.0, use findOneByContentIdLanguageAndVersion instead
+     *
      * @return ContentInterface|null
      */
     public function findOneByContentIdAndLanguageAndVersion($contentId, $language, $version = null);
+
+    /**
+     * @param string      $contentId
+     * @param string      $language
+     * @param int|null    $version
+     *
+     * @return ContentInterface|null
+     */
+    public function findOneByContentIdLanguageAndVersion($contentId, $language, $version = null);
 
     /**
      * @param string|null $contentType
@@ -72,7 +83,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @param int|null    $skip
      * @param int|null    $limit
      *
-     * @deprecated will be removed in 0.3.0, use findByContentTypeAndSiteIdInLastVersionForPaginate instead
+     * @deprecated will be removed in 0.3.0, use findByContentTypeAndSiteInLastVersionForPaginate instead
      *
      * @return array
      */
@@ -110,9 +121,18 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
     /**
      * @param string|null $contentType
      *
+     * @deprecated will be removed in 0.3.0, use countLastByType instead
+     *
      * @return int
      */
     public function countByContentTypeInLastVersion($contentType = null);
+
+    /**
+     * @param string|null $contentType
+     *
+     * @return int
+     */
+    public function countLastByType($contentType = null);
 
     /**
      * @return array

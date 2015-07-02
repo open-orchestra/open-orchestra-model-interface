@@ -14,9 +14,18 @@ interface SiteRepositoryInterface
     /**
      * @param string $siteId
      *
+     * @deprecated will be removed in 0.3.0, use findOneBySite instead
+     *
      * @return ReadSiteInterface
      */
     public function findOneBySiteId($siteId);
+
+    /**
+     * @param string $siteId
+     *
+     * @return ReadSiteInterface
+     */
+    public function findOneBySite($siteId);
 
     /**
      * @param boolean $deleted

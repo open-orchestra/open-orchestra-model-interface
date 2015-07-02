@@ -40,18 +40,30 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @param string $parentId
      * @param string $siteId
      *
-     * @throws \Exception
+     * @deprecated will be removed in 0.3.0, use findByParentIdAndSite instead
      *
      * @return mixed
+     *
+     * @throws \Exception
      */
     public function findByParentIdAndSiteId($parentId, $siteId);
+
+    /**
+     * @param string $parentId
+     * @param string $siteId
+     *
+     * @return mixed
+     *
+     * @throws \Exception
+     */
+    public function findByParentIdAndSite($parentId, $siteId);
 
     /**
      * @param string $nodeId
      * @param string $language
      * @param string $siteId
      *
-     ** @deprecated will be removed in 0.3.0, use findOneByNodeIdAndLanguageAndSiteIdInLastVersion instead
+     * @deprecated will be removed in 0.3.0, use findLastOneByNodeLanguageAndSite instead
      *
      * @return mixed
      */
@@ -64,16 +76,18 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      *
      * @return mixed
      */
-    public function findOneByNodeIdAndLanguageAndSiteIdInLastVersion($nodeId, $language, $siteId);
+    public function findLastOneByNodeIdLanguageAndSite($nodeId, $language, $siteId);
 
     /**
      * @param string $nodeId
      * @param string $language
      * @param string $siteId
      *
-     * @throws \Exception
+     * @deprecated will be removed in 0.3.0, use findByNodeIdLanguageAndSite instead
      *
      * @return mixed
+     *
+     * @throws \Exception
      */
     public function findByNodeIdAndLanguageAndSiteId($nodeId, $language, $siteId);
 
@@ -86,11 +100,37 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      *
      * @return mixed
      */
+    public function findByNodeIdLanguageAndSite($nodeId, $language, $siteId);
+
+    /**
+     * @param string $nodeId
+     * @param string $language
+     * @param string $siteId
+     *
+     * @deprecated will be removed in 0.3.0, use findPublishedByNodeIdLanguageAndSite instead
+     *
+     * @return mixed
+     *
+     * @throws \Exception
+     */
     public function findByNodeIdAndLanguageAndSiteIdAndPublishedOrderedByVersion($nodeId, $language, $siteId);
+
+    /**
+     * @param string $nodeId
+     * @param string $language
+     * @param string $siteId
+     *
+     * @return mixed
+     *
+     * @throws \Exception
+     */
+    public function findPublishedByNodeIdLanguageAndSite($nodeId, $language, $siteId);
 
     /**
      * @param string $siteId
      * @param string $type
+     *
+     * @deprecated will be removed in 0.3.0, use findLastBySite instead
      *
      * @return array
      */
@@ -100,7 +140,15 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @param string $siteId
      * @param string $type
      *
-     * @deprecated will be removed in 0.3.0, use findDeletedInLastVersionBySiteId instead
+     * @return array
+     */
+    public function findLastBySite($siteId, $type = NodeInterface::TYPE_DEFAULT);
+
+    /**
+     * @param string $siteId
+     * @param string $type
+     *
+     * @deprecated will be removed in 0.3.0, use findLastDeletedBySite instead
      *
      * @return array
      */
@@ -112,14 +160,14 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      *
      * @return array
      */
-    public function findDeletedInLastVersionBySiteId($siteId, $type = NodeInterface::TYPE_DEFAULT);
+    public function findLastDeletedBySite($siteId, $type = NodeInterface::TYPE_DEFAULT);
 
     /**
      * @param string $path
      * @param string $siteId
      * @param string $language
      *
-     * @deprecated will be removed in 0.3.0, use findChildrenByPathAndSiteIdAndLanguage instead
+     * @deprecated will be removed in 0.3.0, use findChildrenByPathSiteAndLanguage instead
      *
      * @return mixed
      */
@@ -132,7 +180,19 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      *
      * @return mixed
      */
-    public function findChildrenByPathAndSiteIdAndLanguage($path, $siteId, $language);
+    public function findChildrenByPathSiteAndLanguage($path, $siteId, $language);
+
+    /**
+     * @param string $nodeId
+     * @param string $siteId
+     *
+     * @deprecated will be removed in 0.3.0, use findByNodeIdAndSite instead
+     *
+     * @return mixed
+     *
+     * @throws \Exception
+     */
+    public function findByNodeIdAndSiteId($nodeId, $siteId);
 
     /**
      * @param string $nodeId
@@ -142,7 +202,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      *
      * @return mixed
      */
-    public function findByNodeIdAndSiteId($nodeId, $siteId);
+    public function findByNodeIdAndSite($nodeId, $siteId);
 
     /**
      * @param string $type
@@ -160,7 +220,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @param string $nodeId
      * @param string $siteId
      *
-     * @deprecated will be removed in 0.3.0, use findByParentIdAndRoutePatternAndNodeIdAndSiteId instead
+     * @deprecated will be removed in 0.3.0, use findByParentIdRouteNodeIdAndSite instead
      *
      * @return array
      */
@@ -175,7 +235,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      *
      * @return array
      */
-    public function findByParentIdAndRoutePatternAndNodeIdAndSiteId($parentId, $routePattern, $nodeId, $siteId);
+    public function findByParentIdRouteNodeIdAndSite($parentId, $routePattern, $nodeId, $siteId);
 
     /**
      * @param string      $nodeId
@@ -183,7 +243,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @param string      $siteId
      * @param int|null    $version
      *
-     * @deprecated will be removed in 0.3.0, use findOneByNodeIdAndLanguageAndSiteIdAndVersion instead
+     * @deprecated will be removed in 0.3.0, use findOneByNodeIdLanguageSiteAndVersion instead
      *
      * @return mixed
      */
@@ -197,6 +257,6 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      *
      * @return mixed
      */
-    public function findOneByNodeIdAndLanguageAndSiteIdAndVersion($nodeId, $language, $siteId, $version = null);
+    public function findOneByNodeIdLanguageSiteAndVersion($nodeId, $language, $siteId, $version = null);
 
 }

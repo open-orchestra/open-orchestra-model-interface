@@ -12,16 +12,20 @@ use OpenOrchestra\ModelInterface\Repository\Configuration\PaginateFinderConfigur
 interface ContentTypeRepositoryInterface
 {
     /**
-     * @deprecated will be removed in 0.3.0, use findAllNotDeletedInLastVersion instead
+     * @param string $language
+     *
+     * @deprecated will be removed in 0.3.0, use findAllLastActive instead
      *
      * @return array
      */
-    public function findAllByDeletedInLastVersion();
+    public function findAllByDeletedInLastVersion($language = null);
 
     /**
+     * @param string $language
+     *
      * @return array
      */
-    public function findAllNotDeletedInLastVersion();
+    public function findAllLastActive($language = null);
 
     /**
      * @param array|null  $descriptionEntity
@@ -63,9 +67,16 @@ interface ContentTypeRepositoryInterface
     public function countNotDeletedInLastVersionWithSearchFilter(FinderConfiguration $configuration);
 
     /**
+     * @deprecated will be removed in 0.3.0, use countLastByType instead
+     *
      * @return int
      */
     public function countByContentTypeInLastVersion();
+
+    /**
+     * @return int
+     */
+    public function countLastContent();
 
     /**
      * @return array
@@ -75,9 +86,18 @@ interface ContentTypeRepositoryInterface
     /**
      * @param string   $contentType
      *
+     * @deprecated will be removed in 0.3.0, use findLastOneByType instead
+     *
      * @return ContentTypeInterface
      */
     public function findOneByContentTypeIdInLastVersion($contentType);
+
+    /**
+     * @param string   $contentType
+     *
+     * @return ContentTypeInterface
+     */
+    public function findLastOneByTypeId($contentType);
 
     /**
      * @param string $id
