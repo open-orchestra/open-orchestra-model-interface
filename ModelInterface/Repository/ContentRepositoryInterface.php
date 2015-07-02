@@ -72,7 +72,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @param int|null    $skip
      * @param int|null    $limit
      *
-     * @deprecated will be removed in 0.3.0, use findByContentTypeAndSiteIdInLastVersionForPaginate instead
+     * @deprecated will be removed in 0.3.0, use findPaginateLastByTypeAndSite instead
      *
      * @return array
      */
@@ -85,7 +85,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      *
      * @return array
      */
-    public function findByContentTypeAndSiteIdInLastVersionForPaginate($contentType = null, PaginateFinderConfiguration $configuration = null, $siteId = null);
+    public function findPaginateLastByTypeAndSite($contentType = null, PaginateFinderConfiguration $configuration = null, $siteId = null);
 
     /**
      * @param string|null $contentType
@@ -93,7 +93,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @param array|null  $columns
      * @param string|null $search
      *
-     * @deprecated will be removed in 0.3.0, use countByContentTypeInLastVersionWithFilter instead
+     * @deprecated will be removed in 0.3.0, use countLastByTypeWithFilter instead
      *
      * @return int
      */
@@ -105,7 +105,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      *
      * @return array
      */
-    public function countByContentTypeInLastVersionWithFilter($contentType = null, FinderConfiguration $configuration = null);
+    public function countLastByTypeWithFilter($contentType = null, FinderConfiguration $configuration = null);
 
     /**
      * @param string|null $contentType

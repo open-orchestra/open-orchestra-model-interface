@@ -2,6 +2,8 @@
 
 namespace OpenOrchestra\ModelInterface\Repository\Configuration;
 
+use Symfony\Component\HttpFoundation\Request;
+
 /**
  * Class PaginateFinderConfiguration
  */
@@ -10,6 +12,29 @@ class PaginateFinderConfiguration extends FinderConfiguration
     protected $order = null;
     protected $skip = null;
     protected $limit = null;
+
+    /**
+     * @param Request $request
+     *
+     * @return PaginateFinderConfiguration
+     */
+    public static function generateFromRequest(Request $request)
+    {
+        $finderConfig = new PaginateFinderConfiguration();
+        $columns = $request->get('columns');
+        if(PaginateFinderConfiguration::isArrayOrNull($columns)){
+            $finderConfig->setColumns($columns);
+        }
+        $finderConfig->setSearch($request->get('search'));
+        $finderConfig->setLimit($request->get('limit'));
+        $order = $request->get('order');
+        if(PaginateFinderConfiguration::isArrayOrNull($order)){
+            $finderConfig->setOrder($order);
+        }
+        $finderConfig->setSkip($request->get('skip'));
+
+        return $finderConfig;
+    }
 
     /**
      * @return array order
@@ -40,7 +65,7 @@ class PaginateFinderConfiguration extends FinderConfiguration
      */
     public function setSkip($skip)
     {
-        $this->skip = $skip;
+        $this->skip = $this->getIntOrNull($skip);
     }
 
     /**
@@ -56,18 +81,10 @@ class PaginateFinderConfiguration extends FinderConfiguration
      */
     public function setLimit($limit)
     {
-        $this->limit = $limit;
+        $this->limit = $this->getIntOrNull($limit);
     }
 
-    /**
-     * @return FinderConfiguration
-     */
-    public function getFinderConfiguration()
-    {
-        return FinderConfiguration::generateFinderConfiguration(
-            $this->getDescriptionEntity(),
-            $this->getColumns(),
-            $this->getSearch()
-        );
+    protected function getIntOrNull($value) {
+        return $value === NULL ? NULL : (int) $value;
     }
 }

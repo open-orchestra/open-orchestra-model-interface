@@ -2,6 +2,8 @@
 
 namespace OpenOrchestra\ModelInterface\Repository\Configuration;
 
+use Symfony\Component\HttpFoundation\Request;
+
 /**
  * Class FinderConfiguration
  */
@@ -12,20 +14,29 @@ class FinderConfiguration
     protected $search = null;
 
     /**
-     * @param string|null $descriptionEntity
-     * @param array|null  $columns
-     * @param string|null $search
+     * @param Request $request
      *
      * @return FinderConfiguration
      */
-    public static function generateFinderConfiguration($descriptionEntity, array $columns = null, $search = null)
+    public static function generateFromRequest(Request $request)
     {
         $finderConfig = new FinderConfiguration();
-        $finderConfig->setColumns($columns);
-        $finderConfig->setDescriptionEntity($descriptionEntity);
-        $finderConfig->setSearch($search);
+        $columns = $request->get('columns');
+        if(FinderConfiguration::isArrayOrNull($columns))
+            $finderConfig->setColumns($columns);
+        $finderConfig->setSearch($request->get('search'));
 
         return $finderConfig;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return boolean
+     */
+    public static function isArrayOrNull($value)
+    {
+        return  is_array($value) || $value === NULL;
     }
 
     /**
@@ -75,5 +86,4 @@ class FinderConfiguration
     {
         $this->search = $search;
     }
-
 }

@@ -42,14 +42,14 @@ interface ContentTypeRepositoryInterface
      *
      * @return array
      */
-    public function findAllNotDeletedInLastVersionForPaginate(PaginateFinderConfiguration $configuration);
+    public function findAllLastActiveForPaginate(PaginateFinderConfiguration $configuration);
 
     /**
      * @param array|null  $descriptionEntity
      * @param array|null  $columns
      * @param string|null $search
      *
-     * @deprecated will be removed in 0.3.0, use countNotDeletedInLastVersionWithSearchFilter instead
+     * @deprecated will be removed in 0.3.0, use countLastActiveWithFilter instead
      *
      * @return int
      */
@@ -60,7 +60,7 @@ interface ContentTypeRepositoryInterface
      *
      * @return int
      */
-    public function countNotDeletedInLastVersionWithSearchFilter(FinderConfiguration $configuration);
+    public function countLastActiveWithFilter(FinderConfiguration $configuration);
 
     /**
      * @return int

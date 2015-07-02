@@ -34,7 +34,7 @@ interface SiteRepositoryInterface
      * @param int|null    $skip
      * @param int|null    $limit
      *
-     * @deprecated will be removed in 0.3.0, use findByDeletedForPaginate instead
+     * @deprecated will be removed in 0.3.0, use findPaginateByDeleted instead
      *
      * @return array
      */
@@ -46,7 +46,7 @@ interface SiteRepositoryInterface
      *
      * @return array
      */
-    public function findByDeletedForPaginate($deleted, PaginateFinderConfiguration $configuration);
+    public function findPaginateByDeleted($deleted, PaginateFinderConfiguration $configuration);
 
     /**
      * @param boolean $deleted
@@ -61,7 +61,7 @@ interface SiteRepositoryInterface
      * @param array|null $columns
      * @param array|null $search
      *
-     * @deprecated will be removed in 0.3.0, use countWithSearchFilterByDeleted instead
+     * @deprecated will be removed in 0.3.0, use countByDeletedWithFilter instead
      *
      * @return int
      */
@@ -73,7 +73,7 @@ interface SiteRepositoryInterface
      *
      * @return int
      */
-    public function countWithSearchFilterByDeleted($deleted, FinderConfiguration $configuration);
+    public function countByDeletedWithFilter($deleted, FinderConfiguration $configuration);
 
     /**
      * @param string $domain
