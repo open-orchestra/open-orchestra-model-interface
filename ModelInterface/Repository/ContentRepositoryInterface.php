@@ -58,7 +58,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @param string      $language
      * @param int|null    $version
      *
-     * @deprecated will be removed in 0.3.0, use findOneByContentIdLanguageAndVersion instead
+     * @deprecated will be removed in 0.3.0, use findOneByContentIdAndVersion instead
      *
      * @return ContentInterface|null
      */
@@ -71,7 +71,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      *
      * @return ContentInterface|null
      */
-    public function findOneByContentIdLanguageAndVersion($contentId, $language, $version = null);
+    public function findOneByContentIdAndVersion($contentId, $language, $version = null);
 
     /**
      * @param string|null $contentType

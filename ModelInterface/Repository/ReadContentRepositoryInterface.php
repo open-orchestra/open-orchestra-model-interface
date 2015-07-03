@@ -25,7 +25,7 @@ interface ReadContentRepositoryInterface
      * @param string $choiceType
      * @param string $keywords
      *
-     * @deprecated will be removed in 0.3.0, use findByLanguageTypeChoiceAndKeywords instead
+     * @deprecated will be removed in 0.3.0, use findByTypeAndChoiceAndKeywords instead
      *
      * @return array
      */
@@ -39,7 +39,7 @@ interface ReadContentRepositoryInterface
      *
      * @return array
      */
-    public function findByLanguageTypeChoiceAndKeywords($language, $contentType = '', $choiceType = self::CHOICE_AND, $keywords = null);
+    public function findByTypeAndChoiceAndKeywords($language, $contentType = '', $choiceType = self::CHOICE_AND, $keywords = null);
 
     /**
      * @param string $contentId

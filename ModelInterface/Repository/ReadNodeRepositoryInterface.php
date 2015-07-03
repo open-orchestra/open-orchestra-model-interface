@@ -13,7 +13,7 @@ interface ReadNodeRepositoryInterface
      * @param string $language
      * @param string $siteId
      *
-     * @deprecated will be removed in 0.3.0, use findLastOnePublishedByNodeIdAndSiteId instead
+     * @deprecated will be removed in 0.3.0, use findLastOnePublishedByNodeIdAndSite instead
      *
      * @return ReadNodeInterface
      */
@@ -89,7 +89,7 @@ interface ReadNodeRepositoryInterface
      * @param string $language
      * @param string $siteId
      *
-     * @deprecated will be removed in 0.3.0, use getSubMenuByNodeNbLevelAndLanguage instead
+     * @deprecated will be removed in 0.3.0, use getSubMenuByNodeIdAndNbLevel instead
      *
      * @return array
      */
@@ -103,7 +103,7 @@ interface ReadNodeRepositoryInterface
      *
      * @return array
      */
-    public function getSubMenuByNodeIdNbLevelAndLanguage($nodeId, $nbLevel, $language, $siteId);
+    public function getSubMenuByNodeIdAndNbLevel($nodeId, $nbLevel, $language, $siteId);
 
     /**
      * @return ReadNodeInterface
