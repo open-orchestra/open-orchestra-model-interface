@@ -3,8 +3,8 @@
 namespace OpenOrchestra\ModelInterface\Repository;
 
 use OpenOrchestra\ModelInterface\Model\ContentTypeInterface;
-use OpenOrchestra\ModelInterface\Repository\Configuration\FinderConfiguration;
-use OpenOrchestra\ModelInterface\Repository\Configuration\PaginateFinderConfiguration;
+use OpenOrchestra\Pagination\Configuration\FinderConfiguration;
+use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 
 /**
  * Interface ContentTypeRepositoryInterface

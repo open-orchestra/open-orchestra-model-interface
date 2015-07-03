@@ -12,7 +12,8 @@
     "require": {
         "symfony/form": "*",
         "doctrine/collections": "*",
-        "doctrine/annotations": "*"
+        "doctrine/annotations": "*",
+        "open-orchestra/open-orchestra-libs": "*"
     },
     "require-dev": {
         "psr/log": "1.0.0",
