@@ -63,22 +63,6 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
     public function findOneByContentIdAndLanguageAndVersion($contentId, $language, $version = null);
 
     /**
-     * @param string|null $contentType
-     * @param array|null  $descriptionEntity
-     * @param array|null  $columns
-     * @param string|null $search
-     * @param string|null $siteId
-     * @param array|null  $order
-     * @param int|null    $skip
-     * @param int|null    $limit
-     *
-     * @deprecated will be removed in 0.3.0, use findByContentTypeAndSiteIdInLastVersionForPaginate instead
-     *
-     * @return array
-     */
-    public function findByContentTypeInLastVersionForPaginateAndSearchAndSiteId($contentType = null, $descriptionEntity = null, $columns = null, $search = null, $siteId = null, $order = null, $skip = null, $limit = null);
-
-    /**
      * @param string|null                 $contentType
      * @param PaginateFinderConfiguration $configuration
      * @param string|null                 $siteId
@@ -86,18 +70,6 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @return array
      */
     public function findByContentTypeAndSiteIdInLastVersionForPaginate($contentType = null, PaginateFinderConfiguration $configuration = null, $siteId = null);
-
-    /**
-     * @param string|null $contentType
-     * @param array|null  $descriptionEntity
-     * @param array|null  $columns
-     * @param string|null $search
-     *
-     * @deprecated will be removed in 0.3.0, use countByContentTypeInLastVersionWithFilter instead
-     *
-     * @return int
-     */
-    public function countByContentTypeInLastVersionWithSearchFilter($contentType = null, $descriptionEntity = null, $columns = null, $search = null);
 
     /**
      * @param string|null         $contentType
