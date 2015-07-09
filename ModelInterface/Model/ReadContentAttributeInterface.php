@@ -16,4 +16,9 @@ interface ReadContentAttributeInterface
      * @return string
      */
     public function getValue();
+
+    /**
+     * @return string
+     */
+    public function  getStringValue();
 }
