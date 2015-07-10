@@ -70,4 +70,25 @@ interface ContentTypeInterface extends FieldTypeContainerInterface, TranslatedVa
      * @return ArrayCollection
      */
     public function getNames();
+
+    /**
+     * @return array
+     */
+    public function getDefaultListable();
+
+    /**
+     * @param string  $name
+     * @param boolean $value
+     */
+    public function addDefaultListable($name, $value);
+
+    /**
+     * @param string $name
+     */
+    public function removeDefaultListable($name);
+
+    /**
+     * @param array $defaultListable
+     */
+    public function setDefaultListable(array $defaultListable);
 }
