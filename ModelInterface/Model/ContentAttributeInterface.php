@@ -13,7 +13,22 @@ interface ContentAttributeInterface extends ReadContentAttributeInterface
     public function setName($name);
 
     /**
-     * @param string $value
+     * @param mixed $value
      */
     public function setValue($value);
+
+    /**
+     * @param string $stringValue
+     */
+    public function setStringValue($stringValue);
+
+    /**
+     * @param string $type
+     */
+    public function setType($type);
+
+    /**
+     * @return string
+     */
+    public function getType();
 }
