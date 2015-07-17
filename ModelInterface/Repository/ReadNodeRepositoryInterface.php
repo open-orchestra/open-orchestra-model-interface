@@ -66,4 +66,12 @@ interface ReadNodeRepositoryInterface
      * @return ReadNodeInterface
      */
     public function findLastPublished();
+
+    /**
+     * @param string $nodeType
+     * @param string $siteId
+     * 
+     * @return array
+     */
+    public function findAllNodesOfTypeInLastPublishedVersionForSite($nodeType, $siteId);
 }
