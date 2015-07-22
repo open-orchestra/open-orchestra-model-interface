@@ -7,6 +7,9 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInterface, ReadSchemeableInterface, CacheableInterface, AreaContainerInterface
 {
+    const ERROR_404_NODE_ID = 'errorPage404';
+    const ERROR_503_NODE_ID = 'errorPage503';
+
     /**
      * Get id
      *
