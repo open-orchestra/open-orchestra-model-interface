@@ -22,5 +22,5 @@ interface NodeManagerInterface
      *
      * @return NodeInterface
      */
-    public function duplicateNode($nodeId, $siteId, $language);
+    public function duplicateNode($nodeId, $siteId, $language, $status);
 }
