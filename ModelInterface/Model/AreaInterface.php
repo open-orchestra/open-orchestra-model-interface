@@ -50,6 +50,62 @@ interface AreaInterface extends ReadAreaInterface
     public function getBoDirection();
 
     /**
+     * Set x
+     *
+     * @param int $x
+     */
+    public function setX($x);
+
+    /**
+     * Get x
+     *
+     * @return int $x
+     */
+    public function getX();
+
+    /**
+     * Set y
+     *
+     * @param int $y
+     */
+    public function setY($y);
+
+    /**
+     * Get y
+     *
+     * @return int $y
+     */
+    public function getY();
+
+    /**
+     * Set width
+     *
+     * @param int $width
+     */
+    public function setWidth($width);
+
+    /**
+     * Get width
+     *
+     * @return int $width
+     */
+    public function getWidth();
+
+    /**
+     * Set height
+     *
+     * @param int $height
+     */
+    public function setHeight($height);
+
+    /**
+     * Get height
+     *
+     * @return int $height
+     */
+    public function getHeight();
+
+    /**
      * Set blocks
      *
      * @param array $blocks
