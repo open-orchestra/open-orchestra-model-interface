@@ -143,13 +143,6 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
     public function setBlocks(Collection $blocks);
 
     /**
-     * Set areas
-     *
-     * @param Collection $areas
-     */
-    public function setAreas(Collection $areas);
-
-    /**
      * @param boolean $inFooter
      */
     public function setInFooter($inFooter);

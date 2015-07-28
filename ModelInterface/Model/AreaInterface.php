@@ -50,6 +50,62 @@ interface AreaInterface extends ReadAreaInterface
     public function getBoDirection();
 
     /**
+     * Set x
+     *
+     * @param int $x
+     */
+    public function setGridX($gridX);
+
+    /**
+     * Get gridX
+     *
+     * @return int $gridX
+     */
+    public function getGridX();
+
+    /**
+     * Set gridY
+     *
+     * @param int $gridY
+     */
+    public function setGridY($gridY);
+
+    /**
+     * Get gridY
+     *
+     * @return int $gridY
+     */
+    public function getGridY();
+
+    /**
+     * Set gridWidth
+     *
+     * @param int $gridWidth
+     */
+    public function setGridWidth($gridWidth);
+
+    /**
+     * Get gridWidth
+     *
+     * @return int $gridWidth
+     */
+    public function getGridWidth();
+
+    /**
+     * Set gridHeight
+     *
+     * @param int $gridHeight
+     */
+    public function setGridHeight($gridHeight);
+
+    /**
+     * Get gridHeight
+     *
+     * @return int $gridHeight
+     */
+    public function getGridHeight();
+
+    /**
      * Set blocks
      *
      * @param array $blocks
