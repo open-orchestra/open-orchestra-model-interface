@@ -54,56 +54,56 @@ interface AreaInterface extends ReadAreaInterface
      *
      * @param int $x
      */
-    public function setX($x);
+    public function setXInGrid($xInGrid);
 
     /**
-     * Get x
+     * Get xInGrid
      *
-     * @return int $x
+     * @return int $xInGrid
      */
-    public function getX();
+    public function getXInGrid();
 
     /**
-     * Set y
+     * Set yInGrid
      *
-     * @param int $y
+     * @param int $yInGrid
      */
-    public function setY($y);
+    public function setYInGrid($yInGrid);
 
     /**
-     * Get y
+     * Get yInGrid
      *
-     * @return int $y
+     * @return int $yInGrid
      */
-    public function getY();
+    public function getYInGrid();
 
     /**
-     * Set width
+     * Set widthInGrid
      *
-     * @param int $width
+     * @param int $widthInGrid
      */
-    public function setWidth($width);
+    public function setWidthInGrid($widthInGrid);
 
     /**
-     * Get width
+     * Get widthInGrid
      *
-     * @return int $width
+     * @return int $widthInGrid
      */
-    public function getWidth();
+    public function getWidthInGrid();
 
     /**
-     * Set height
+     * Set heightInGrid
      *
-     * @param int $height
+     * @param int $heightInGrid
      */
-    public function setHeight($height);
+    public function setHeightInGrid($heightInGrid);
 
     /**
-     * Get height
+     * Get heightInGrid
      *
-     * @return int $height
+     * @return int $heightInGrid
      */
-    public function getHeight();
+    public function getHeightInGrid();
 
     /**
      * Set blocks
