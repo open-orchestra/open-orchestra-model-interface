@@ -54,56 +54,56 @@ interface AreaInterface extends ReadAreaInterface
      *
      * @param int $x
      */
-    public function setXInGrid($xInGrid);
+    public function setGridX($gridX);
 
     /**
-     * Get xInGrid
+     * Get gridX
      *
-     * @return int $xInGrid
+     * @return int $gridX
      */
-    public function getXInGrid();
+    public function getGridX();
 
     /**
-     * Set yInGrid
+     * Set gridY
      *
-     * @param int $yInGrid
+     * @param int $gridY
      */
-    public function setYInGrid($yInGrid);
+    public function setGridY($gridY);
 
     /**
-     * Get yInGrid
+     * Get gridY
      *
-     * @return int $yInGrid
+     * @return int $gridY
      */
-    public function getYInGrid();
+    public function getGridY();
 
     /**
-     * Set widthInGrid
+     * Set gridWidth
      *
-     * @param int $widthInGrid
+     * @param int $gridWidth
      */
-    public function setWidthInGrid($widthInGrid);
+    public function setGridWidth($gridWidth);
 
     /**
-     * Get widthInGrid
+     * Get gridWidth
      *
-     * @return int $widthInGrid
+     * @return int $gridWidth
      */
-    public function getWidthInGrid();
+    public function getGridWidth();
 
     /**
-     * Set heightInGrid
+     * Set gridHeight
      *
-     * @param int $heightInGrid
+     * @param int $gridHeight
      */
-    public function setHeightInGrid($heightInGrid);
+    public function setGridHeight($gridHeight);
 
     /**
-     * Get heightInGrid
+     * Get gridHeight
      *
-     * @return int $heightInGrid
+     * @return int $gridHeight
      */
-    public function getHeightInGrid();
+    public function getGridHeight();
 
     /**
      * Set blocks
