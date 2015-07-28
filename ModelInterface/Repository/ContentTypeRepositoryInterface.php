@@ -12,30 +12,9 @@ use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 interface ContentTypeRepositoryInterface
 {
     /**
-     * @deprecated will be removed in 0.3.0, use findAllNotDeletedInLastVersion instead
-     *
-     * @return array
-     */
-    public function findAllByDeletedInLastVersion();
-
-    /**
      * @return array
      */
     public function findAllNotDeletedInLastVersion();
-
-    /**
-     * @param array|null  $descriptionEntity
-     * @param array|null  $columns
-     * @param string|null $search
-     * @param array|null  $order
-     * @param int|null    $skip
-     * @param int|null    $limit
-     *
-     * @deprecated will be removed in 0.3.0, use findAllNotDeletedInLastVersionForPaginate instead
-     *
-     * @return array
-     */
-    public function findAllByDeletedInLastVersionForPaginateAndSearch($descriptionEntity = null, $columns = null, $search = null, $order = null, $skip = null, $limit = null);
 
     /**
      * @param PaginateFinderConfiguration $configuration

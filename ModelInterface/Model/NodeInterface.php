@@ -149,13 +149,6 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
 
     /**
      * @return boolean
-     *
-     * @deprecated use isInFooter
-     */
-    public function getInFooter();
-
-    /**
-     * @return boolean
      */
     public function isInFooter();
 
@@ -163,13 +156,6 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
      * @param boolean $inMenu
      */
     public function setInMenu($inMenu);
-
-    /**
-     * @return boolean
-     *
-     * @deprecated use isInMenu
-     */
-    public function getInMenu();
 
     /**
      * @return boolean
