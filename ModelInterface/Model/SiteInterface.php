@@ -43,15 +43,6 @@ interface SiteInterface extends ReadSiteInterface, SitemapableInterface
      * Get deleted
      *
      * @return boolean $deleted
-     *
-     * @deprecated use isDeleted instead, will be removed in 0.2.8
-     */
-    public function getDeleted();
-
-    /**
-     * Get deleted
-     *
-     * @return boolean $deleted
      */
     public function isDeleted();
 

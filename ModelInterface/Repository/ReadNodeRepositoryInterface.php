@@ -13,17 +13,6 @@ interface ReadNodeRepositoryInterface
      * @param string $language
      * @param string $siteId
      *
-     * @deprecated will be removed in 0.3.0, use findOnePublishedByNodeIdAndLanguageAndSiteIdInLastVersion instead
-     *
-     * @return ReadNodeInterface
-     */
-    public function findOneByNodeIdAndLanguageWithPublishedAndLastVersionAndSiteId($nodeId, $language, $siteId);
-
-    /**
-     * @param string $nodeId
-     * @param string $language
-     * @param string $siteId
-     *
      * @return mixed
      */
     public function findOnePublishedByNodeIdAndLanguageAndSiteIdInLastVersion($nodeId, $language, $siteId);

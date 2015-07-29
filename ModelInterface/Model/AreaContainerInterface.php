@@ -35,7 +35,7 @@ interface AreaContainerInterface
     /**
      * Get subAreas
      *
-     * @return Collection $subAreas
+     * @param Collection $subAreas
      */
     public function setAreas(Collection $subAreas);
 
