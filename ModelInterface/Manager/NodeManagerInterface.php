@@ -1,6 +1,8 @@
 <?php
+
 namespace OpenOrchestra\ModelInterface\Manager;
 
+use OpenOrchestra\ModelInterface\Model\NodeInterface;
 
 /**
  * Class NodeManagerInterface
@@ -16,11 +18,9 @@ interface NodeManagerInterface
     public function createTransverseNode($language, $siteId);
 
     /**
-     * @param string $nodeId
-     * @param string $siteId
-     * @param string $language
+     * @param NodeInterface   $node
      *
      * @return NodeInterface
      */
-    public function duplicateNode($nodeId, $siteId, $language, $status);
+    public function saveDuplicatedNode(NodeInterface $node);
 }
