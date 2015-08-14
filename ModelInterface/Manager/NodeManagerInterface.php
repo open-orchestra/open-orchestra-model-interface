@@ -22,5 +22,5 @@ interface NodeManagerInterface
      *
      * @return NodeInterface
      */
-    public function saveDuplicatedNode(NodeInterface $node);
+    public function saveDuplicated(NodeInterface $node);
 }
