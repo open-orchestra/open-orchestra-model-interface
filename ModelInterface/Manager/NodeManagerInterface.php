@@ -10,17 +10,12 @@ use OpenOrchestra\ModelInterface\Model\NodeInterface;
 interface NodeManagerInterface
 {
     /**
+     * Create transverse node
+     *
      * @param string $language
      * @param string $siteId
      *
      * @return NodeInterface
      */
     public function createTransverseNode($language, $siteId);
-
-    /**
-     * @param NodeInterface   $node
-     *
-     * @return NodeInterface
-     */
-    public function saveDuplicated(NodeInterface $node);
 }
