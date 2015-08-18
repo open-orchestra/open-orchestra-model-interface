@@ -20,4 +20,9 @@ interface StatusableInterface
      * @return StatusInterface
      */
     public function getStatus();
+
+    /**
+     * @return bool
+     */
+    public function hasStatusChanged();
 }
