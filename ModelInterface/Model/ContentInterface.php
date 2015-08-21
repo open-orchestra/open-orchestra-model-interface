@@ -6,7 +6,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface ContentInterface
  */
-interface ContentInterface extends ReadContentInterface, StatusableInterface, TimestampableInterface, BlameableInterface, VersionableInterface, SiteLinkableInterface
+interface ContentInterface extends ReadContentInterface, StatusableInterface, TimestampableInterface, BlameableInterface, VersionableInterface, SiteLinkableInterface, TrashCanableInterface
 {
     /**
      * @param ContentAttributeInterface $attribute
@@ -42,16 +42,6 @@ interface ContentInterface extends ReadContentInterface, StatusableInterface, Ti
      * @return int
      */
     public function getContentTypeVersion();
-
-    /**
-     * @param boolean $deleted
-     */
-    public function setDeleted($deleted);
-
-    /**
-     * @return boolean
-     */
-    public function getDeleted();
 
     /**
      * @return string
