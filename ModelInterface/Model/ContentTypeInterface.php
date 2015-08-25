@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * Interface ContentTypeInterface
  */
-interface ContentTypeInterface extends FieldTypeContainerInterface, TranslatedValueContainerInterface, BlameableInterface, TimestampableInterface, VersionableInterface, SiteLinkableInterface
+interface ContentTypeInterface extends FieldTypeContainerInterface, TranslatedValueContainerInterface, BlameableInterface, TimestampableInterface, VersionableInterface, SiteLinkableInterface, SoftDeleteableInterface
 {
     /**
      * @param string $contentTypeId
@@ -18,16 +18,6 @@ interface ContentTypeInterface extends FieldTypeContainerInterface, TranslatedVa
      * @return string
      */
     public function getContentTypeId();
-
-    /**
-     * @param boolean $deleted
-     */
-    public function setDeleted($deleted);
-
-    /**
-     * @return boolean
-     */
-    public function getDeleted();
 
     /**
      * @param string $template

@@ -3,9 +3,9 @@
 namespace OpenOrchestra\ModelInterface\Model;
 
 /**
- * Interface TrashCanableInterface
+ * Interface SoftDeleteableInterface
  */
-interface TrashCanableInterface
+interface SoftDeleteableInterface
 {
     /**
      * Set deleted
@@ -20,9 +20,4 @@ interface TrashCanableInterface
      * @return boolean $deleted
      */
     public function getDeleted();
-
-    /**
-     * @return string
-     */
-    public function getTrashCanName();
 }

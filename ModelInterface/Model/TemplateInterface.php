@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface TemplateInterface
  */
-interface TemplateInterface extends AreaContainerInterface, BlockContainerInterface, VersionableInterface
+interface TemplateInterface extends AreaContainerInterface, BlockContainerInterface, VersionableInterface, SoftDeleteableInterface
 {
     /**
      * @param string $boDirection
@@ -16,16 +16,6 @@ interface TemplateInterface extends AreaContainerInterface, BlockContainerInterf
      * @return string
      */
     public function getBoDirection();
-
-    /**
-     * @param boolean $deleted
-     */
-    public function setDeleted($deleted);
-
-    /**
-     * @return boolean
-     */
-    public function getDeleted();
 
     /**
      * @return string

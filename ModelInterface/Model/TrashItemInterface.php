@@ -3,9 +3,9 @@
 namespace OpenOrchestra\ModelInterface\Model;
 
 /**
- * Interface TrashCanInterface
+ * Interface TrashItemInterface
  */
-interface TrashCanInterface
+interface TrashItemInterface
 {
     /**
      * @return string
