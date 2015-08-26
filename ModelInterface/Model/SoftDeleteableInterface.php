@@ -19,5 +19,5 @@ interface SoftDeleteableInterface
      *
      * @return boolean $deleted
      */
-    public function getDeleted();
+    public function isDeleted();
 }
