@@ -20,12 +20,12 @@ interface TrashItemInterface
     /**
      * @return string
      */
-    public function getDeleteAt();
+    public function getDeletedAt();
 
     /**
-     * @param string $deleteAt
+     * @param string $deletedAt
      */
-    public function setDeleteAt($deleteAt);
+    public function setDeletedAt($deletedAt);
 
     /**
      * @return mixed
