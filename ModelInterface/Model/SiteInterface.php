@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface SiteInterface
  */
-interface SiteInterface extends ReadSiteInterface, SitemapableInterface
+interface SiteInterface extends ReadSiteInterface, SitemapableInterface, SoftDeleteableInterface
 {
     /**
      * @param SiteAliasInterface $alias
@@ -31,20 +31,6 @@ interface SiteInterface extends ReadSiteInterface, SitemapableInterface
      * @param string $siteId
      */
     public function setSiteId($siteId);
-
-    /**
-     * Set deleted
-     *
-     * @param boolean $deleted
-     */
-    public function setDeleted($deleted);
-
-    /**
-     * Get deleted
-     *
-     * @return boolean $deleted
-     */
-    public function isDeleted();
 
     /**
      * Set name

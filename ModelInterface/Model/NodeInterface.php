@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\Collection;
 /**
  * Interface NodeInterface
  */
-interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, StatusableInterface, BlameableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface, VersionableInterface
+interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, StatusableInterface, BlameableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface, VersionableInterface, TrashCanDisplayableInterface
 {
     const TYPE_DEFAULT = 'page';
     const TYPE_TRANSVERSE = 'general';
@@ -86,20 +86,6 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
      * @param string $language
      */
     public function setLanguage($language);
-
-    /**
-     * Set deleted
-     *
-     * @param boolean $deleted
-     */
-    public function setDeleted($deleted);
-
-    /**
-     * Get deleted
-     *
-     * @return boolean $deleted
-     */
-    public function getDeleted();
 
     /**
      * Set templateId
