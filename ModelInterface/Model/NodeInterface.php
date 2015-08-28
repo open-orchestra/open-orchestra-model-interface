@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\Collection;
 /**
  * Interface NodeInterface
  */
-interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, StatusableInterface, BlameableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface, VersionableInterface, TrashCanDisplayableInterface
+interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, StatusableInterface, BlameableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface, VersionableInterface, SoftDeleteableInterface
 {
     const TYPE_DEFAULT = 'page';
     const TYPE_TRANSVERSE = 'general';
