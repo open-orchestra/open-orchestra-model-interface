@@ -14,6 +14,7 @@ final class NodeEvents
     const NODE_UPDATE_BLOCK_POSITION = 'node.update_block_position';
     const NODE_CREATION = 'node.creation';
     const NODE_DELETE = 'node.delete';
+    const NODE_RESTORE = 'node.restore';
     const NODE_DUPLICATE = 'node.duplicate';
     const NODE_ADD_LANGUAGE = 'node.add_language';
     const NODE_DELETE_BLOCK = 'node.delete_block';
