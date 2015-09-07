@@ -46,6 +46,16 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
     public function findByParentIdAndSiteId($parentId, $siteId);
 
     /**
+     * @param string $path
+     * @param string $siteId
+     *
+     * @throws \Exception
+     *
+     * @return mixed
+     */
+    public function findByIncludedPathAndSiteId($path, $siteId);
+
+    /**
      * @param string $nodeId
      * @param string $language
      * @param string $siteId
