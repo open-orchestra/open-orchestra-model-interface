@@ -53,7 +53,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      *
      * @return mixed
      */
-    public function findByIncludingPathAndSiteId($path, $siteId);
+    public function findByIncludedPathAndSiteId($path, $siteId);
 
     /**
      * @param string $nodeId
