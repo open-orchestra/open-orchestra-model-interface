@@ -63,4 +63,13 @@ interface ReadNodeRepositoryInterface
      * @return array
      */
     public function findAllNodesOfTypeInLastPublishedVersionForSite($nodeType, $siteId);
+
+    /**
+     * @param string       $author
+     * @param boolean|null $published
+     * @param int|null     $limit
+     *
+     * @return array
+     */
+    public function findByAuthor($author, $published = null, $limit = null);
 }

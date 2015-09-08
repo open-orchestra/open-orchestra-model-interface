@@ -36,4 +36,13 @@ interface ReadContentRepositoryInterface
      * @return ContentInterface
      */
     public function findLastPublishedVersionByContentIdAndLanguage($contentId, $language);
+
+    /**
+     * @param string       $author
+     * @param boolean|null $published
+     * @param int|null     $limit
+     *
+     * @return array
+     */
+    public function findByAuthor($author, $published = null, $limit = null);
 }
