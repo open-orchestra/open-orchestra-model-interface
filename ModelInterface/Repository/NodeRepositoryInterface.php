@@ -163,6 +163,14 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      *
      * @return mixed
      */
-    public function findOneByNodeIdAndLanguageAndSiteIdAndVersion($nodeId, $language, $siteId, $version = null);
 
+    public function findOneByNodeIdAndLanguageAndSiteIdAndVersion($nodeId, $language, $siteId, $version = null);
+    /**
+     * @param string       $contributor
+     * @param boolean|null $published
+     * @param int|null     $limit
+     *
+     * @return array
+     */
+    public function findByContributor($contributor, $published = null, $limit = null);
 }

@@ -91,4 +91,14 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @deprecated will be removed in 0.3.5
      */
     public function findAllDeleted();
+
+
+    /**
+     * @param string       $contributor
+     * @param boolean|null $published
+     * @param int|null     $limit
+     *
+     * @return array
+     */
+    public function findByContributor($contributor, $published = null, $limit = null);
 }
