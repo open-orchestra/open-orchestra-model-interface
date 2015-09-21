@@ -23,4 +23,14 @@ interface RoleRepositoryInterface extends PaginateRepositoryInterface
      * @return array
      */
     public function findAll();
+
+    /**
+     * @return array
+     */
+    public function findAccessRole();
+
+    /**
+     * @return array
+     */
+    public function findWorkflowRole();
 }
