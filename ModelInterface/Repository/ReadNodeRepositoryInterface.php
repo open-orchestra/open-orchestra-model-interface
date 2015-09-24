@@ -1,6 +1,7 @@
 <?php
 
 namespace OpenOrchestra\ModelInterface\Repository;
+
 use OpenOrchestra\ModelInterface\Model\ReadNodeInterface;
 
 /**
