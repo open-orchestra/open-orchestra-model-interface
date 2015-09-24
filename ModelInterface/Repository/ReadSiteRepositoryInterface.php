@@ -1,15 +1,32 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alavieille
- * Date: 24/09/15
- * Time: 09:34
- */
 
 namespace OpenOrchestra\ModelInterface\Repository;
 
+use OpenOrchestra\ModelInterface\Model\ReadSiteInterface;
 
+/**
+ * Interface ReadSiteRepositoryInterface
+ */
 interface ReadSiteRepositoryInterface
 {
+    /**
+     * @param string $siteId
+     *
+     * @return ReadSiteInterface
+     */
+    public function findOneBySiteId($siteId);
 
+    /**
+     * @param boolean $deleted
+     *
+     * @return array
+     */
+    public function findByDeleted($deleted);
+
+    /**
+     * @param string $domain
+     *
+     * @return ReadSiteInterface
+     */
+    public function findByAliasDomain($domain);
 }
