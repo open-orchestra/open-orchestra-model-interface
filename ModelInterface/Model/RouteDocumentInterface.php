@@ -33,6 +33,11 @@ interface RouteDocumentInterface
     public function getDefaults();
 
     /**
+     * @param array $defaults
+     */
+    public function setDefaults(array $defaults);
+
+    /**
      * @return array
      */
     public function getRequirements();
