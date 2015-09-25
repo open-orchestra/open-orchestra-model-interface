@@ -28,4 +28,13 @@ interface RouteDocumentRepositoryInterface
      * @return Collection
      */
     public function findByPathInfo($pathInfo);
+
+    /**
+     * @param string $nodeId
+     * @param string $siteId
+     * @param string $language
+     *
+     * @return Collection
+     */
+    public function findByNodeIdSiteIdAndLanguage($nodeId, $siteId, $language);
 }
