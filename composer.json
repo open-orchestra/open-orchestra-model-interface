@@ -26,9 +26,8 @@
         "bin-dir" : "bin"
     },
     "autoload": {
-        "psr-0": {
-            "OpenOrchestra\\ModelInterface": ""
+        "psr-4": {
+            "OpenOrchestra\\ModelInterface\\": ""
         }
-    },
-    "target-dir": "OpenOrchestra"
+    }
 }
