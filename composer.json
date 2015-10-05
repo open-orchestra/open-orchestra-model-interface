@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "OpenOrchestra\\ModelInterface\\": ""
+            "OpenOrchestra\\ModelInterface\\": "ModelInterface/"
         }
     }
 }
