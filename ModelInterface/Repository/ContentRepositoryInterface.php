@@ -34,6 +34,8 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @param string $contentId
      * @param string $language
      *
+     * @deprecated will be removed in 1.2.0, use findOneByLanguage
+     *
      * @return ContentInterface|null
      */
     public function findOneByContentIdAndLanguage($contentId, $language);
@@ -42,9 +44,27 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @param string $contentId
      * @param string $language
      *
+     * @return ContentInterface|null
+     */
+    public function findOneByLanguage($contentId, $language);
+
+    /**
+     * @param string $contentId
+     * @param string $language
+     *
+     * @deprecated will be removed in 1.2.0, use findByLanguage
+     *
      * @return array
      */
     public function findByContentIdAndLanguage($contentId, $language);
+
+    /**
+     * @param string $contentId
+     * @param string $language
+     *
+     * @return array
+     */
+    public function findByLanguage($contentId, $language);
 
     /**
      * @param string $contentId
@@ -58,9 +78,31 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @param string      $language
      * @param int|null    $version
      *
+     * @deprecated will be removed in 1.2.0, use findOneByLanguageAndVersion
+     *
      * @return ContentInterface|null
      */
     public function findOneByContentIdAndLanguageAndVersion($contentId, $language, $version = null);
+
+    /**
+     * @param string      $contentId
+     * @param string      $language
+     * @param int|null    $version
+     *
+     * @return ContentInterface|null
+     */
+    public function findOneByLanguageAndVersion($contentId, $language, $version = null);
+
+    /**
+     * @param string|null                 $contentType
+     * @param PaginateFinderConfiguration $configuration
+     * @param string|null                 $siteId
+     *
+     * @deprecated will be removed in 1.2.0, use findPaginatedLastVersionByContentTypeAndSite
+     *
+     * @return array
+     */
+    public function findByContentTypeAndSiteIdInLastVersionForPaginate($contentType = null, PaginateFinderConfiguration $configuration = null, $siteId = null);
 
     /**
      * @param string|null                 $contentType
@@ -69,7 +111,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      *
      * @return array
      */
-    public function findByContentTypeAndSiteIdInLastVersionForPaginate($contentType = null, PaginateFinderConfiguration $configuration = null, $siteId = null);
+    public function findPaginatedLastVersionByContentTypeAndSite($contentType = null, PaginateFinderConfiguration $configuration = null, $siteId = null);
 
     /**
      * @param string|null         $contentType
@@ -85,13 +127,6 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @return int
      */
     public function countByContentTypeInLastVersion($contentType = null);
-
-    /**
-     * @return array
-     * @deprecated will be removed in 0.3.5
-     */
-    public function findAllDeleted();
-
 
     /**
      * @param string       $author
