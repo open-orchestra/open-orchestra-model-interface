@@ -25,9 +25,31 @@ interface ReadContentRepositoryInterface
      * @param string $choiceType
      * @param string $keywords
      *
+     * @deprecated will be removed in 1.2.0, use findByContentTypeAndKeywords
+     *
      * @return array
      */
     public function findByContentTypeAndChoiceTypeAndKeywordsAndLanguage($language, $contentType = '', $choiceType = self::CHOICE_AND, $keywords = null);
+
+    /**
+     * @param string $language
+     * @param string $contentType
+     * @param string $choiceType
+     * @param string $keywords
+     *
+     * @return array
+     */
+    public function findByContentTypeAndKeywords($language, $contentType = '', $choiceType = self::CHOICE_AND, $keywords = null);
+
+    /**
+     * @param string $contentId
+     * @param string $language
+     *
+     * @deprecated will be removed in 1.2.0, use findLastPublishedVersion
+     *
+     * @return ContentInterface
+     */
+    public function findLastPublishedVersionByContentIdAndLanguage($contentId, $language);
 
     /**
      * @param string $contentId
@@ -35,5 +57,5 @@ interface ReadContentRepositoryInterface
      *
      * @return ContentInterface
      */
-    public function findLastPublishedVersionByContentIdAndLanguage($contentId, $language);
+    public function findLastPublishedVersion($contentId, $language);
 }
