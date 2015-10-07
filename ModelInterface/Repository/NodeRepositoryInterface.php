@@ -24,7 +24,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
     /**
      * @param string $entityId
      *
-     * @deprecated will be removed in 1.2.0, use findVersionBy instead
+     * @deprecated will be removed in 1.2.0, use findVersionByDocumentId instead
      *
      * @return NodeInterface
      */
