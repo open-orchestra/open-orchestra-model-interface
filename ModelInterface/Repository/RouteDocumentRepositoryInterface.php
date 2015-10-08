@@ -37,4 +37,11 @@ interface RouteDocumentRepositoryInterface
      * @return Collection
      */
     public function findByNodeIdSiteIdAndLanguage($nodeId, $siteId, $language);
+
+    /**
+     * @param string $siteId
+     *
+     * @return Collection
+     */
+    public function findBySiteId($siteId);
 }
