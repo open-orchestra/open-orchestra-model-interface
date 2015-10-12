@@ -43,5 +43,5 @@ interface RouteDocumentRepositoryInterface
      *
      * @return Collection
      */
-    public function findBySiteId($siteId);
+    public function findBySite($siteId);
 }
