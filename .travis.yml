@@ -17,5 +17,9 @@ install:
 
 script: ./bin/phpunit
 
+addons:
+  code_climate:
+    repo_token: 4a6c1ee790fc11bf750955c0f4dbfb8283404d734b1e2bf757a2e81c69045639 
+
 after_script:
-  - CODECLIMATE_REPO_TOKEN=4a6c1ee790fc11bf750955c0f4dbfb8283404d734b1e2bf757a2e81c69045639 ./bin/test-reporter
+  - ./bin/test-reporter
