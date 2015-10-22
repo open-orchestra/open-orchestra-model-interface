@@ -56,11 +56,6 @@ interface BlockInterface extends ReadBlockInterface
     public function addAttribute($name, $value);
 
     /**
-     * @return array
-     */
-    public function getAreas();
-
-    /**
      * @param array $areas
      */
     public function setAreas(array $areas);

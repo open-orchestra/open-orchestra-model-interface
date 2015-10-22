@@ -10,13 +10,6 @@ use OpenOrchestra\ModelInterface\Model\NodeInterface;
 interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
 {
     /**
-     * @param string $id
-     *
-     * @return NodeInterface
-     */
-    public function find($id);
-
-    /**
      * @return array
      */
     public function findAll();

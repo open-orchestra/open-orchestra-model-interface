@@ -41,4 +41,9 @@ interface ReadBlockInterface extends CacheableInterface
      * @return string|null
      */
     public function getAttribute($name);
+
+    /**
+     * @return array
+     */
+    public function getAreas();
 }
