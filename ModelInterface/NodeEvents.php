@@ -8,7 +8,6 @@ namespace OpenOrchestra\ModelInterface;
 final class NodeEvents
 {
     const PATH_UPDATED = 'node.path_updated';
-
     const NODE_UPDATE = 'node.update';
     const NODE_UPDATE_BLOCK = 'node.update_block';
     const NODE_UPDATE_BLOCK_POSITION = 'node.update_block_position';
