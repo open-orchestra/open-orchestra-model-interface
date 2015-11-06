@@ -55,7 +55,6 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
      *
      * @param string $path
      *
-     * @deprecated
      */
     public function setPath($path);
 
@@ -64,7 +63,6 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
      *
      * @return string $path
      *
-     * @deprecated
      */
     public function getPath();
 

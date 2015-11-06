@@ -24,17 +24,6 @@ interface ContentTypeRepositoryInterface
     public function findAllNotDeletedInLastVersionForPaginate(PaginateFinderConfiguration $configuration);
 
     /**
-     * @param array|null  $descriptionEntity
-     * @param array|null  $columns
-     * @param string|null $search
-     *
-     * @deprecated will be removed in 0.3.0, use countNotDeletedInLastVersionWithSearchFilter instead
-     *
-     * @return int
-     */
-    public function countByDeletedInLastVersionWithSearchFilter($descriptionEntity = null, $columns = null, $search = null);
-
-    /**
      * @param FinderConfiguration $configuration
      *
      * @return int
