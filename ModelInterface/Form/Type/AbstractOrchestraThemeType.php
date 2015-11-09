@@ -16,6 +16,6 @@ abstract class AbstractOrchestraThemeType extends AbstractType
      */
     public function getName()
     {
-        return 'orchestra_theme';
+        return 'oo_orchestra_theme';
     }
 }

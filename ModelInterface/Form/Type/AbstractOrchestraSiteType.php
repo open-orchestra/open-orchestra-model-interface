@@ -16,6 +16,6 @@ abstract class AbstractOrchestraSiteType extends AbstractType
      */
     public function getName()
     {
-        return 'orchestra_site';
+        return 'oo_orchestra_site';
     }
 }
