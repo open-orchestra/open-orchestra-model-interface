@@ -16,6 +16,6 @@ abstract class AbstractOrchestraStatusType extends AbstractType
      */
     public function getName()
     {
-        return 'orchestra_status';
+        return 'oo_orchestra_status';
     }
 }

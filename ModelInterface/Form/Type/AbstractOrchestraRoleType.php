@@ -16,6 +16,6 @@ abstract class AbstractOrchestraRoleType extends AbstractType
      */
     public function getName()
     {
-        return 'orchestra_role';
+        return 'oo_orchestra_role';
     }
 }
