@@ -129,4 +129,14 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface
      * @return array
      */
     public function findByAuthor($author, $published = null, $limit = null);
+
+    /**
+     * @param string       $author
+     * @param string       $siteId
+     * @param boolean|null $published
+     * @param int|null     $limit
+     *
+     * @return array
+     */
+    public function findByAuthorAndSiteId($author, $siteId, $published = null, $limit = null);
 }
