@@ -5,9 +5,9 @@ namespace OpenOrchestra\ModelInterface\Form\Type;
 use Symfony\Component\Form\AbstractType;
 
 /**
- * Class AbstractOrchestraSiteType
+ * Class AbstractGroupSiteChoiceType
  */
-abstract class AbstractOrchestraSiteType extends AbstractType
+abstract class AbstractGroupSiteChoiceType extends AbstractType
 {
     /**
      * Returns the name of this type.
@@ -16,6 +16,6 @@ abstract class AbstractOrchestraSiteType extends AbstractType
      */
     public function getName()
     {
-        return 'oo_orchestra_site';
+        return 'oo_group_site_choice';
     }
 }
