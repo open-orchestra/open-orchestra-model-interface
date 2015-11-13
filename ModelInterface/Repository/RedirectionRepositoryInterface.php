@@ -1,12 +1,14 @@
 <?php
 
 namespace OpenOrchestra\ModelInterface\Repository;
+
 use OpenOrchestra\ModelInterface\Model\RedirectionInterface;
+use OpenOrchestra\Pagination\Configuration\PaginationRepositoryInterface;
 
 /**
  * Interface RedirectionRepositoryInterface
  */
-interface RedirectionRepositoryInterface extends PaginateRepositoryInterface
+interface RedirectionRepositoryInterface extends PaginationRepositoryInterface
 {
     /**
      * @return array
