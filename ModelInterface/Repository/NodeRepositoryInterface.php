@@ -270,6 +270,8 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @param int|null     $limit
      *
      * @return array
+     * 
+     * @deprecated will be removed in 1.2.0
      */
     public function findByAuthor($author, $published = null, $limit = null);
 
