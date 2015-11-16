@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Repository;
 /**
  * Interface ThemeRepositoryInterface
  */
-interface ThemeRepositoryInterface
+interface ThemeRepositoryInterface extends PaginateRepositoryInterface
 {
     /**
      * @return array
