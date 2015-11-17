@@ -270,6 +270,18 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @param int|null     $limit
      *
      * @return array
+     * 
+     * @deprecated will be removed in 1.2.0
      */
     public function findByAuthor($author, $published = null, $limit = null);
+
+    /**
+     * @param string       $author
+     * @param string       $siteId
+     * @param boolean|null $published
+     * @param int|null     $limit
+     *
+     * @return array
+     */
+    public function findByAuthorAndSiteId($author, $siteId, $published = null, $limit = null);
 }
