@@ -280,8 +280,9 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface
      * @param string       $siteId
      * @param boolean|null $published
      * @param int|null     $limit
+     * @param array|null   $sort
      *
      * @return array
      */
-    public function findByAuthorAndSiteId($author, $siteId, $published = null, $limit = null);
+    public function findByAuthorAndSiteId($author, $siteId, $published = null, $limit = null, $sort = null);
 }
