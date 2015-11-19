@@ -1,13 +1,15 @@
 <?php
 
 namespace OpenOrchestra\ModelInterface\Repository;
+
 use OpenOrchestra\ModelInterface\Model\StatusInterface;
 use OpenOrchestra\ModelInterface\Model\RoleInterface;
+use OpenOrchestra\Pagination\Configuration\PaginationRepositoryInterface;
 
 /**
  * Interface RoleRepositoryInterface
  */
-interface RoleRepositoryInterface extends PaginateRepositoryInterface
+interface RoleRepositoryInterface extends PaginationRepositoryInterface
 {
     /**
      * Find the role that connect fromStatus to toStatus

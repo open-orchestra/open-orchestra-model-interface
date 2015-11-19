@@ -3,11 +3,12 @@
 namespace OpenOrchestra\ModelInterface\Repository;
 
 use OpenOrchestra\ModelInterface\Model\KeywordInterface;
+use OpenOrchestra\Pagination\Configuration\PaginationRepositoryInterface;
 
 /**
  * Interface KeywordRepositoryInterface
  */
-interface KeywordRepositoryInterface extends PaginateRepositoryInterface
+interface KeywordRepositoryInterface extends PaginationRepositoryInterface
 {
     /**
      * @return array

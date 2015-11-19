@@ -7,6 +7,8 @@ use OpenOrchestra\Pagination\Configuration\FinderConfiguration;
 
 /**
  * Interface PaginateRepositoryInterface
+ *
+ * @deprecated use PaginationRepositoryInterface, will be removed in 1.2.0
  */
 interface PaginateRepositoryInterface
 {

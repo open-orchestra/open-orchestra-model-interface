@@ -3,11 +3,12 @@
 namespace OpenOrchestra\ModelInterface\Repository;
 
 use OpenOrchestra\ModelInterface\Model\StatusInterface;
+use OpenOrchestra\Pagination\Configuration\PaginationRepositoryInterface;
 
 /**
  * Interface StatusRepositoryInterface
  */
-interface StatusRepositoryInterface extends PaginateRepositoryInterface
+interface StatusRepositoryInterface extends PaginationRepositoryInterface
 {
     /**
      * @return StatusInterface
