@@ -3,6 +3,7 @@
 namespace OpenOrchestra\ModelInterface\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use OpenOrchestra\ModelInterface\Exceptions\TranslatedValueNotExisting;
 
 /**
  * Interface ContentTypeInterface
@@ -53,8 +54,9 @@ interface ContentTypeInterface extends FieldTypeContainerInterface, TranslatedVa
      * @param string $language
      *
      * @return string
+     * @throws TranslatedValueNotExisting
      */
-    public function getName($language = 'en');
+    public function getName($language);
 
     /**
      * @return ArrayCollection
