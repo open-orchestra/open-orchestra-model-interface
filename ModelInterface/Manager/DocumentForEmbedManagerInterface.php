@@ -5,20 +5,20 @@ namespace OpenOrchestra\ModelInterface\Manager;
 interface DocumentForEmbedManagerInterface
 {
     /**
-     * Take a embed document array representation to return id
+     * Take a embed document array representation to return entity
      *
      * @param array $data
      *
      * @return string
      */
-    public function transform($data);
+    public function fromDbToEntity($data);
 
     /**
      * Take a id to turn it into a embed document array representation
      *
-     * @param array $data
+     * @param mixed $document
      *
      * @return array
      */
-    public function reverseTransform($id);
+    public function fromEntityToDb($document);
 }
