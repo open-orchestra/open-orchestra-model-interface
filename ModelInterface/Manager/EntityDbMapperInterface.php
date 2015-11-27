@@ -2,7 +2,7 @@
 
 namespace OpenOrchestra\ModelInterface\Manager;
 
-interface DocumentForEmbedManagerInterface
+interface EntityDbMapperInterface
 {
     /**
      * Take a embed document array representation to return entity
