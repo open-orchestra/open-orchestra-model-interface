@@ -14,7 +14,7 @@ interface EntityDbMapperInterface
      *
      * @return string
      */
-    public function fromDbToEntity($data);
+    public function fromDbToEntity(array $data);
 
     /**
      * Take a id to turn it into a embed document array representation
