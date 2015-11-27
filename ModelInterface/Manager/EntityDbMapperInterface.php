@@ -2,6 +2,9 @@
 
 namespace OpenOrchestra\ModelInterface\Manager;
 
+/**
+ * Class EntityDbMapperInterface
+ */
 interface EntityDbMapperInterface
 {
     /**
