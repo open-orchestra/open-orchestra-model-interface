@@ -2,19 +2,13 @@
 
 namespace OpenOrchestra\ModelInterface\Manager;
 
-use OpenOrchestra\ModelInterface\Model\VersionableInterface;
+use OpenOrchestra\ModelInterface\Saver\VersionableSaverInterface as NewVersionableSaver;
 
 /**
  * Class VersionableSaverInterface
+ *
+ * @deprecated use Saver\VersionableSaverInterface instead, will be removed in 1.2.0
  */
-interface VersionableSaverInterface
+interface VersionableSaverInterface extends NewVersionableSaver
 {
-    /**
-     * Duplicate a node
-     *
-     * @param VersionableInterface   $versionable
-     *
-     * @return VersionableInterface
-     */
-    public function saveDuplicated(VersionableInterface $versionable);
 }
