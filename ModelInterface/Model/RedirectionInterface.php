@@ -33,6 +33,11 @@ interface RedirectionInterface extends ReadRedirectionInterface
     public function setNodeId($nodeId);
 
     /**
+     * @param int $nodeVersion
+     */
+    public function setNodeVersion($nodeVersion);
+
+    /**
      * @param string $url
      */
     public function setUrl($url);

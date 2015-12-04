@@ -11,13 +11,16 @@ use Symfony\Component\EventDispatcher\Event;
 class ContentEvent extends Event
 {
     protected $content;
+    protected $previousStatus;
 
     /**
-     * @param ContentInterface $content
+     * @param ContentInterface     $content
+     * @param StatusInterface|null $previousStatus
      */
-    public function __construct(ContentInterface $content)
+    public function __construct(ContentInterface $content, $previousStatus = null)
     {
         $this->content = $content;
+        $this->previousStatus = $previousStatus;
     }
 
     /**
@@ -26,5 +29,13 @@ class ContentEvent extends Event
     public function getContent()
     {
         return $this->content;
+    }
+
+    /**
+     * @return StatusInterface|null
+     */
+    public function getPreviousStatus()
+    {
+        return $this->previousStatus;
     }
 }
