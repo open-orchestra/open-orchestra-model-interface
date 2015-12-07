@@ -140,4 +140,16 @@ Interface FieldTypeInterface extends TranslatedValueContainerInterface
      * @param boolean $translatable
      */
     public function setTranslatable($translatable);
+
+    /**
+     * @return string
+     */
+    public function getFieldTypeSearchable();
+
+    /**
+     * Set field searchable
+     *
+     * @param string $fieldTypeSearchable
+     */
+    public function setFieldTypeSearchable($fieldTypeSearchable);
 }
