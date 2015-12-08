@@ -38,11 +38,6 @@ interface ReadRedirectionInterface
     public function getNodeId();
 
     /**
-     * @return int
-     */
-    public function getNodeVersion();
-
-    /**
      * @return string
      */
     public function getUrl();
