@@ -4,7 +4,6 @@ namespace OpenOrchestra\ModelInterface\Event;
 
 use OpenOrchestra\ModelInterface\Model\ContentInterface;
 use Symfony\Component\EventDispatcher\Event;
-use OpenOrchestra\ModelInterface\Event\EventTrait\StatusableEvent;
 
 /**
  * Class ContentEvent
