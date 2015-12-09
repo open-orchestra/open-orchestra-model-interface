@@ -2,10 +2,12 @@
 
 namespace OpenOrchestra\ModelInterface\Event\EventTrait;
 
+use OpenOrchestra\ModelInterface\Model\StatusInterface;
+
 /**
- * Trait StatusableEvent
+ * Trait EventStatusable
  */
-trait StatusableEvent
+trait EventStatusable
 {
     protected $previousStatus;
 

@@ -11,18 +11,14 @@ use OpenOrchestra\ModelInterface\Event\EventTrait\StatusableEvent;
  */
 class ContentEvent extends Event
 {
-    use StatusableEvent;
-
     protected $content;
 
     /**
      * @param ContentInterface     $content
-     * @param StatusInterface|null $previousStatus
      */
-    public function __construct(ContentInterface $content, $previousStatus = null)
+    public function __construct(ContentInterface $content)
     {
         $this->content = $content;
-        $this->previousStatus = $previousStatus;
     }
 
     /**
