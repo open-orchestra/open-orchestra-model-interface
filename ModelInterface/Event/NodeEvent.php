@@ -5,14 +5,16 @@ namespace OpenOrchestra\ModelInterface\Event;
 use OpenOrchestra\ModelInterface\Model\NodeInterface;
 use OpenOrchestra\ModelInterface\Model\StatusInterface;
 use Symfony\Component\EventDispatcher\Event;
+use OpenOrchestra\ModelInterface\Event\EventTrait\StatusableEvent;
 
 /**
  * Class NodeEvent
  */
 class NodeEvent extends Event
 {
+    use StatusableEvent;
+
     protected $node;
-    protected $previousStatus;
     protected $area;
     protected $block;
 
@@ -32,13 +34,5 @@ class NodeEvent extends Event
     public function getNode()
     {
         return $this->node;
-    }
-
-    /**
-     * @return StatusInterface|null
-     */
-    public function getPreviousStatus()
-    {
-        return $this->previousStatus;
     }
 }

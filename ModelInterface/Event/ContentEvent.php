@@ -4,14 +4,16 @@ namespace OpenOrchestra\ModelInterface\Event;
 
 use OpenOrchestra\ModelInterface\Model\ContentInterface;
 use Symfony\Component\EventDispatcher\Event;
+use OpenOrchestra\ModelInterface\Event\EventTrait\StatusableEvent;
 
 /**
  * Class ContentEvent
  */
 class ContentEvent extends Event
 {
+    use StatusableEvent;
+
     protected $content;
-    protected $previousStatus;
 
     /**
      * @param ContentInterface     $content
@@ -29,13 +31,5 @@ class ContentEvent extends Event
     public function getContent()
     {
         return $this->content;
-    }
-
-    /**
-     * @return StatusInterface|null
-     */
-    public function getPreviousStatus()
-    {
-        return $this->previousStatus;
     }
 }
