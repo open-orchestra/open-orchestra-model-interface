@@ -23,6 +23,13 @@ interface RouteDocumentRepositoryInterface
     public function findOneByName($name);
 
     /**
+     * @param string $redirectionId
+     *
+     * @return RouteDocumentInterface
+     */
+    public function findByRedirection($redirectionId);
+
+    /**
      * @param string $pathInfo
      *
      * @return Collection

@@ -13,7 +13,7 @@ class ContentEvent extends Event
     protected $content;
 
     /**
-     * @param ContentInterface $content
+     * @param ContentInterface     $content
      */
     public function __construct(ContentInterface $content)
     {
