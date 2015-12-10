@@ -5,11 +5,12 @@ namespace OpenOrchestra\ModelInterface\Event;
 use OpenOrchestra\ModelInterface\Model\NodeInterface;
 use Symfony\Component\EventDispatcher\Event;
 use OpenOrchestra\ModelInterface\Event\EventTrait\EventStatusable;
+use OpenOrchestra\ModelInterface\Event\EventTrait\EventStatusableInterface;
 
 /**
  * Class NodeEvent
  */
-class NodeEvent extends Event
+class NodeEvent extends Event implements EventStatusableInterface
 {
     use EventStatusable;
 
