@@ -9,7 +9,7 @@ use OpenOrchestra\Pagination\Configuration\PaginationRepositoryInterface;
 /**
  * Interface RoleRepositoryInterface
  */
-interface RoleRepositoryInterface extends PaginationRepositoryInterface
+interface RoleRepositoryInterface extends PaginationRepositoryInterface, StatusableElementRepositoryInterface
 {
     /**
      * Find the role that connect fromStatus to toStatus
