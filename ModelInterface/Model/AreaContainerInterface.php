@@ -2,9 +2,7 @@
 
 namespace OpenOrchestra\ModelInterface\Model;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use OpenOrchestra\ModelInterface\Model\AreaInterface;
 
 /**
  * Interface AreaContainerInterface
@@ -42,7 +40,7 @@ interface AreaContainerInterface
     /**
      * Get subAreas
      *
-     * @return ArrayCollection $subAreas
+     * @return Collection $subAreas
      */
     public function getAreas();
 
