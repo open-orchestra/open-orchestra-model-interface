@@ -42,7 +42,7 @@ interface AreaContainerInterface
     /**
      * Get subAreas
      *
-     * @return ArrayCollection $subAreas
+     * @return Collection $subAreas
      */
     public function getAreas();
 
