@@ -65,7 +65,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      *
      * @throws \Exception
      *
-     * @return mixed
+     * @return array
      */
     public function findByParentSortedByOrder($parentId, $siteId);
 
@@ -260,7 +260,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      *
      * @return array
      */
-    public function findByParentAndOrder($parentId, $order, $nodeId, $siteId);
+    public function findByParentAndOrderAndNotNode($parentId, $order, $nodeId, $siteId);
 
     /**
      * @param string   $nodeId
