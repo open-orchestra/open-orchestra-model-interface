@@ -260,7 +260,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      *
      * @return bool
      */
-    public function findByParentAndOrderAndNotNode($parentId, $order, $nodeId, $siteId);
+    public function hasOtherNodeWithSameParentAndOrder($parentId, $order, $nodeId, $siteId);
 
     /**
      * @param string   $nodeId
