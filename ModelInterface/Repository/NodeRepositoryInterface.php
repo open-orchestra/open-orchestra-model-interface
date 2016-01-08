@@ -60,6 +60,16 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     public function findByParent($parentId, $siteId);
 
     /**
+     * @param string $parentId
+     * @param string $siteId
+     *
+     * @throws \Exception
+     *
+     * @return mixed
+     */
+    public function findOneByParentWithGreatestOrder($parentId, $siteId);
+
+    /**
      * @param string $path
      * @param string $siteId
      *
@@ -241,6 +251,16 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return array
      */
     public function findByParentAndRoutePattern($parentId, $routePattern, $nodeId, $siteId);
+
+    /**
+     * @param string $parentId
+     * @param int    $order
+     * @param string $nodeId
+     * @param string $siteId
+     *
+     * @return bool
+     */
+    public function hasOtherNodeWithSameParentAndOrder($parentId, $order, $nodeId, $siteId);
 
     /**
      * @param string   $nodeId
