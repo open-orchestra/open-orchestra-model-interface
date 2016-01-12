@@ -71,7 +71,7 @@ Interface FieldTypeInterface extends TranslatedValueContainerInterface
     /**
      * @return boolean
      */
-    public function getSearchable();
+    public function isSearchable();
 
     /**
      * Set Listable
