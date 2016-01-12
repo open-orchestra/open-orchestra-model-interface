@@ -229,6 +229,17 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     public function findByNodeTypeAndSite($type, $siteId);
 
     /**
+     * @param string $nodeId
+     * @param string $type
+     * @param string $siteId
+     *
+     * @throws \Exception
+     *
+     * @return array
+     */
+    public function findByNodeIdAndNodeTypeAndSite($nodeId, $type, $siteId);
+
+    /**
      *
      * @param string $parentId
      * @param string $routePattern
