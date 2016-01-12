@@ -162,4 +162,15 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
      * @return boolean
      */
     public function isEditable();
+
+    /**
+     * @param string $boDirection
+     */
+    public function setBoDirection($boDirection);
+
+    /**
+     * @return string
+     */
+    public function getBoDirection();
+
 }
