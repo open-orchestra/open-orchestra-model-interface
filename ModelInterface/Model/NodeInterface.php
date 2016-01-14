@@ -14,6 +14,7 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
     const ROOT_NODE_ID = 'root';
     const TRANSVERSE_NODE_ID = 'transverse';
     const MAX_AGE = 1000;
+    const THEME_DEFAULT = 'default';
 
     /**
      * Set nodeId
@@ -105,6 +106,20 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
      * @param string $theme
      */
     public function setTheme($theme);
+
+    /**
+     * Set default theme
+     *
+     * @param boolean $defaultTheme
+     */
+    public function setDefaultTheme($defaultTheme);
+
+    /**
+     * Is default theme
+     *
+     * @return boolean $defaultTheme
+     */
+    public function isDefaultTheme();
 
     /**
      * @param BlockInterface $block
