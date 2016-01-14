@@ -15,12 +15,18 @@ class SiteEvent extends Event
     protected $oldAliases;
 
     /**
+     * @param SiteInterface   $site
+     * @param Collection|null $oldAliases
+     *
      * @param SiteInterface $site
      */
-    public function __construct(SiteInterface $site, Collection $oldAliases)
+    public function __construct(SiteInterface $site, $oldAliases = null)
     {
         $this->site = $site;
         $this->oldAliases = $oldAliases;
+        if (is_null($oldAliases)) {
+            $this->oldAliases = new Collection();
+        }
     }
 
     /**
