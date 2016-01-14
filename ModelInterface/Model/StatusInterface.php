@@ -3,7 +3,6 @@
 namespace OpenOrchestra\ModelInterface\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use OpenOrchestra\ModelBundle\Document\Role;
 
 /**
  * interface StatusInterface
@@ -66,24 +65,24 @@ interface StatusInterface extends TranslatedValueContainerInterface
     public function getFromRoles();
 
     /**
-     * @param Role $role
+     * @param RoleInterface $role
      */
-    public function addFromRole(Role $role);
+    public function addFromRole(RoleInterface $role);
 
     /**
-     * @param Role $role
+     * @param RoleInterface $role
      */
-    public function removeFromRole(Role $role);
+    public function removeFromRole(RoleInterface $role);
 
     /**
-     * @param Role $role
+     * @param RoleInterface $role
      */
-    public function addToRole(Role $role);
+    public function addToRole(RoleInterface $role);
 
     /**
-     * @param Role $role
+     * @param RoleInterface $role
      */
-    public function removeToRole(Role $role);
+    public function removeToRole(RoleInterface $role);
 
     /**
      * @return ArrayCollection
