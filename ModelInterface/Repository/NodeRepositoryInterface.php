@@ -319,9 +319,9 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
 
     /**
      * @param string $siteId
-     * @param bool   $defaultTheme
+     * @param bool   $themeSiteDefault
      *
      * @return array
      */
-    public function findBySiteIdAndDefaultTheme($siteId, $defaultTheme = true);
+    public function findBySiteIdAndDefaultTheme($siteId, $themeSiteDefault = true);
 }
