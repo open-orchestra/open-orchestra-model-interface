@@ -112,14 +112,14 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
      *
      * @param boolean $themeSiteDefault
      */
-    public function setThemeSiteDefault($themeSiteDefault);
+    public function setDefaultSiteTheme($themeSiteDefault);
 
     /**
-     * Is default theme site
+     * Has default site theme
      *
      * @return boolean $themeSiteDefault
      */
-    public function isThemeSiteDefault();
+    public function hasDefaultSiteTheme();
 
     /**
      * @param BlockInterface $block
