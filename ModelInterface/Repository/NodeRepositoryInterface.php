@@ -316,4 +316,12 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return array
      */
     public function findByAuthorAndSiteId($author, $siteId, $published = null, $limit = null, $sort = null);
+
+    /**
+     * @param string $siteId
+     * @param bool   $themeSiteDefault
+     *
+     * @return array
+     */
+    public function findBySiteIdAndDefaultTheme($siteId, $themeSiteDefault = true);
 }
