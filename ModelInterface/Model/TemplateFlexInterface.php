@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface TemplateFlexInterface
  */
-interface TemplateFlexInterface extends AreaContainerInterface, BlockContainerInterface, VersionableInterface, SoftDeleteableInterface
+interface TemplateFlexInterface extends AreaFlexContainerInterface, SoftDeleteableInterface
 {
 
     /**
