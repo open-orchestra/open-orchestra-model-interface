@@ -7,6 +7,26 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface AreaFlexInterface extends ReadAreaFlexInterface
 {
+    const TYPE_ROOT = 'root';
+    const TYPE_ROW = 'row';
+    const TYPE_COLUMN = 'column';
+    const ROOT_AREA_ID = 'node';
+    const ROOT_AREA_LABEL = 'Node';
+
+    /**
+     * Set area type
+     *
+     * @param string $areaType
+     */
+    public function setAreaType($areaType);
+
+    /**
+     * Get area type
+     *
+     * @return string $areaType
+     */
+    public function getAreaType();
+
     /**
      * Set label
      *

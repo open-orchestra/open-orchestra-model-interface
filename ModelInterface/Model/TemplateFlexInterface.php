@@ -5,8 +5,17 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface TemplateFlexInterface
  */
-interface TemplateFlexInterface extends AreaFlexContainerInterface, SoftDeleteableInterface
+interface TemplateFlexInterface extends SoftDeleteableInterface
 {
+    /**
+     * @param AreaFlexInterface $area
+     */
+    public function setArea(AreaFlexInterface $area);
+
+    /**
+     * @return AreaFlexInterface
+     */
+    public function getArea();
 
     /**
      * @return string
