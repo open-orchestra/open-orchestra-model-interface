@@ -10,8 +10,8 @@ interface AreaFlexInterface extends ReadAreaFlexInterface
     const TYPE_ROOT = 'root';
     const TYPE_ROW = 'row';
     const TYPE_COLUMN = 'column';
-    const ROOT_AREA_ID = 'node';
-    const ROOT_AREA_LABEL = 'Node';
+    const ROOT_AREA_ID = 'root';
+    const ROOT_AREA_LABEL = 'Root';
 
     /**
      * Set area type
