@@ -42,16 +42,30 @@ interface AreaFlexInterface extends ReadAreaFlexInterface
     public function getLabel();
 
     /**
-     * Set htmlId
+     * Set areaId
      *
-     * @param string $htmlId
+     * @param string
      */
     public function setAreaId($htmlId);
 
     /**
-     * Get htmlId
+     * Get areaId
      *
-     * @return string $htmlId
+     * @return string
      */
     public function getAreaId();
+
+    /**
+     * Get width
+     *
+     * @return string
+     */
+    public function getWidth();
+
+    /**
+     * set width
+     *
+     * @param string $width
+     */
+    public function setWidth($width);
 }
