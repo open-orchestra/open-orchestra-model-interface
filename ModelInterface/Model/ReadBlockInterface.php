@@ -38,7 +38,7 @@ interface ReadBlockInterface extends CacheableInterface
     /**
      * @param string $name
      *
-     * @return string|null
+     * @return mixed
      */
     public function getAttribute($name);
 
