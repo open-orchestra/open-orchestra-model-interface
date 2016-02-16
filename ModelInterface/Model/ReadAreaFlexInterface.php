@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * interface ReadAreaFlexInterface
  */
-interface ReadAreaFlexInterface extends AreaFlexContainerInterface
+interface ReadAreaFlexInterface extends AreaFlexContainerInterface, HtmlClassContainerInterface
 {
     /**
      * Get htmlId
