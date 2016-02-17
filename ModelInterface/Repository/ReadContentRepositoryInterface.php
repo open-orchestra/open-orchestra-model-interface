@@ -42,6 +42,16 @@ interface ReadContentRepositoryInterface
     public function findByContentTypeAndKeywords($language, $contentType = '', $choiceType = self::CHOICE_AND, $keywords = null);
 
     /**
+     * @param string $language
+     * @param string $contentType
+     * @param string $choiceType
+     * @param string $condition
+     *
+     * @return array
+     */
+    public function findByContentTypeAndCondition($language, $contentType = '', $choiceType = self::CHOICE_AND, $condition = null);
+
+    /**
      * @param string $contentId
      * @param string $language
      *
