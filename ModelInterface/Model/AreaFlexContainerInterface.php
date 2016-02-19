@@ -17,13 +17,6 @@ interface AreaFlexContainerInterface
     public function addArea(AreaFlexInterface $subArea);
 
     /**
-     * Remove subArea
-     *
-     * @param AreaFlexInterface $subArea
-     */
-    public function removeArea(AreaFlexInterface $subArea);
-
-    /**
      * Remove subArea by areaId
      *
      * @param string $areaId
