@@ -3,6 +3,7 @@
 namespace OpenOrchestra\ModelInterface\Event;
 
 use OpenOrchestra\ModelInterface\Model\NodeInterface;
+use OpenOrchestra\ModelInterface\Model\StatusInterface;
 use Symfony\Component\EventDispatcher\Event;
 use OpenOrchestra\ModelInterface\Event\EventTrait\EventStatusable;
 use OpenOrchestra\ModelInterface\Event\EventTrait\EventStatusableInterface;

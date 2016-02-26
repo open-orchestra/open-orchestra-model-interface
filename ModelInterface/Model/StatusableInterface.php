@@ -25,4 +25,14 @@ interface StatusableInterface
      * @return bool
      */
     public function hasStatusChanged();
+
+    /**
+     * @return bool
+     */
+    public function isCurrentlyPublished();
+
+    /**
+     * @param bool $currentlyPublished
+     */
+    public function setCurrentlyPublished($currentlyPublished);
 }

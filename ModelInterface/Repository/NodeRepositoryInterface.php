@@ -324,4 +324,22 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return array
      */
     public function findBySiteIdAndDefaultTheme($siteId, $themeSiteDefault = true);
+
+    /**
+     * @param string $nodeId
+     * @param string $language
+     * @param string $siteId
+     *
+     * @return NodeInterface
+     */
+    public function findPublishedInLastVersionWithoutFlag($nodeId, $language, $siteId);
+
+    /**
+     * @param string $nodeId
+     * @param string $language
+     * @param string $siteId
+     *
+     * @return NodeInterface
+     */
+    public function findCurrentlyPublished($nodeId, $language, $siteId);
 }
