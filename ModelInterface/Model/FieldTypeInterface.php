@@ -74,6 +74,28 @@ Interface FieldTypeInterface extends TranslatedValueContainerInterface
     public function isSearchable();
 
     /**
+     * Set Orderable
+     *
+     * @param boolean $orderable
+     */
+    public function setOrderable($orderable);
+
+    /**
+     * @return boolean
+     */
+    public function isOrderable();
+
+    /**
+     * @return string
+     */
+    public function getOrderDirection();
+
+    /**
+     * @param string $orderDirection
+     */
+    public function setOrderDirection($orderDirection);
+
+    /**
      * Set Listable
      *
      * @param boolean $listable
