@@ -341,5 +341,5 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      *
      * @return NodeInterface
      */
-    public function findCurrentlyPublished($nodeId, $language, $siteId);
+    public function findAllCurrentlyPublishedByNode($nodeId, $language, $siteId);
 }

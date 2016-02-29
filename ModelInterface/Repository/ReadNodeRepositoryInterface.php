@@ -32,9 +32,20 @@ interface ReadNodeRepositoryInterface
      * @param string $language
      * @param string $siteId
      *
+     * @deprecated With the currently published flag, use findCurrentlyPublished instead, will be remoted in 1.2.0
+     *
      * @return mixed
      */
     public function findPublishedInLastVersion($nodeId, $language, $siteId);
+
+    /**
+     * @param string $nodeId
+     * @param string $language
+     * @param string $siteId
+     *
+     * @return mixed
+     */
+    public function findOneCurrentlyPublished($nodeId, $language, $siteId);
 
     /**
      * @param string $language
@@ -50,9 +61,19 @@ interface ReadNodeRepositoryInterface
      * @param string $language
      * @param string $siteId
      *
+     * @deprecated with the fag usage, use findCurrentlyPublishedVersion, will be removed in 1.2
+     *
      * @return ReadNodeInterface
      */
     public function findLastPublishedVersion($language, $siteId);
+
+    /**
+     * @param string $language
+     * @param string $siteId
+     *
+     * @return ReadNodeInterface
+     */
+    public function findCurrentlyPublishedVersion($language, $siteId);
 
     /**
      * @param string $language
