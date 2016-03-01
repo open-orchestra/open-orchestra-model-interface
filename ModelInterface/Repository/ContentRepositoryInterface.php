@@ -9,7 +9,7 @@ use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 /**
  * Interface ContentRepositoryInterface
  */
-interface ContentRepositoryInterface extends ReadContentRepositoryInterface, StatusableElementRepositoryInterface
+interface ContentRepositoryInterface extends ReadContentRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface
 {
     /**
      * @return array list of news

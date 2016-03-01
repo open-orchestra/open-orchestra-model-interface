@@ -3,6 +3,7 @@
 namespace OpenOrchestra\ModelInterface\Event;
 
 use OpenOrchestra\ModelInterface\Model\NodeInterface;
+use OpenOrchestra\ModelInterface\Model\StatusableInterface;
 use OpenOrchestra\ModelInterface\Model\StatusInterface;
 use Symfony\Component\EventDispatcher\Event;
 use OpenOrchestra\ModelInterface\Event\EventTrait\EventStatusable;
@@ -35,5 +36,13 @@ class NodeEvent extends Event implements EventStatusableInterface
     public function getNode()
     {
         return $this->node;
+    }
+
+    /**
+     * @return StatusableInterface
+     */
+    public function getStatusableElement()
+    {
+        return $this->getNode();
     }
 }

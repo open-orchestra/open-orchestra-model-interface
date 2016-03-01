@@ -2,6 +2,7 @@
 
 namespace OpenOrchestra\ModelInterface\Repository;
 
+use OpenOrchestra\ModelInterface\Model\NodeInterface;
 use OpenOrchestra\ModelInterface\Model\ReadNodeInterface;
 
 /**
@@ -43,7 +44,7 @@ interface ReadNodeRepositoryInterface
      * @param string $language
      * @param string $siteId
      *
-     * @return mixed
+     * @return NodeInterface
      */
     public function findOneCurrentlyPublished($nodeId, $language, $siteId);
 
