@@ -7,7 +7,7 @@ use OpenOrchestra\ModelInterface\Model\NodeInterface;
 /**
  * Interface NodeRepositoryInterface
  */
-interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, StatusableElementRepositoryInterface
+interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface
 {
     /**
      * @return array

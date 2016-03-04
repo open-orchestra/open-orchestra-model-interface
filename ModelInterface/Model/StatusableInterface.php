@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface StatusableInterface
  */
-interface StatusableInterface
+interface StatusableInterface extends VersionableInterface
 {
     /**
      * Set status
@@ -25,4 +25,14 @@ interface StatusableInterface
      * @return bool
      */
     public function hasStatusChanged();
+
+    /**
+     * @return bool
+     */
+    public function isCurrentlyPublished();
+
+    /**
+     * @param bool $currentlyPublished
+     */
+    public function setCurrentlyPublished($currentlyPublished);
 }
