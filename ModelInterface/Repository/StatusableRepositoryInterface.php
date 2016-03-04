@@ -1,8 +1,8 @@
 <?php
 
 namespace OpenOrchestra\ModelInterface\Repository;
-use OpenOrchestra\ModelInterface\Model\StatusableInterface;
 
+use OpenOrchestra\ModelInterface\Model\StatusableInterface;
 
 /**
  * Interface StatusableRepositoryInterface
@@ -19,20 +19,23 @@ interface StatusableRepositoryInterface
     public function findOneCurrentlyPublished($elementId, $language, $siteId);
 
     /**
-     * @param string $elementId
-     * @param string $language
-     * @param string $siteId
+     * @param StatusableInterface $element
      *
      * @return StatusableInterface
      */
-    public function findPublishedInLastVersionWithoutFlag($elementId, $language, $siteId);
+    public function findOneCurrentlyPublishedByElement(StatusableInterface $element);
 
     /**
-     * @param string $elementId
-     * @param string $language
-     * @param string $siteId
+     * @param StatusableInterface $element
      *
      * @return StatusableInterface
      */
-    public function findAllCurrentlyPublishedByElementId($elementId, $language, $siteId);
+    public function findPublishedInLastVersionWithoutFlag(StatusableInterface $element);
+
+    /**
+     * @param StatusableInterface $element
+     *
+     * @return array
+     */
+    public function findAllCurrentlyPublishedByElementId(StatusableInterface $element);
 }

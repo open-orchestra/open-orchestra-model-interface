@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface StatusableInterface
  */
-interface StatusableInterface
+interface StatusableInterface extends VersionableInterface
 {
     /**
      * Set status
@@ -35,28 +35,4 @@ interface StatusableInterface
      * @param bool $currentlyPublished
      */
     public function setCurrentlyPublished($currentlyPublished);
-
-    /**
-     * @return string
-     */
-    public function getElementId();
-
-    /**
-     * @return int
-     */
-    public function getVersion();
-
-    /**
-     * Get siteId
-     *
-     * @return string $siteId
-     */
-    public function getSiteId();
-
-    /**
-     * Get language
-     *
-     * @return string $language
-     */
-    public function getLanguage();
 }

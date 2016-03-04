@@ -1,12 +1,11 @@
 <?php
 
-
 namespace OpenOrchestra\ModelInterface\Model;
 
 /**
  * Interface ContentInterface
  */
-interface ContentInterface extends ReadContentInterface, StatusableInterface, TimestampableInterface, BlameableInterface, VersionableInterface, SiteLinkableInterface, SoftDeleteableInterface
+interface ContentInterface extends ReadContentInterface, StatusableInterface, TimestampableInterface, BlameableInterface, SiteLinkableInterface, SoftDeleteableInterface
 {
     /**
      * @param ContentAttributeInterface $attribute
