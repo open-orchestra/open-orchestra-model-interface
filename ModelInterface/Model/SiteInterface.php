@@ -15,6 +15,16 @@ interface SiteInterface extends ReadSiteInterface, SitemapableInterface, SoftDel
     public function addAlias(SiteAliasInterface $alias);
 
     /**
+     * @param SiteAliasInterface $alias
+     */
+    public function removeAlias(SiteAliasInterface $alias);
+
+    /**
+     * @return Collection
+     */
+    public function getAliases();
+
+    /**
      * @param string $block
      */
     public function addBlock($block);
