@@ -13,17 +13,20 @@ class SiteEvent extends Event
 {
     protected $site;
     protected $oldAliases;
+    protected $templateIdNodeHome;
 
     /**
      * @param SiteInterface   $site
      * @param Collection|null $oldAliases
+     * @param string|null     $templateIdNodeHome
      *
      * @param SiteInterface $site
      */
-    public function __construct(SiteInterface $site, $oldAliases = null)
+    public function __construct(SiteInterface $site, $oldAliases = null, $templateIdNodeHome = null)
     {
         $this->site = $site;
         $this->oldAliases = $oldAliases;
+        $this->templateIdNodeHome = $templateIdNodeHome;
         if (is_null($oldAliases)) {
             $this->oldAliases = new ArrayCollection();
         }
@@ -43,5 +46,13 @@ class SiteEvent extends Event
     public function getOldAliases()
     {
         return $this->oldAliases;
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getTemplateIdNodeHome()
+    {
+        return $this->templateIdNodeHome;
     }
 }
