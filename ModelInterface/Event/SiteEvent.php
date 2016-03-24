@@ -13,20 +13,20 @@ class SiteEvent extends Event
 {
     protected $site;
     protected $oldAliases;
-    protected $templateIdNodeHome;
+    protected $rootNodeTemplateId;
 
     /**
      * @param SiteInterface   $site
      * @param Collection|null $oldAliases
-     * @param string|null     $templateIdNodeHome
+     * @param string|null     $rootNodeTemplateId
      *
      * @param SiteInterface $site
      */
-    public function __construct(SiteInterface $site, $oldAliases = null, $templateIdNodeHome = null)
+    public function __construct(SiteInterface $site, $oldAliases = null, $rootNodeTemplateId = null)
     {
         $this->site = $site;
         $this->oldAliases = $oldAliases;
-        $this->templateIdNodeHome = $templateIdNodeHome;
+        $this->rootNodeTemplateId = $rootNodeTemplateId;
         if (is_null($oldAliases)) {
             $this->oldAliases = new ArrayCollection();
         }
@@ -49,10 +49,10 @@ class SiteEvent extends Event
     }
 
     /**
-     * @return Collection
+     * @return string
      */
-    public function getTemplateIdNodeHome()
+    public function getRootNodeTemplateId()
     {
-        return $this->templateIdNodeHome;
+        return $this->rootNodeTemplateId;
     }
 }
