@@ -20,6 +20,13 @@ interface BlockContainerInterface
     public function removeBlock(BlockInterface $block);
 
     /**
+     * Remove block with index $key
+     *
+     * @param string $key
+     */
+    public function removeBlockWithKey($key);
+
+    /**
      * Get subAreas
      *
      * @return ArrayCollection $subAreas
