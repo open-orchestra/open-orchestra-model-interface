@@ -2,6 +2,7 @@
 
 namespace OpenOrchestra\ModelInterface\Repository;
 
+use OpenOrchestra\ModelInterface\Model\TrashItemInterface;
 use OpenOrchestra\Pagination\Configuration\PaginationRepositoryInterface;
 
 /**
@@ -9,4 +10,10 @@ use OpenOrchestra\Pagination\Configuration\PaginationRepositoryInterface;
  */
 interface TrashItemRepositoryInterface extends PaginationRepositoryInterface
 {
+    /**
+     * @param $entityId
+     *
+     * @return TrashItemInterface
+     */
+    public function findByEntity($entityId);
 }

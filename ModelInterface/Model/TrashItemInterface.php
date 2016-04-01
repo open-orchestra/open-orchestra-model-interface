@@ -7,6 +7,9 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface TrashItemInterface
 {
+    const TYPE_NODE = 'node';
+    const TYPE_CONTENT = 'content';
+
     /**
      * @return string
      */
@@ -46,4 +49,14 @@ interface TrashItemInterface
      * @param string $name
      */
     public function setName($name);
+
+    /**
+     * @return string
+     */
+    public function getType();
+
+    /**
+     * @param string $type
+     */
+    public function setType($type);
 }
