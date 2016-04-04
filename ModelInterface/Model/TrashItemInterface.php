@@ -7,9 +7,6 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface TrashItemInterface
 {
-    const TYPE_NODE = 'node';
-    const TYPE_CONTENT = 'content';
-
     /**
      * @return string
      */
