@@ -7,7 +7,7 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface ContentInterface extends ReadContentInterface, StatusableInterface, TimestampableInterface, BlameableInterface, SiteLinkableInterface, SoftDeleteableInterface
 {
-    const TRASH_ITEM_TYPE = 'node';
+    const TRASH_ITEM_TYPE = 'content';
 
     /**
      * @param ContentAttributeInterface $attribute
