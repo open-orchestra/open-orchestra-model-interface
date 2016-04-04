@@ -7,5 +7,5 @@ namespace OpenOrchestra\ModelInterface;
  */
 final class TrashcanEvents
 {
-    const TRASHCAN_DELETE_ENTITY = 'trashcan.delete.entity';
+    const TRASHCAN_REMOVE_ENTITY = 'trashcan.remove.entity';
 }
