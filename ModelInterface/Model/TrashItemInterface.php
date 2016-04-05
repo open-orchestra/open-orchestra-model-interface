@@ -46,4 +46,14 @@ interface TrashItemInterface
      * @param string $name
      */
     public function setName($name);
+
+    /**
+     * @return string
+     */
+    public function getType();
+
+    /**
+     * @param string $type
+     */
+    public function setType($type);
 }
