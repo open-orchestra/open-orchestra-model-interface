@@ -18,7 +18,7 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
     /**
      * Set nodeId
      *
-     * @param int $nodeId
+     * @param string $nodeId
      */
     public function setNodeId($nodeId);
 
