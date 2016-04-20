@@ -21,7 +21,7 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     /**
      * Get nodeId
      *
-     * @return int $nodeId
+     * @return string $nodeId
      */
     public function getNodeId();
 
