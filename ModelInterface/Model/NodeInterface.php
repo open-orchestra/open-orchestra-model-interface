@@ -77,14 +77,14 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
     public function setRoutePattern($routePattern);
 
     /**
-     * Set boLabel
+     * Set name
      *
      * @param string $name
      */
     public function setName($name);
 
     /**
-     * Set name
+     * Set boLabel
      *
      * @param string $boLabel
      */
