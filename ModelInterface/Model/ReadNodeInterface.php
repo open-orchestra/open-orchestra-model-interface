@@ -52,6 +52,13 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     public function getName();
 
     /**
+     * Get boLabel
+     *
+     * @return string
+     */
+    public function getBoLabel();
+
+    /**
      * Get language
      *
      * @return string $language
