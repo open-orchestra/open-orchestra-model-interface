@@ -84,6 +84,13 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
     public function setName($name);
 
     /**
+     * Set boLabel
+     *
+     * @param string $boLabel
+     */
+    public function setBoLabel($boLabel);
+
+    /**
      * Set language
      *
      * @param string $language
