@@ -13,7 +13,7 @@
         "symfony/form": "*",
         "doctrine/collections": "*",
         "doctrine/annotations": "*",
-        "open-orchestra/open-orchestra-libs": "~1.0.0"
+        "open-orchestra/open-orchestra-libs": "1.0.x-dev"
     },
     "require-dev": {
         "psr/log": "1.0.0",
