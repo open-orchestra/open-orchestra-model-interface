@@ -14,6 +14,7 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
     const ROOT_NODE_ID = 'root';
     const ROOT_PARENT_ID = '-';
     const TRANSVERSE_NODE_ID = 'transverse';
+    const TRANSVERSE_BO_LABEL = 'Global page';
     const MAX_AGE = 1000;
     const THEME_DEFAULT = 'use_default_theme';
     const GROUP_ROLE_TYPE = 'node';
