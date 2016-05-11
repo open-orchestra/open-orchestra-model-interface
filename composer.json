@@ -17,10 +17,9 @@
   },
 
   "require-dev": {
+    "codeclimate/php-test-reporter": "~0.3.2",
     "phake/phake": "2.1.0",
-    "phpunit/phpunit": "4.7.2",
-
-    "codeclimate/php-test-reporter": "~0.3.2"
+    "phpunit/phpunit": "4.7.2"
   },
 
   "extra": {
