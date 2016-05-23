@@ -14,6 +14,8 @@ interface ConditionFromBooleanToBddTransformerInterface extends DataTransformerI
     const GET_OR_SUB_BOOLEAN = '/(NOT (?=.)){0,1}([^ \(\)]+)( OR (?=.)){0,1}/';
     const IS_AND_BOOLEAN = '/^((NOT (?=.)){0,1}[^ \(\)]+( AND (?=.)){0,1})+$/';
     const IS_OR_BOOLEAN = '/^((NOT (?=.)){0,1}[^ \(\)]+( OR (?=.)){0,1})+$/';
+    const OPERATOR_SPLIT = array('/ *\( +/', '/ +\) */', '/ *NOT +/', '/ +AND +/', '/ +OR +/');
+    const SEPARATOR = '##';
 
     /**
      * @param string $field
