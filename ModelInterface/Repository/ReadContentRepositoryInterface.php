@@ -45,16 +45,6 @@ interface ReadContentRepositoryInterface
      * @param string $contentId
      * @param string $language
      *
-     * @deprecated will be removed in 1.2.0, use findLastPublishedVersion
-     *
-     * @return ContentInterface
-     */
-    public function findLastPublishedVersionByContentIdAndLanguage($contentId, $language);
-
-    /**
-     * @param string $contentId
-     * @param string $language
-     *
      * @return ContentInterface
      */
     public function findLastPublishedVersion($contentId, $language);

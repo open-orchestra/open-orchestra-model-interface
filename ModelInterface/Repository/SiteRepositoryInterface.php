@@ -15,16 +15,12 @@ interface SiteRepositoryInterface extends ReadSiteRepositoryInterface, Paginatio
      * @param boolean                     $deleted
      * @param PaginateFinderConfiguration $configuration
      *
-     * @deprecated use findForPaginate instead, will be removed in 1.2.0
-     *
      * @return array
      */
     public function findByDeletedForPaginate($deleted, PaginateFinderConfiguration $configuration);
 
     /**
      * @param boolean $deleted
-     *
-     * @deprecated use count instead, will be removed in 1.2.0
      *
      * @return int
      */
@@ -33,8 +29,6 @@ interface SiteRepositoryInterface extends ReadSiteRepositoryInterface, Paginatio
     /**
      * @param boolean             $deleted
      * @param FinderConfiguration $configuration
-     *
-     * @deprecated use countWithFilter instead, will be removed in 1.2.0
      *
      * @return int
      */
