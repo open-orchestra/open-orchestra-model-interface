@@ -11,6 +11,13 @@ use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
  */
 interface ContentRepositoryInterface extends ReadContentRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface
 {
+    const GET_BALANCED_BRACKETS = '/\( ([^\(\)]*) \)/';
+    const GET_AND_SUB_BOOLEAN = '/(NOT (?=.)){0,1}([^ \(\)]+)( AND (?=.)){0,1}/';
+    const GET_OR_SUB_BOOLEAN = '/(NOT (?=.)){0,1}([^ \(\)]+)( OR (?=.)){0,1}/';
+    const IS_AND_BOOLEAN = '/^((NOT (?=.)){0,1}[^ \(\)]+( AND (?=.)){0,1})+$/';
+    const IS_OR_BOOLEAN = '/^((NOT (?=.)){0,1}[^ \(\)]+( OR (?=.)){0,1})+$/';
+    const OPERATOR_SPLIT = array('/ *\( +/', '/ +\) */', '/ *NOT +/', '/ +AND +/', '/ +OR +/');
+
     /**
      * @return array list of news
      */
@@ -127,7 +134,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @param int|null     $limit
      *
      * @return array
-     * 
+     *
      * @deprecated will be removed in 1.2.0
      */
     public function findByAuthor($author, $published = null, $limit = null);
