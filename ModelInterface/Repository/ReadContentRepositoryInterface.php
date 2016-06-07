@@ -20,22 +20,12 @@ interface ReadContentRepositoryInterface
     public function findOneByContentId($contentId);
 
     /**
-     * @param string $language
-     * @param string $contentType
-     * @param string $choiceType
-     * @param string $keywords
-     *
-     * @deprecated will be removed in 1.2.0, use findByContentTypeAndKeywords
-     *
-     * @return array
-     */
-    public function findByContentTypeAndChoiceTypeAndKeywordsAndLanguage($language, $contentType = '', $choiceType = self::CHOICE_AND, $keywords = null);
-
-    /**
      * @param string      $language
      * @param string      $contentType
      * @param string      $choiceType
      * @param string|null $keywords
+     *
+     * @deprecated will be removed in 1.3.0, use findByContentTypeAndKeywords
      *
      * @return array
      */
