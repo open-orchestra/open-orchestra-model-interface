@@ -208,6 +208,16 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     public function findByNodeAndSite($nodeId, $siteId);
 
     /**
+     * @param string $nodeId
+     * @param string $siteId
+     *
+     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     *
+     * @return mixed
+     */
+    public function findOneByNodeAndSite($nodeId, $siteId);
+
+    /**
      * @param string $type
      *
      * @throws \Exception
