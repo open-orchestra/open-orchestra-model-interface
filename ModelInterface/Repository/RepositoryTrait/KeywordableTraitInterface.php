@@ -12,8 +12,7 @@ interface KeywordableTraitInterface
     const GET_OR_SUB_BOOLEAN = '/(NOT (?=.)){0,1}([^ \(\)]+)( OR (?=.)){0,1}/';
     const IS_AND_BOOLEAN = '/^((NOT (?=.)){0,1}[^ \(\)]+( AND (?=.)){0,1})+$/';
     const IS_OR_BOOLEAN = '/^((NOT (?=.)){0,1}[^ \(\)]+( OR (?=.)){0,1})+$/';
-
-    public static $OPERATOR_SPLIT = array('/ *\( +/', '/ +\) */', '/ *NOT +/', '/ +AND +/', '/ +OR +/');
+    const OPERATOR_SPLIT = '/ *\( +/|/ +\) */|/ *NOT +/|/ +AND +/|/ +OR +/';
 
     /**
      * @param string $condition
