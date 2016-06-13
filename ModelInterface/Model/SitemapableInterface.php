@@ -3,7 +3,7 @@
 namespace OpenOrchestra\ModelInterface\Model;
 
 /**
- * interface MetaableInterface
+ * interface SitemapableInterface
  */
 interface SitemapableInterface extends ReadSitemapableInterface
 {

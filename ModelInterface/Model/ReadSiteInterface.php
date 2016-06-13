@@ -48,6 +48,30 @@ interface ReadSiteInterface extends MetaableInterface, ReadSitemapableInterface
     public function getTheme();
 
     /**
+     * @return string
+     */
+    public function getMetaKeywords();
+
+    /**
+     * @param string $language
+     *
+     * @return string
+     */
+    public function getMetaKeywordsInLanguage($language);
+
+    /**
+     * @return string
+     */
+    public function getMetaDescriptions();
+
+    /**
+     * @param string $language
+     *
+     * @return string
+     */
+    public function getMetaDescriptionInLanguage($language);
+
+    /**
      * Get robotsTxt
      *
      * @return string $robotsTxt
