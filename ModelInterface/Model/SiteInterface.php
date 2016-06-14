@@ -59,6 +59,38 @@ interface SiteInterface extends ReadSiteInterface, SitemapableInterface, SoftDel
     public function setTheme(ThemeInterface $theme);
 
     /**
+     * @param array $metaKeywords
+     */
+    public function setMetaKeywords(array $metaKeywords);
+
+    /**
+     * @param string $language
+     * @param string $metaKeywords
+     */
+    public function addMetaKeywords($language, $metaKeywords);
+
+    /**
+     * @param string $language
+     */
+    public function removeMetaKeywords($language);
+
+    /**
+     * @param array $metaDescriptions
+     */
+    public function setMetaDescriptions(array $metaDescriptions);
+
+    /**
+     * @param string $language
+     * @param string $metaDescription
+     */
+    public function addMetaDescription($language, $metaDescription);
+
+    /**
+     * @param string $language
+     */
+    public function removeMetaDescription($language);
+
+    /**
      * Set robotsTxt
      *
      * @param string $robotsTxt

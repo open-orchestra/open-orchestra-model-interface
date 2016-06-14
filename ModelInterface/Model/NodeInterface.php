@@ -193,4 +193,13 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
      */
     public function getBoDirection();
 
+    /**
+     * @param string $metaKeywords
+     */
+    public function setMetaKeywords($metaKeywords);
+
+    /**
+     * @param string $metaDescription
+     */
+    public function setMetaDescription($metaDescription);
 }

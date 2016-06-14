@@ -88,4 +88,14 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
      * @return int
      */
     public function getOrder();
+
+    /**
+     * @return string
+     */
+    public function getMetaKeywords();
+
+    /**
+     * @return string
+     */
+    public function getMetaDescription();
 }
