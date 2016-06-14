@@ -184,11 +184,6 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
     public function setOrder($order);
 
     /**
-     * @return boolean
-     */
-    public function isEditable();
-
-    /**
      * @param string $boDirection
      */
     public function setBoDirection($boDirection);
