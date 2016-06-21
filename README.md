@@ -1,5 +1,5 @@
-open-orchestra-model-interface-bundle
-===========================
+open-orchestra-model-interface
+==============================
 
 The Open Orchestra model bundle
 
