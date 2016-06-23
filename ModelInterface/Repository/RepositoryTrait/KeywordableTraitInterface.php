@@ -8,10 +8,10 @@ namespace OpenOrchestra\ModelInterface\Repository\RepositoryTrait;
 interface KeywordableTraitInterface
 {
     const GET_BALANCED_BRACKETS = '/\( ([^\(\)]*) \)/';
-    const GET_AND_SUB_BOOLEAN = '/(NOT (?=.)){0,1}([^ \(\)]+)( AND (?=.)){0,1}/';
-    const GET_OR_SUB_BOOLEAN = '/(NOT (?=.)){0,1}([^ \(\)]+)( OR (?=.)){0,1}/';
-    const IS_AND_BOOLEAN = '/^((NOT (?=.)){0,1}[^ \(\)]+( AND (?=.)){0,1})+$/';
-    const IS_OR_BOOLEAN = '/^((NOT (?=.)){0,1}[^ \(\)]+( OR (?=.)){0,1})+$/';
+    const GET_AND_SUB_BOOLEAN = '/(?:(?: AND )(NOT ){0,1}([^ ]+))/';
+    const GET_OR_SUB_BOOLEAN = '/(?:(?: OR )(NOT ){0,1}([^ ]+))/';
+    const IS_AND_BOOLEAN = '/^(NOT ){0,1}([^ ]+?)(?:(?: AND (?:NOT ){0,1}[^ ]+?)*)$/';
+    const IS_OR_BOOLEAN = '/^(NOT ){0,1}([^ ]+?)(?:(?: OR (?:NOT ){0,1}[^ ]+?)*)$/';
     const OPERATOR_SPLIT = '/ *\( +/|/ +\) */|/ *NOT +/|/ +AND +/|/ +OR +/';
 
     /**
