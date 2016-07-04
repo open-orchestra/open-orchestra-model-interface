@@ -110,16 +110,41 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @param string|null         $contentType
      * @param FinderConfiguration $configuration
      *
-     * @return array
+     * @return int
+     *
+     * @deprecated will be removed in 1.3.0, use countByContentTypeAndSiteInLastVersionWithFilter
      */
     public function countByContentTypeInLastVersionWithFilter($contentType = null, FinderConfiguration $configuration = null);
+
+    /**
+     * @param string|null         $contentType
+     * @param FinderConfiguration $configuration
+     * @param string|null         $siteId
+     *
+     * @return int
+     */
+    public function countByContentTypeAndSiteInLastVersionWithFilter(
+        $contentType = null,
+        FinderConfiguration $configuration = null,
+        $siteId = null
+    );
 
     /**
      * @param string|null $contentType
      *
      * @return int
+     *
+     * @deprecated will be removed in 1.3.0, use countByContentTypeAndSiteInLastVersion
      */
     public function countByContentTypeInLastVersion($contentType = null);
+
+    /**
+     * @param string|null $contentType
+     * @param string|null $siteId
+     *
+     * @return int
+     */
+    public function countByContentTypeAndSiteInLastVersion($contentType = null, $siteId = null);
 
     /**
      * @param string       $author
@@ -127,7 +152,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @param int|null     $limit
      *
      * @return array
-     * 
+     *
      * @deprecated will be removed in 1.2.0
      */
     public function findByAuthor($author, $published = null, $limit = null);
