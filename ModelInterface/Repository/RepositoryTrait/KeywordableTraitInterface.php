@@ -30,7 +30,7 @@ interface KeywordableTraitInterface
      *
      * @return array
      *
-     * @throws TransformationFailedException
+     * @throws \Symfony\Component\Form\Exception\TransformationFailedException
      */
     public function transformSubConditionToMongoCondition($condition, array &$aliases);
 }
