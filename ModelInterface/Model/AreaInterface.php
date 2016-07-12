@@ -7,6 +7,12 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface AreaInterface extends ReadAreaInterface
 {
+    const TYPE_ROOT = 'root';
+    const TYPE_ROW = 'row';
+    const TYPE_COLUMN = 'column';
+    const ROOT_AREA_ID = 'root';
+    const ROOT_AREA_LABEL = 'Root';
+
     /**
      * Set label
      *
@@ -39,6 +45,7 @@ interface AreaInterface extends ReadAreaInterface
      * Set boDirection
      *
      * @param string $boDirection
+     * @deprecated will be removed in 2.0
      */
     public function setBoDirection($boDirection);
 
@@ -46,6 +53,7 @@ interface AreaInterface extends ReadAreaInterface
      * Get boDirection
      *
      * @return string $boDirection
+     * @deprecated will be removed in 2.0
      */
     public function getBoDirection();
 
@@ -60,4 +68,32 @@ interface AreaInterface extends ReadAreaInterface
      * @param array $block
      */
     public function addBlock(array $block);
+
+    /**
+     * Get width
+     *
+     * @return string
+     */
+    public function getWidth();
+
+    /**
+     * set width
+     *
+     * @param string $width
+     */
+    public function setWidth($width);
+
+    /**
+     * Set area type
+     *
+     * @param string $areaType
+     */
+    public function setAreaType($areaType);
+
+    /**
+     * Get area type
+     *
+     * @return string $areaType
+     */
+    public function getAreaType();
 }

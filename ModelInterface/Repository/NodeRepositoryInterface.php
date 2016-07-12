@@ -2,6 +2,7 @@
 
 namespace OpenOrchestra\ModelInterface\Repository;
 
+use OpenOrchestra\ModelInterface\Model\AreaInterface;
 use OpenOrchestra\ModelInterface\Model\NodeInterface;
 
 /**
@@ -9,6 +10,14 @@ use OpenOrchestra\ModelInterface\Model\NodeInterface;
  */
 interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface
 {
+    /**
+     * @param NodeInterface $node
+     * @param string        $areaId
+     *
+     * @return null|AreaInterface
+     */
+    public function findAreaInNodeByAreaId(NodeInterface $node, $areaId);
+
     /**
      * @return array
      */

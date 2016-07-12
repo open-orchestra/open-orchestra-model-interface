@@ -9,11 +9,13 @@ interface TemplateInterface extends AreaContainerInterface, BlockContainerInterf
 {
     /**
      * @param string $boDirection
+     * @deprecated will be removed in 2.0
      */
     public function setBoDirection($boDirection);
 
     /**
      * @return string
+     * @deprecated will be removed in 2.0
      */
     public function getBoDirection();
 
@@ -54,11 +56,23 @@ interface TemplateInterface extends AreaContainerInterface, BlockContainerInterf
 
     /**
      * @param string $language
+     * @deprecated will be removed in 2.0
      */
     public function setLanguage($language);
 
     /**
      * @return string
+     * @deprecated will be removed in 2.0
      */
     public function getLanguage();
+
+    /**
+     * @param AreaInterface $area
+     */
+    public function setArea(AreaInterface $area);
+
+    /**
+     * @return AreaInterface
+     */
+    public function getArea();
 }

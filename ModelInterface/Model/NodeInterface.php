@@ -185,11 +185,13 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
 
     /**
      * @param string $boDirection
+     * @deprecated will be removed in 2.0
      */
     public function setBoDirection($boDirection);
 
     /**
      * @return string
+     * @deprecated will be removed in 2.0
      */
     public function getBoDirection();
 
@@ -202,4 +204,14 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
      * @param string $metaDescription
      */
     public function setMetaDescription($metaDescription);
+
+    /**
+     * @param AreaInterface $area
+     */
+    public function setArea(AreaInterface $area);
+
+    /**
+     * @return AreaInterface
+     */
+    public function getArea();
 }
