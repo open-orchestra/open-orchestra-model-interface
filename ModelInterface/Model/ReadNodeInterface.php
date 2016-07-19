@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface ReadNodeInterface
  */
-interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInterface, ReadSchemeableInterface, CacheableInterface, AreaContainerInterface
+interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInterface, ReadSchemeableInterface, CacheableInterface
 {
     const TYPE_ERROR = 'error';
     const ERROR_404_NODE_ID = 'errorPage404';
@@ -98,4 +98,14 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
      * @return string
      */
     public function getMetaDescription();
+
+    /**
+     * @param AreaInterface $area
+     */
+    public function setArea(AreaInterface $area);
+
+    /**
+     * @return AreaInterface
+     */
+    public function getArea();
 }

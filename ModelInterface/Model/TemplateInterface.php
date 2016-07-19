@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface TemplateInterface
  */
-interface TemplateInterface extends AreaContainerInterface, BlockContainerInterface, VersionableInterface, SoftDeleteableInterface
+interface TemplateInterface extends VersionableInterface, SoftDeleteableInterface
 {
     /**
      * @param string $boDirection

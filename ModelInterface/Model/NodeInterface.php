@@ -204,14 +204,4 @@ interface NodeInterface extends ReadNodeInterface, BlockContainerInterface, Stat
      * @param string $metaDescription
      */
     public function setMetaDescription($metaDescription);
-
-    /**
-     * @param AreaInterface $area
-     */
-    public function setArea(AreaInterface $area);
-
-    /**
-     * @return AreaInterface
-     */
-    public function getArea();
 }
