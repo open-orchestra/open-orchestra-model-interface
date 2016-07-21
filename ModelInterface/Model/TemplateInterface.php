@@ -69,10 +69,10 @@ interface TemplateInterface extends VersionableInterface, SoftDeleteableInterfac
     /**
      * @param AreaInterface $area
      */
-    public function setArea(AreaInterface $area);
+    public function setRootArea(AreaInterface $area);
 
     /**
      * @return AreaInterface
      */
-    public function getArea();
+    public function getRootArea();
 }
