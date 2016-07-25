@@ -107,44 +107,30 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
     public function findPaginatedLastVersionByContentTypeAndSite($contentType = null, PaginateFinderConfiguration $configuration = null, $siteId = null);
 
     /**
-     * @param string|null         $contentType
+     * @param null                $contentType
      * @param FinderConfiguration $configuration
-     *
-     * @return int
-     *
-     * @deprecated will be removed in 1.3.0, use countByContentTypeAndSiteInLastVersionWithFilter
-     */
-    public function countByContentTypeInLastVersionWithFilter($contentType = null, FinderConfiguration $configuration = null);
-
-    /**
-     * @param string|null         $contentType
-     * @param FinderConfiguration $configuration
-     * @param string|null         $siteId
+     * @param int|null            $siteId
      *
      * @return int
      */
-    public function countByContentTypeAndSiteInLastVersionWithFilter(
-        $contentType = null,
-        FinderConfiguration $configuration = null,
-        $siteId = null
-    );
+    public function countByContentTypeInLastVersionWithFilter($contentType, FinderConfiguration $configuration = null, $siteId = null);
 
     /**
      * @param string|null $contentType
      *
      * @return int
      *
-     * @deprecated will be removed in 1.3.0, use countByContentTypeAndSiteInLastVersion
+     * @deprecated will be removed in 2.0, use countByContentTypeAndSiteInLastVersion
      */
     public function countByContentTypeInLastVersion($contentType = null);
 
     /**
-     * @param string|null $contentType
+     * @param string      $contentType
      * @param string|null $siteId
      *
      * @return int
      */
-    public function countByContentTypeAndSiteInLastVersion($contentType = null, $siteId = null);
+    public function countByContentTypeAndSiteInLastVersion($contentType, $siteId = null);
 
     /**
      * @param string       $author
