@@ -177,7 +177,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @param string $path
      * @param string $siteId
      *
-     * @return Collection
+     * @return array
      */
     public function findByPathCurrentlyPublished($path, $siteId);
 
