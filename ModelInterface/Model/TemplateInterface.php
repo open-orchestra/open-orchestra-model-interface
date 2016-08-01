@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface TemplateInterface
  */
-interface TemplateInterface extends VersionableInterface, SoftDeleteableInterface
+interface TemplateInterface extends VersionableInterface, SoftDeleteableInterface, AreaRootContainerInterface
 {
     /**
      * @param string $boDirection
@@ -65,14 +65,4 @@ interface TemplateInterface extends VersionableInterface, SoftDeleteableInterfac
      * @deprecated will be removed in 2.0
      */
     public function getLanguage();
-
-    /**
-     * @param AreaInterface $area
-     */
-    public function setRootArea(AreaInterface $area);
-
-    /**
-     * @return AreaInterface
-     */
-    public function getRootArea();
 }
