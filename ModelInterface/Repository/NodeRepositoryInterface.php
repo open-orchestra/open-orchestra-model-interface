@@ -60,6 +60,17 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     /**
      * @param string $path
      * @param string $siteId
+     * @param string $language
+     *
+     * @throws \Exception
+     *
+     * @return mixed
+     */
+    public function findByIncludedPathSiteIdAndLanguage($path, $siteId, $language);
+
+    /**
+     * @param string $path
+     * @param string $siteId
      *
      * @throws \Exception
      *
@@ -117,10 +128,11 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     /**
      * @param string $path
      * @param string $siteId
+     * @param string $language
      *
      * @return array
      */
-    public function findByPathCurrentlyPublished($path, $siteId);
+    public function findByPathCurrentlyPublishedAndLanguage($path, $siteId, $language);
 
     /**
      * @param string $path
