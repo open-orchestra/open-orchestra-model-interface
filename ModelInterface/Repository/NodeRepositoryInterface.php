@@ -64,7 +64,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      *
      * @throws \Exception
      *
-     * @return mixed
+     * @return array
      */
     public function findByIncludedPathSiteIdAndLanguage($path, $siteId, $language);
 
