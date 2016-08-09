@@ -128,6 +128,15 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     /**
      * @param string $path
      * @param string $siteId
+     *
+     * @return array
+     * @deprecated will be removed in 2.0, use findByPathCurrentlyPublishedAndLanguage
+     */
+    public function findByPathCurrentlyPublished($path, $siteId);
+
+    /**
+     * @param string $path
+     * @param string $siteId
      * @param string $language
      *
      * @return array
