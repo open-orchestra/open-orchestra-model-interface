@@ -15,8 +15,17 @@ interface TemplateRepositoryInterface
      * @param string $areaId
      *
      * @return AreaInterface|null
+     * @deprecated will be removed in 2.0 use findAreaInTemplateByAreaId
      */
     public function findAreaByTemplateIdAndAreaId($templateId, $areaId);
+
+    /**
+     * @param $template TemplateInterface
+     * @param string    $areaId
+     *
+     * @return null|AreaInterface
+     */
+    public function findAreaInTemplateByAreaId(TemplateInterface $template, $areaId);
 
     /**
      * @param string $templateId

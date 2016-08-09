@@ -5,15 +5,17 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface TemplateInterface
  */
-interface TemplateInterface extends AreaContainerInterface, BlockContainerInterface, VersionableInterface, SoftDeleteableInterface
+interface TemplateInterface extends VersionableInterface, SoftDeleteableInterface, AreaRootContainerInterface
 {
     /**
      * @param string $boDirection
+     * @deprecated will be removed in 2.0
      */
     public function setBoDirection($boDirection);
 
     /**
      * @return string
+     * @deprecated will be removed in 2.0
      */
     public function getBoDirection();
 
@@ -54,11 +56,13 @@ interface TemplateInterface extends AreaContainerInterface, BlockContainerInterf
 
     /**
      * @param string $language
+     * @deprecated will be removed in 2.0
      */
     public function setLanguage($language);
 
     /**
      * @return string
+     * @deprecated will be removed in 2.0
      */
     public function getLanguage();
 }
