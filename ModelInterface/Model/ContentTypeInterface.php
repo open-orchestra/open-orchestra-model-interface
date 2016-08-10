@@ -3,6 +3,8 @@
 namespace OpenOrchestra\ModelInterface\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+
 use OpenOrchestra\ModelInterface\Exceptions\TranslatedValueNotExisting;
 
 /**
@@ -31,9 +33,9 @@ interface ContentTypeInterface extends FieldTypeContainerInterface, TranslatedVa
     public function getTemplate();
 
     /**
-     * @param FieldTypeInterface $fields
+     * @param Collection $fields
      */
-    public function setFields(FieldTypeInterface $fields);
+    public function setFields(Collection $fields);
 
     /**
      * @return string
