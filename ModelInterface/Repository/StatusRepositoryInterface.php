@@ -16,6 +16,13 @@ interface StatusRepositoryInterface extends PaginationRepositoryInterface
     public function findOneByInitial();
 
     /**
+     * @param string $name
+     *
+     * @return mixed
+     */
+    public function findOtherByInitial($name);
+
+    /**
      * @return StatusInterface
      */
     public function findOneByPublished();
@@ -33,9 +40,9 @@ interface StatusRepositoryInterface extends PaginationRepositoryInterface
     /**
      * @param string $name
      *
-     * @return mixed
+     * @return array
      */
-    public function findOtherByInitial($name);
+    public function findOtherByAutoUnpublishTo($name);
 
     /**
      * @param string $id
