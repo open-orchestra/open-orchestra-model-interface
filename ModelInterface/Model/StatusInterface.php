@@ -83,6 +83,16 @@ interface StatusInterface
     public function isInitial();
 
     /**
+     * @return boolean
+     */
+    public function isAutoPublishFrom();
+
+    /**
+     * @return boolean
+     */
+    public function isAutoUnpublishTo();
+
+    /**
      * @return ArrayCollection
      */
     public function getFromRoles();

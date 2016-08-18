@@ -98,4 +98,14 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
      * @return string
      */
     public function getMetaDescription();
+
+    /**
+     * @return DateTime | Null
+     */
+    public function getPublishDate();
+
+    /**
+     * @return DateTime | Null
+     */
+    public function getUnpublishDate();
 }
