@@ -99,4 +99,11 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @return array
      */
     public function findByAuthorAndSiteId($author, $siteId, $published = null, $limit = null, $sort = null);
+
+    /**
+     * @param string $entityId
+     *
+     * @return ContentInterface
+     */
+    public function findById($entityId);
 }
