@@ -8,30 +8,10 @@ namespace OpenOrchestra\ModelInterface\Repository\RepositoryTrait;
 interface UseTrackableTraitInterface
 {
     /**
-     * @param string $nodeId
+     * @param string $entityId
+     * @param string $entityType
      *
      * @return array
      */
-    public function findUsedInNode($nodeId);
-
-    /**
-     * @param string $contentId
-     *
-     * @return array
-     */
-    public function findUsedInContent($contentId);
-
-    /**
-     * @param string $contentId
-     *
-     * @return array
-     */
-    public function findUsedInContentType($contentId);
-
-    /**
-     * @param string $mediaId
-     *
-     * @return array
-     */
-    public function findUsedInMedia($mediaId);
+    public function findByUsedInEntity($entityId, $entityType);
 }

@@ -9,6 +9,8 @@ use Doctrine\Common\Collections\Collection;
  */
 interface ContentTypeInterface extends FieldTypeContainerInterface, BlameableInterface, TimestampableInterface, VersionableInterface, SiteLinkableInterface, SoftDeleteableInterface
 {
+    const ENTITY_TYPE = 'content_type';
+
     /**
      * @param string $contentTypeId
      */

@@ -9,6 +9,7 @@ use Doctrine\Common\Collections\Collection;
  */
 interface NodeInterface extends ReadNodeInterface, StatusableInterface, BlameableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface, SoftDeleteableInterface
 {
+    const ENTITY_TYPE = 'node';
     const TYPE_DEFAULT = 'page';
     const TYPE_TRANSVERSE = 'general';
     const ROOT_NODE_ID = 'root';
