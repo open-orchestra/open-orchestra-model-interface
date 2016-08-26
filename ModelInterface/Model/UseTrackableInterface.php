@@ -13,34 +13,16 @@ interface UseTrackableInterface
     const KEY_MEDIA = 'media';
 
     /**
-     * @param string $nodeId
+     * @param string $entityId
+     * @param string $entityType
      */
-    public function addUseInNode($nodeId);
+    public function addUseInEntity($entityId, $entityType);
 
     /**
-     * @param string $nodeId
+     * @param string $entityId
+     * @param string $entityType
      */
-    public function removeUseInNode($nodeId);
-
-    /**
-     * @param string $contentId
-     */
-    public function addUseInContent($contentId);
-
-    /**
-     * @param string $contentId
-     */
-    public function removeUseInContent($contentId);
-
-    /**
-     * @param string $contentTypeId
-     */
-    public function addUseInContentType($contentTypeId);
-    
-    /**
-     * @param string $contentTypeId
-     */
-    public function removeUseInContentType($contentTypeId);
+    public function removeUseInEntity($entityId, $entitytype);
 
     /**
      * @return array
