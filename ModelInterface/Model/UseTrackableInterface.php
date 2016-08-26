@@ -28,4 +28,9 @@ interface UseTrackableInterface
      * @return array
      */
     public function getUseReferences();
+
+    /**
+     * @return boolean
+     */
+    public function isUsed();
 }
