@@ -75,9 +75,11 @@ interface ReadNodeRepositoryInterface
 
     /**
      * @param string $nodeType
+     * @param int    $skip
+     * @param int    $limit
      *
      * @return array
      */
-    public function findAllCurrentlyPublishedByType($nodeType);
+    public function findAllCurrentlyPublishedByTypeWithSkipAndLimit($nodeType, $skip, $limit);
 
 }
