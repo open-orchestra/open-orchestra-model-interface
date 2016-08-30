@@ -10,7 +10,7 @@ use OpenOrchestra\ModelInterface\Exceptions\TranslatedValueNotExisting;
 /**
  * Interface ContentTypeInterface
  */
-interface ContentTypeInterface extends FieldTypeContainerInterface, TranslatedValueContainerInterface, BlameableInterface, TimestampableInterface, VersionableInterface, SiteLinkableInterface, SoftDeleteableInterface
+interface ContentTypeInterface extends FieldTypeContainerInterface, TranslatedValueContainerInterface, BlameableInterface, TimestampableInterface, VersionableInterface, SiteLinkableInterface, SoftDeleteableInterface, IsStatusableInterface
 {
     /**
      * @param string $contentTypeId
