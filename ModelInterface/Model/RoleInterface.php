@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * Interface RoleInterface
  */
-interface RoleInterface extends TranslatedValueContainerInterface
+interface RoleInterface
 {
     /**
      * @return mixed
@@ -45,24 +45,30 @@ interface RoleInterface extends TranslatedValueContainerInterface
     public function setFromStatus(StatusInterface $fromStatus);
 
     /**
-     * @param TranslatedValueInterface $description
+     * @param string $language
+     * @param string $description
      */
-    public function addDescription(TranslatedValueInterface $description);
+    public function addDescription($language, $description);
 
     /**
-     * @param TranslatedValueInterface $description
+     * @param string $language
      */
-    public function removeDescription(TranslatedValueInterface $description);
+    public function removeDescription($language);
 
     /**
      * @param string $language
      *
      * @return string
      */
-    public function getDescription($language = 'en');
+    public function getDescription($language);
 
     /**
-     * @return ArrayCollection
+     * @return array
      */
     public function getDescriptions();
+
+    /**
+     * @param array $descriptions
+     */
+    public function setDescriptions(array $descriptions);
 }
