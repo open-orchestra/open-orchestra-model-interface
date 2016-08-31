@@ -12,7 +12,7 @@ use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 interface ContentTypeRepositoryInterface
 {
     /**
-     * @param $language
+     * @param string|null $language
      *
      * @return array
      */
