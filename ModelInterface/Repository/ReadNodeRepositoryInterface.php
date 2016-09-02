@@ -82,4 +82,10 @@ interface ReadNodeRepositoryInterface
      */
     public function findAllCurrentlyPublishedByTypeWithSkipAndLimit($nodeType, $skip, $limit);
 
+    /**
+     * @param string $nodeType
+     *
+     * @return int
+     */
+    public function countAllCurrentlyPublishedByType($nodeType);
 }
