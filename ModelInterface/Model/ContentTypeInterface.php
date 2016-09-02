@@ -94,7 +94,7 @@ interface ContentTypeInterface extends FieldTypeContainerInterface, BlameableInt
     public function setVersionable($versionable);
 
     /**
-     * @return int
+     * @return boolean
      */
     public function isVersionable();
 }
