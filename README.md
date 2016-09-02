@@ -1,7 +1,7 @@
 open-orchestra-model-interface
 ==============================
 
-The Open Orchestra model bundle
+The Open Orchestra model bundle interface
 
 | Service       | Badge         |
 | ------------- |:-------------:|
