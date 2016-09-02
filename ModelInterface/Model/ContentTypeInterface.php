@@ -87,4 +87,14 @@ interface ContentTypeInterface extends FieldTypeContainerInterface, BlameableInt
      * @param array $defaultListable
      */
     public function setDefaultListable(array $defaultListable);
+
+    /**
+     * @param boolean $versionable
+     */
+    public function setVersionable($versionable);
+
+    /**
+     * @return boolean
+     */
+    public function isVersionable();
 }
