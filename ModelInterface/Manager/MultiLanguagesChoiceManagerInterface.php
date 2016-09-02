@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenOrchestra\Backoffice\Manager;
+namespace OpenOrchestra\ModelInterface\Manager;
 
 /**
  * Class MultiLanguagesChoiceManager
