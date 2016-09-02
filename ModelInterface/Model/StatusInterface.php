@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * interface StatusInterface
  */
-interface StatusInterface extends TranslatedValueContainerInterface
+interface StatusInterface
 {
     /**
      * @return string
@@ -25,19 +25,32 @@ interface StatusInterface extends TranslatedValueContainerInterface
     public function setName($name);
 
     /**
-     * @return ArrayCollection
+     * @return array
      */
     public function getLabels();
 
     /**
-     * @param TranslatedValueInterface $translatedValue
+     * @param array $labels
      */
-    public function addLabel(TranslatedValueInterface $translatedValue);
+    public function setLabels(array $labels);
 
     /**
-     * @param TranslatedValueInterface $translatedValue
+     * @param string $language
+     * @param string $label
      */
-    public function removeLabel(TranslatedValueInterface $translatedValue);
+    public function addLabel($language, $label);
+
+    /**
+     * @param string $language
+     */
+    public function removeLabel($language);
+
+    /**
+     * @param string $language
+     *
+     * @return string
+     */
+    public function getLabel($language);
 
     /**
      * @param boolean $published

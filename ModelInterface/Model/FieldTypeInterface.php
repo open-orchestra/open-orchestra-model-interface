@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * Interface FieldTypeInterface
  */
-Interface FieldTypeInterface extends TranslatedValueContainerInterface
+Interface FieldTypeInterface
 {
     /**
      * Set FieldId
@@ -24,28 +24,34 @@ Interface FieldTypeInterface extends TranslatedValueContainerInterface
     public function getFieldId();
 
     /**
-     * @param TranslatedValueInterface $label
+     * @param string $language
+     * @param string $label
      */
-    public function addLabel(TranslatedValueInterface $label);
+    public function addLabel($language, $label);
 
     /**
-     * @param TranslatedValueInterface $label
+     * @param string $language
      */
-    public function removeLabel(TranslatedValueInterface $label);
+    public function removeLabel($language);
 
     /**
      * Get Label
      *
-     * @return ArrayCollection
+     * @return array
      */
     public function getLabels();
 
     /**
+     * @param array $labels
+     */
+    public function setLabels(array $labels);
+
+    /**
      * @param string $language
      *
-     * @return mixed
+     * @return string
      */
-    public function getLabel($language = 'fr');
+    public function getLabel($language);
 
     /**
      * Set Default Value

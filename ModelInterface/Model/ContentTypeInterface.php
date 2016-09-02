@@ -2,15 +2,12 @@
 
 namespace OpenOrchestra\ModelInterface\Model;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-
-use OpenOrchestra\ModelInterface\Exceptions\TranslatedValueNotExisting;
 
 /**
  * Interface ContentTypeInterface
  */
-interface ContentTypeInterface extends FieldTypeContainerInterface, TranslatedValueContainerInterface, BlameableInterface, TimestampableInterface, VersionableInterface, SiteLinkableInterface, SoftDeleteableInterface
+interface ContentTypeInterface extends FieldTypeContainerInterface, BlameableInterface, TimestampableInterface, VersionableInterface, SiteLinkableInterface, SoftDeleteableInterface
 {
     /**
      * @param string $contentTypeId
@@ -43,27 +40,32 @@ interface ContentTypeInterface extends FieldTypeContainerInterface, TranslatedVa
     public function getId();
 
     /**
-     * @param TranslatedValueInterface $name
+     * @param string $language
+     * @param string $name
      */
-    public function addName(TranslatedValueInterface $name);
+    public function addName($language, $name);
 
     /**
-     * @param TranslatedValueInterface $name
+     * @param string $language
      */
-    public function removeName(TranslatedValueInterface $name);
+    public function removeName($language);
 
     /**
      * @param string $language
      *
      * @return string
-     * @throws TranslatedValueNotExisting
      */
     public function getName($language);
 
     /**
-     * @return ArrayCollection
+     * @return array
      */
     public function getNames();
+
+    /**
+     * @param array $names
+     */
+    public function setNames(array $names);
 
     /**
      * @return array
