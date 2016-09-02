@@ -11,13 +11,16 @@ use Symfony\Component\EventDispatcher\Event;
 class ThemeEvent extends Event
 {
     protected $theme;
+    protected $oldTheme;
 
     /**
-     * @param ThemeInterface $theme
+     * @param ThemeInterface      $theme
+     * @param ThemeInterface|null $oldTheme
      */
-    public function __construct(ThemeInterface $theme)
+    public function __construct(ThemeInterface $theme, ThemeInterface $oldTheme = null)
     {
         $this->theme = $theme;
+        $this->oldTheme = $oldTheme;
     }
 
     /**
@@ -26,5 +29,13 @@ class ThemeEvent extends Event
     public function getTheme()
     {
         return $this->theme;
+    }
+
+    /**
+     * @return ThemeInterface
+     */
+    public function getOldTheme()
+    {
+        return $this->oldTheme;
     }
 }
