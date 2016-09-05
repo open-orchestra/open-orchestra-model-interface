@@ -7,11 +7,6 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface UseTrackableInterface
 {
-    const KEY_NODE = 'node';
-    const KEY_CONTENT = 'content';
-    const KEY_CONTENT_TYPE = 'content_type';
-    const KEY_MEDIA = 'media';
-
     /**
      * @param string $entityId
      * @param string $entityType
