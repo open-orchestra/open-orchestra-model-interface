@@ -207,12 +207,12 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     public function setMetaDescription($metaDescription);
 
     /**
-     * @param null | DateTime $date
+     * @param DateTime|null $date
      */
     public function setPublishDate($date);
 
     /**
-     * @param null | DateTime $date
+     * @param DateTime|null $date
      */
     public function setUnpublishDate($date);
 }
