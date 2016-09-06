@@ -63,6 +63,16 @@ interface StatusInterface
     public function isPublished();
 
     /**
+     * @param boolean $blockedEdition
+     */
+    public function setBlockedEdition($blockedEdition);
+
+    /**
+     * @return boolean
+     */
+    public function isBlockedEdition();
+
+    /**
      * @param boolean $initial
      */
     public function setInitial($initial);
