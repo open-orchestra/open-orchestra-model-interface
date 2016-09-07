@@ -20,9 +20,11 @@ interface UseTrackableInterface
     public function removeUseInEntity($entityId, $entitytype);
 
     /**
+     * @param string|null $entityType
+     *
      * @return array
      */
-    public function getUseReferences();
+    public function getUseReferences($entityType = null);
 
     /**
      * @return boolean
