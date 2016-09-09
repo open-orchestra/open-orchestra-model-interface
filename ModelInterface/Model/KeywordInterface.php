@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * interface KeywordInterface
  */
-interface KeywordInterface
+interface KeywordInterface extends UseTrackableInterface
 {
     /**
      * @return string

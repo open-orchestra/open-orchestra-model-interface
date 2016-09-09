@@ -4,11 +4,12 @@ namespace OpenOrchestra\ModelInterface\Repository;
 
 use OpenOrchestra\ModelInterface\Model\KeywordInterface;
 use OpenOrchestra\Pagination\Configuration\PaginationRepositoryInterface;
+use OpenOrchestra\ModelInterface\Repository\RepositoryTrait\UseTrackableTraitInterface;
 
 /**
  * Interface KeywordRepositoryInterface
  */
-interface KeywordRepositoryInterface extends PaginationRepositoryInterface
+interface KeywordRepositoryInterface extends PaginationRepositoryInterface, UseTrackableTraitInterface
 {
     /**
      * @return array

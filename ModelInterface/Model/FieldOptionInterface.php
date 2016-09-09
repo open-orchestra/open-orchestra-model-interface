@@ -1,6 +1,5 @@
 <?php
 
-
 namespace OpenOrchestra\ModelInterface\Model;
 
 /**
