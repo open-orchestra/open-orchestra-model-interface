@@ -73,6 +73,16 @@ interface StatusInterface
     public function isBlockedEdition();
 
     /**
+     * @param boolean $outOfWorkflow
+     */
+    public function setOutOfWorkflow($outOfWorkflow);
+
+    /**
+     * @return boolean
+     */
+    public function isOutOfWorkflow();
+
+    /**
      * @param boolean $initial
      */
     public function setInitial($initial);

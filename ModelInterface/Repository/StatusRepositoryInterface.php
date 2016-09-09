@@ -33,4 +33,9 @@ interface StatusRepositoryInterface extends PaginationRepositoryInterface
      * @return StatusInterface
      */
     public function findOneByEditable();
+
+    /**
+     * @return StatusInterface
+     */
+    public function findOneByOutOfWorkflow();
 }
