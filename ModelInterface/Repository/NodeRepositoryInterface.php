@@ -4,6 +4,7 @@ namespace OpenOrchestra\ModelInterface\Repository;
 
 use OpenOrchestra\ModelInterface\Model\AreaInterface;
 use OpenOrchestra\ModelInterface\Model\NodeInterface;
+use OpenOrchestra\ModelInterface\Model\StatusInterface;
 
 /**
  * Interface NodeRepositoryInterface
@@ -249,4 +250,24 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return array
      */
     public function findByTheme($theme);
+
+    /**
+     * Find all nodes (in all versions and all langauges) ready to be auto-published
+     *
+     * @param string $siteId
+     * @param array  $fromStatus
+     *
+     * @return array
+     */
+    public function findNodeToAutoPublish($siteId, array $fromStatus);
+
+    /**
+     * Find all nodes (in all versions and all langauges) ready to be auto-unpublished
+     *
+     * @param string          $siteId
+     * @param StatusInterface $publishedStatus
+     *
+     * @return array
+     */
+    public function findNodeToAutoUnpublish($siteId, StatusInterface $publishedStatus);
 }

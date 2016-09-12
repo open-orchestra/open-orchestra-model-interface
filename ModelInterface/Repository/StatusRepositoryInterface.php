@@ -23,6 +23,28 @@ interface StatusRepositoryInterface extends PaginationRepositoryInterface
     public function findOtherByInitial($name);
 
     /**
+     * @return StatusInterface
+     */
+    public function findOneByPublished();
+
+    /**
+     * @return array
+     */
+    public function findByAutoPublishFrom();
+
+    /**
+     * @return StatusInterface
+     */
+    public function findOneByAutoUnpublishTo();
+
+    /**
+     * @param string $name
+     *
+     * @return array
+     */
+    public function findOtherByAutoUnpublishTo($name);
+
+    /**
      * @param string $id
      *
      * @return StatusInterface
