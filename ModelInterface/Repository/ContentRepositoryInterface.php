@@ -5,11 +5,12 @@ namespace OpenOrchestra\ModelInterface\Repository;
 use OpenOrchestra\ModelInterface\Model\ContentInterface;
 use OpenOrchestra\Pagination\Configuration\FinderConfiguration;
 use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
+use OpenOrchestra\ModelInterface\Repository\RepositoryTrait\UseTrackableTraitInterface;
 
 /**
  * Interface ContentRepositoryInterface
  */
-interface ContentRepositoryInterface extends ReadContentRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface
+interface ContentRepositoryInterface extends ReadContentRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface, UseTrackableTraitInterface
 {
     /**
      * @return array list of news
