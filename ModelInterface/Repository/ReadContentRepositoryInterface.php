@@ -25,7 +25,7 @@ interface ReadContentRepositoryInterface
      * @param string      $choiceType
      * @param string|null $keywords
      *
-     * @deprecated will be removed in 1.3.0, use findByContentTypeAndKeywords
+     * @deprecated will be removed in 1.3.0, use findByContentTypeAndCondition
      *
      * @return array
      */
