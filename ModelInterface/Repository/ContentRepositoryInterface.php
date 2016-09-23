@@ -91,6 +91,13 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
     public function countByContentTypeAndSiteInLastVersion($contentType, $siteId = null);
 
     /**
+     * @param string $contentType
+     *
+     * @return int
+     */
+    public function countByContentType($contentType);
+
+    /**
      * @param string       $author
      * @param string       $siteId
      * @param boolean|null $published
