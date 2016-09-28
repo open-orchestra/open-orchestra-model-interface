@@ -233,8 +233,20 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @param array|null   $sort
      *
      * @return array
+     * @deprecated will be removed in 2.0
      */
     public function findByAuthorAndSiteId($author, $siteId, $published = null, $limit = null, $sort = null);
+
+    /**
+     * @param string       $id
+     * @param string       $siteId
+     * @param boolean|null $published
+     * @param int|null     $limit
+     * @param array        $sort
+     *
+     * @return array
+     */
+    public function findByReportAndSiteId($id, $siteId, $published = null, $limit = null, $sort = null);
 
     /**
      * @param string $siteId
