@@ -1,6 +1,5 @@
 <?php
 
-
 namespace OpenOrchestra\ModelInterface\Model;
 
 /**
@@ -11,7 +10,7 @@ interface HistorisableInterface
     /**
      * Add history
      *
-     * @param HistoryInterface $hiistory
+     * @param HistoryInterface $history
      */
     public function addHistory(HistoryInterface $history);
 }

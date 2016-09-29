@@ -242,7 +242,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @param string       $siteId
      * @param boolean|null $published
      * @param int|null     $limit
-     * @param array        $sort
+     * @param array|null   $sort
      *
      * @return array
      */
