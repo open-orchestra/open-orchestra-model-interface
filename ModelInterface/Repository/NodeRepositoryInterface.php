@@ -246,7 +246,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      *
      * @return array
      */
-    public function findByReportAndSiteId($id, $siteId, $published = null, $limit = null, $sort = null);
+    public function findByHistoryAndSiteId($id, $siteId, $published = null, $limit = null, $sort = null);
 
     /**
      * @param string $siteId

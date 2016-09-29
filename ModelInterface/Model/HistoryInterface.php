@@ -5,9 +5,9 @@ namespace OpenOrchestra\ModelInterface\Model;
 use OpenOrchestra\UserBundle\Model\UserInterface;
 
 /**
- * Interface ReportInterface
+ * Interface HistoryInterface
  */
-interface ReportInterface
+interface HistoryInterface
 {
     /**
      * Set user
