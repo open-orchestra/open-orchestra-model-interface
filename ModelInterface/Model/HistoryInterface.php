@@ -2,7 +2,7 @@
 
 namespace OpenOrchestra\ModelInterface\Model;
 
-use OpenOrchestra\UserBundle\Model\UserInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Interface HistoryInterface
