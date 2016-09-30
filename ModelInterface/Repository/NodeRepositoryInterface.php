@@ -240,14 +240,14 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     /**
      * @param string       $id
      * @param string       $siteId
-     * @param string|null  $eventType
+     * @param array|null   $eventTypes
      * @param boolean|null $published
      * @param int|null     $limit
      * @param array|null   $sort
      *
      * @return array
      */
-    public function findByHistoryAndSiteId($id, $siteId, $eventType = null, $published = null, $limit = null, array $sort = null);
+    public function findByHistoryAndSiteId($id, $siteId, array $eventTypes = null, $published = null, $limit = null, array $sort = null);
 
     /**
      * @param string $siteId
