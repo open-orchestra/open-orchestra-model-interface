@@ -36,4 +36,18 @@ interface HistoryInterface
      * @return \Datetime
      */
     public function getUpdatedAt();
+
+    /**
+     * Sets eventType
+     *
+     * @param  string $eventType
+     */
+    public function setEventType($eventType);
+
+    /**
+     * Returns eventType
+     *
+     * @return string
+     */
+    public function getEventType();
 }
