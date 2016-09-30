@@ -105,8 +105,21 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @param int|null     $limit
      *
      * @return array
+     * @deprecated will be removed in 2.0
      */
     public function findByAuthorAndSiteId($author, $siteId, $published = null, $limit = null, $sort = null);
+
+    /**
+     * @param string       $id
+     * @param string       $siteId
+     * @param array|null   $eventTypes
+     * @param boolean|null $published
+     * @param int|null     $limit
+     * @param array|null   $sort
+     *
+     * @return array
+     */
+    public function findByHistoryAndSiteId($id, $siteId, array $eventTypes = null, $published = null, $limit = null, array $sort = null);
 
     /**
      * @param string $entityId
