@@ -17,7 +17,7 @@ interface UseTrackableInterface
      * @param string $entityId
      * @param string $entityType
      */
-    public function removeUseInEntity($entityId, $entitytype);
+    public function removeUseInEntity($entityId, $entityType);
 
     /**
      * @param string|null $entityType
