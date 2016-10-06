@@ -56,4 +56,14 @@ interface TrashItemInterface
      * @param string $type
      */
     public function setType($type);
+
+    /**
+     * @return string
+     */
+    public function getSiteId();
+
+    /**
+     * @param string $siteId
+     */
+    public function setSiteId($siteId);
 }
