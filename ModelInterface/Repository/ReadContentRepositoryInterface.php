@@ -36,10 +36,11 @@ interface ReadContentRepositoryInterface
      * @param string      $contentType
      * @param string      $choiceType
      * @param string|null $condition
+     * @param string|null $siteId
      *
      * @return array
      */
-    public function findByContentTypeAndCondition($language, $contentType = '', $choiceType = self::CHOICE_AND, $condition = null);
+    public function findByContentTypeAndCondition($language, $contentType = '', $choiceType = self::CHOICE_AND, $condition = null,  $siteId = null);
 
     /**
      * @param string $contentId
