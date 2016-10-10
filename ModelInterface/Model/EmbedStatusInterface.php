@@ -2,7 +2,6 @@
 
 namespace OpenOrchestra\ModelInterface\Model;
 
-
 /**
  * Interface EmbedStatusInterface
  */

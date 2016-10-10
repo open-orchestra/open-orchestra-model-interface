@@ -23,18 +23,6 @@ interface ReadContentRepositoryInterface
      * @param string      $language
      * @param string      $contentType
      * @param string      $choiceType
-     * @param string|null $keywords
-     *
-     * @deprecated will be removed in 2.0, use findByContentTypeAndCondition
-     *
-     * @return array
-     */
-    public function findByContentTypeAndKeywords($language, $contentType = '', $choiceType = self::CHOICE_AND, $keywords = null);
-
-    /**
-     * @param string      $language
-     * @param string      $contentType
-     * @param string      $choiceType
      * @param string|null $condition
      * @param string|null $siteId
      *

@@ -27,13 +27,6 @@ interface BlockContainerInterface
     public function removeBlockWithKey($key);
 
     /**
-     * Get subAreas
-     *
-     * @return ArrayCollection $subAreas
-     */
-    public function getAreas();
-
-    /**
      * Get blocks
      *
      * @return array $blocks

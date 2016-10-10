@@ -75,14 +75,6 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
     public function countByContentTypeInLastVersionWithFilter($contentType, FinderConfiguration $configuration = null, $siteId = null);
 
     /**
-     * @param string|null $contentType
-     *
-     * @return int
-     * @deprecated will be removed in 2.0, use countByContentTypeAndSiteInLastVersion
-     */
-    public function countByContentTypeInLastVersion($contentType = null);
-
-    /**
      * @param string      $contentType
      * @param string|null $siteId
      *
@@ -96,18 +88,6 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @return int
      */
     public function countByContentType($contentType);
-
-    /**
-     * @param string       $author
-     * @param string       $siteId
-     * @param boolean|null $published
-     * @param array|null   $sort
-     * @param int|null     $limit
-     *
-     * @return array
-     * @deprecated will be removed in 2.0
-     */
-    public function findByAuthorAndSiteId($author, $siteId, $published = null, $limit = null, $sort = null);
 
     /**
      * @param string       $id
