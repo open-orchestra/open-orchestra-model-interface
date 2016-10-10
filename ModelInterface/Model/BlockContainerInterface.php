@@ -2,8 +2,6 @@
 
 namespace OpenOrchestra\ModelInterface\Model;
 
-use Doctrine\Common\Collections\ArrayCollection;
-
 /**
  * Interface BlockContainerInterface
  */
@@ -25,13 +23,6 @@ interface BlockContainerInterface
      * @param string $key
      */
     public function removeBlockWithKey($key);
-
-    /**
-     * Get subAreas
-     *
-     * @return ArrayCollection $subAreas
-     */
-    public function getAreas();
 
     /**
      * Get blocks

@@ -42,22 +42,6 @@ interface AreaInterface extends ReadAreaInterface
     public function getAreaId();
 
     /**
-     * Set boDirection
-     *
-     * @param string $boDirection
-     * @deprecated will be removed in 2.0
-     */
-    public function setBoDirection($boDirection);
-
-    /**
-     * Get boDirection
-     *
-     * @return string $boDirection
-     * @deprecated will be removed in 2.0
-     */
-    public function getBoDirection();
-
-    /**
      * Set blocks
      *
      * @param array $blocks

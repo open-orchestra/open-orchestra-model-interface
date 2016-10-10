@@ -11,15 +11,6 @@ use OpenOrchestra\ModelInterface\Model\TemplateInterface;
 interface TemplateRepositoryInterface
 {
     /**
-     * @param string $templateId
-     * @param string $areaId
-     *
-     * @return AreaInterface|null
-     * @deprecated will be removed in 2.0 use findAreaInTemplateByAreaId
-     */
-    public function findAreaByTemplateIdAndAreaId($templateId, $areaId);
-
-    /**
      * @param $template TemplateInterface
      * @param string    $areaId
      *

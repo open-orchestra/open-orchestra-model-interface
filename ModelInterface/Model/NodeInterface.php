@@ -185,18 +185,6 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     public function setOrder($order);
 
     /**
-     * @param string $boDirection
-     * @deprecated will be removed in 2.0
-     */
-    public function setBoDirection($boDirection);
-
-    /**
-     * @return string
-     * @deprecated will be removed in 2.0
-     */
-    public function getBoDirection();
-
-    /**
      * @param string $metaKeywords
      */
     public function setMetaKeywords($metaKeywords);
