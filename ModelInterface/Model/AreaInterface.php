@@ -2,82 +2,42 @@
 
 namespace OpenOrchestra\ModelInterface\Model;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * interface AreaInterface
  */
 interface AreaInterface extends ReadAreaInterface
 {
-    const TYPE_ROOT = 'root';
-    const TYPE_ROW = 'row';
-    const TYPE_COLUMN = 'column';
-    const ROOT_AREA_ID = 'root';
-    const ROOT_AREA_LABEL = 'Root';
-
-    /**
-     * Set label
-     *
-     * @param string $label
-     */
-    public function setLabel($label);
-
-    /**
-     * Get label
-     *
-     * @return string $label
-     */
-    public function getLabel();
-
-    /**
-     * Set htmlId
-     *
-     * @param string $htmlId
-     */
-    public function setAreaId($htmlId);
-
-    /**
-     * Get htmlId
-     *
-     * @return string $htmlId
-     */
-    public function getAreaId();
-
     /**
      * Set blocks
      *
      * @param array $blocks
      */
-    public function setBlocks(array $blocks);
+    public function setBlocks(ArrayCollection $blocks);
+
+    /**
+     * @param int            $key
+     * @param BlockInterface $block
+     */
+    public function setBlock($key, BlockInterface $block);
 
     /**
      * @param array $block
      */
-    public function addBlock(array $block);
+    public function addBlock(BlockInterface $block);
 
     /**
-     * Get width
+     * Remove block
      *
-     * @return string
+     * @param BlockInterface $block
      */
-    public function getWidth();
+    public function removeBlock(BlockInterface $block);
 
     /**
-     * set width
+     * Remove block with index $key
      *
-     * @param string $width
+     * @param string $key
      */
-    public function setWidth($width);
-
-    /**
-     * Set area type
-     *
-     * @param string $areaType
-     */
-    public function setAreaType($areaType);
-
-    /**
-     * Get area type
-     *
-     * @return string $areaType
-     */
-    public function getAreaType();
+    public function removeBlockWithKey($key);
 }

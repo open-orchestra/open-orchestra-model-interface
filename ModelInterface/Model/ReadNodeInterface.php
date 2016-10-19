@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface ReadNodeInterface
  */
-interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInterface, ReadSchemeableInterface, CacheableInterface, AreaRootContainerInterface, BlockContainerInterface
+interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInterface, ReadSchemeableInterface, CacheableInterface
 {
     const TYPE_ERROR = 'error';
     const ERROR_404_NODE_ID = 'errorPage404';
@@ -21,9 +21,16 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     /**
      * Get nodeId
      *
-     * @return string $nodeId
+     * @return string
      */
     public function getNodeId();
+
+    /**
+     * Get nodeType
+     *
+     * @return string $nodeType
+     */
+    public function getNodeType();
 
     /**
      * Get siteId
@@ -40,9 +47,11 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     public function getParentId();
 
     /**
-     * @return string
+     * Get path
+     *
+     * @return string $path
      */
-    public function getRoutePattern();
+    public function getPath();
 
     /**
      * Get name
@@ -52,18 +61,18 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     public function getName();
 
     /**
-     * Get boLabel
-     *
-     * @return string
-     */
-    public function getBoLabel();
-
-    /**
      * Get language
      *
      * @return string $language
      */
     public function getLanguage();
+
+    /**
+     * Get template
+     *
+     * @return string $template
+     */
+    public function getTemplate();
 
     /**
      * Get theme
@@ -73,11 +82,21 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     public function getTheme();
 
     /**
-     * @param int $key
+     * Has default site theme
      *
-     * @return BlockInterface
+     * @return boolean $themeSiteDefault
      */
-    public function getBlock($key);
+    public function hasDefaultSiteTheme();
+
+    /**
+     * @return boolean
+     */
+    public function isInFooter();
+
+    /**
+     * @return boolean
+     */
+    public function isInMenu();
 
     /**
      * @return string
@@ -92,6 +111,11 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     /**
      * @return string
      */
+    public function getRoutePattern();
+
+    /**
+     * @return string
+     */
     public function getMetaKeywords();
 
     /**
@@ -100,12 +124,27 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     public function getMetaDescription();
 
     /**
-     * @return DateTime|null
+     * @return \DateTime
      */
     public function getPublishDate();
 
     /**
-     * @return DateTime|null
+     * @return \DateTime
      */
     public function getUnpublishDate();
+
+    /**
+     * Get areas
+     *
+     * @return array $areas
+     */
+    public function getAreas();
+
+    /**
+     * Get area
+     * @param string        $areaId
+     *
+     * @return AreaInterface $area
+     */
+    public function getArea($areaId);
 }

@@ -52,6 +52,34 @@ interface SiteInterface extends ReadSiteInterface, SitemapableInterface, SoftDel
     public function setName($name);
 
     /**
+     * Get templateSet
+     *
+     * @return string $templateSet
+     */
+    public function getTemplateSet();
+
+    /**
+     * Set templateSet
+     *
+     * @param string $templateSet
+     */
+    public function setTemplateSet($templateSet);
+
+    /**
+     * Get templateRoot
+     *
+     * @return string $templateRoot
+     */
+    public function getTemplateRoot();
+
+    /**
+     * Set templateRoot
+     *
+     * @param string $templateRoot
+     */
+    public function setTemplateRoot($templateRoot);
+
+    /**
      * Set theme
      *
      * @param ThemeInterface $theme

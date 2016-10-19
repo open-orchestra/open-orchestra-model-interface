@@ -262,4 +262,13 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return array
      */
     public function findNodeToAutoUnpublish($siteId, StatusInterface $publishedStatus);
+
+    /**
+     * indicates if node collection contains an usage of a particular block
+     *
+     * @param string          $blockId
+     *
+     * @return boolean
+     */
+    public function isBlockUsed($blockId);
 }

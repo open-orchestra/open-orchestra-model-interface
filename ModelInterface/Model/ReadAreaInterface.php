@@ -5,12 +5,19 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * interface ReadAreaInterface
  */
-interface ReadAreaInterface extends AreaContainerInterface, HtmlClassContainerInterface
+interface ReadAreaInterface
 {
     /**
-     * Get htmlId
+     * Get blocks
      *
-     * @return string $htmlId
+     * @return array $blocks
      */
-    public function getAreaId();
+    public function getBlocks();
+
+    /**
+     * @param BlockInterface $block
+     *
+     * @return bool|int|mixed|string
+     */
+    public function getBlockIndex(BlockInterface $block);
 }
