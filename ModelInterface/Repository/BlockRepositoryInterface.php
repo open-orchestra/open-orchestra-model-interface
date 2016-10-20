@@ -7,4 +7,15 @@ namespace OpenOrchestra\ModelInterface\Repository;
  */
 interface BlockRepositoryInterface
 {
+    /**
+     * @param string $id
+     *
+     * @return null|\OpenOrchestra\ModelInterface\Model\ReadBlockInterface
+     */
+    public function findById($id);
+
+    /**
+     * @return array
+     */
+    public function findTransverse();
 }
