@@ -7,6 +7,8 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface BlockInterface extends ReadBlockInterface
 {
+    const ENTITY_TYPE = 'block';
+
     /**
      * Set component
      *
