@@ -54,7 +54,7 @@ interface ReadBlockInterface extends CacheableInterface
      *
      * @return boolean $private
      */
-    public function getPrivate();
+    public function isPrivate();
 
     /**
      * Get parameter
