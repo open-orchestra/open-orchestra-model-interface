@@ -62,4 +62,11 @@ interface ReadBlockInterface extends CacheableInterface
      * @return array $private
      */
     public function getParameter();
+
+    /**
+     * Get transverse
+     *
+     * @return boolean
+     */
+    public function isTransverse();
 }

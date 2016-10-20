@@ -24,13 +24,6 @@ interface BlockInterface extends ReadBlockInterface
     public function setTransverse($transverse);
 
     /**
-     * Get transverse
-     *
-     * @return boolean
-     */
-    public function isTransverse();
-
-    /**
      * Set label
      *
      * @param string $label
