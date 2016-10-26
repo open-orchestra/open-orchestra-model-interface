@@ -65,6 +65,13 @@ interface BlockInterface extends ReadBlockInterface
     public function setPrivate($private);
 
     /**
+     * Set language
+     *
+     * @param string $language
+     */
+    public function setLanguage($language);
+
+    /**
      * Set parameter
      *
      * @param array $parameter

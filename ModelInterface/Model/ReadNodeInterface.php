@@ -141,6 +141,11 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     public function getAreas();
 
     /**
+     * @return string
+     */
+    public function getSpecialPageName();
+
+    /**
      * Get area
      * @param string        $areaId
      *

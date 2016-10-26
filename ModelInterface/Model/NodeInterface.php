@@ -143,6 +143,11 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     public function setUnpublishDate($date);
 
     /**
+     * @param string specialPageName
+     */
+    public function setSpecialPageName($specialPageName);
+
+    /**
      * @param string        $areaId
      * @param AreaInterface $area
      */
