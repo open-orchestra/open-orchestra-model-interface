@@ -7,6 +7,8 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface BlockInterface extends ReadBlockInterface
 {
+    const ENTITY_TYPE = 'block';
+
     /**
      * Set component
      *
@@ -15,32 +17,18 @@ interface BlockInterface extends ReadBlockInterface
     public function setComponent($component);
 
     /**
+     * Set transverse
+     *
+     * @param boolean $transverse
+     */
+    public function setTransverse($transverse);
+
+    /**
      * Set label
      *
      * @param string $label
      */
     public function setLabel($label);
-
-    /**
-     * Get label
-     *
-     * @return string $label
-     */
-    public function getLabel();
-
-    /**
-     * Set class
-     *
-     * @param string $class
-     */
-    public function setClass($class);
-
-    /**
-     * Set id
-     *
-     * @param string $id
-     */
-    public function setId($id);
 
     /**
      * Set attributes
@@ -56,18 +44,37 @@ interface BlockInterface extends ReadBlockInterface
     public function addAttribute($name, $value);
 
     /**
-     * @param array $areas
+     * @param string $name
+     *
+     * @return string|null
      */
-    public function setAreas(array $areas);
+    public function getAttribute($name);
 
     /**
-     * @param array $area
+     * Set class
+     *
+     * @param string $class
      */
-    public function addArea(array $area);
+    public function setClass($class);
 
     /**
-     * @param string $areaId
-     * @param string $nodeId
+     * Set private
+     *
+     * @param boolean $private
      */
-    public function removeAreaRef($areaId, $nodeId);
+    public function setPrivate($private);
+
+    /**
+     * Set language
+     *
+     * @param string $language
+     */
+    public function setLanguage($language);
+
+    /**
+     * Set parameter
+     *
+     * @param array $parameter
+     */
+    public function setParameter(array $parameter);
 }

@@ -8,11 +8,39 @@ namespace OpenOrchestra\ModelInterface\Model;
 interface ReadBlockInterface extends CacheableInterface
 {
     /**
+     * Get id
+     *
+     * @return string $id
+     */
+    public function getId();
+
+    /**
      * Get component
      *
      * @return string $component
      */
     public function getComponent();
+
+    /**
+     * Get label
+     *
+     * @return string $label
+     */
+    public function getLabel();
+
+    /**
+     * Get attributes
+     *
+     * @return array
+     */
+    public function getAttributes();
+
+    /**
+     * @param string $name
+     *
+     * @return string|null
+     */
+    public function getAttribute($name);
 
     /**
      * Get class
@@ -22,28 +50,30 @@ interface ReadBlockInterface extends CacheableInterface
     public function getClass();
 
     /**
-     * Get id
+     * Get private
      *
-     * @return string $id
+     * @return boolean $private
      */
-    public function getId();
+    public function isPrivate();
 
     /**
-     * Get attributes
+     * Get language
      *
-     * @return array $attributes
+     * @return string $language
      */
-    public function getAttributes();
+    public function getLanguage();
 
     /**
-     * @param string $name
+     * Get parameter
      *
-     * @return mixed
+     * @return array $parameter
      */
-    public function getAttribute($name);
+    public function getParameter();
 
     /**
-     * @return array
+     * Get transverse
+     *
+     * @return boolean
      */
-    public function getAreas();
+    public function isTransverse();
 }

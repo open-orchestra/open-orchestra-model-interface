@@ -2,15 +2,24 @@
 
 namespace OpenOrchestra\ModelInterface\Model;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * interface ReadAreaInterface
  */
-interface ReadAreaInterface extends AreaContainerInterface, HtmlClassContainerInterface
+interface ReadAreaInterface
 {
     /**
-     * Get htmlId
+     * Get blocks
      *
-     * @return string $htmlId
+     * @return ArrayCollection $blocks
      */
-    public function getAreaId();
+    public function getBlocks();
+
+    /**
+     * @param BlockInterface $block
+     *
+     * @return mixed
+     */
+    public function getBlockIndex(BlockInterface $block);
 }
