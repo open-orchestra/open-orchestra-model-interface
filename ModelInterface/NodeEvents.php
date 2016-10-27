@@ -17,6 +17,5 @@ final class NodeEvents
     const NODE_DUPLICATE = 'node.duplicate';
     const NODE_ADD_LANGUAGE = 'node.add_language';
     const NODE_DELETE_BLOCK = 'node.delete_block';
-    const NODE_UPDATE_AREA = 'node.update_area';
     const NODE_CHANGE_STATUS = 'node.status';
 }

@@ -266,7 +266,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     /**
      * indicates if node collection contains an usage of a particular block
      *
-     * @param string          $blockId
+     * @param string $blockId
      *
      * @return boolean
      */

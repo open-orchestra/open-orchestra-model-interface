@@ -47,13 +47,6 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     public function getParentId();
 
     /**
-     * Get path
-     *
-     * @return string $path
-     */
-    public function getPath();
-
-    /**
      * Get name
      *
      * @return string $name

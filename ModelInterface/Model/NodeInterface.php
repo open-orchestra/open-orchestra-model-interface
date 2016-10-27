@@ -46,6 +46,13 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     public function setParentId($parentId);
 
     /**
+     * Get path
+     *
+     * @return string $path
+     */
+    public function getPath();
+
+    /**
      * Set path
      *
      * @param string $path

@@ -12,7 +12,7 @@ interface AreaInterface extends ReadAreaInterface
     /**
      * Set blocks
      *
-     * @param array $blocks
+     * @param ArrayCollection $blocks
      */
     public function setBlocks(ArrayCollection $blocks);
 
@@ -23,7 +23,7 @@ interface AreaInterface extends ReadAreaInterface
     public function setBlock($key, BlockInterface $block);
 
     /**
-     * @param array $block
+     * @param BlockInterface $block
      */
     public function addBlock(BlockInterface $block);
 
