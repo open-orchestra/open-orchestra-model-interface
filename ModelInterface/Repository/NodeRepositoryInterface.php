@@ -5,11 +5,12 @@ namespace OpenOrchestra\ModelInterface\Repository;
 use OpenOrchestra\ModelInterface\Model\AreaInterface;
 use OpenOrchestra\ModelInterface\Model\NodeInterface;
 use OpenOrchestra\ModelInterface\Model\StatusInterface;
+use OpenOrchestra\ModelInterface\Repository\RepositoryTrait\UseTrackableTraitInterface;
 
 /**
  * Interface NodeRepositoryInterface
  */
-interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface
+interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface, UseTrackableTraitInterface
 {
     /**
      * @param NodeInterface $node
@@ -153,6 +154,16 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return mixed
      */
     public function findByNodeAndSite($nodeId, $siteId);
+
+    /**
+     * @param string $referenceNodeId
+     * @param string $nodeId
+     * @param string $siteId
+     * @param string $entityType
+     *
+     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     */
+    public function updateUseReference($referenceNodeId, $nodeId, $siteId, $entityType);
 
     /**
      * @param string $nodeId
