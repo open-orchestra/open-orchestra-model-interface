@@ -48,28 +48,11 @@ interface ReadSiteInterface extends MetaableInterface, ReadSitemapableInterface
     public function getTheme();
 
     /**
-     * @return string
-     */
-    public function getMetaKeywords();
-
-    /**
-     * @param string $language
+     * Get metaAuthor
      *
-     * @return string
+     * @return string $metaAuthor
      */
-    public function getMetaKeywordsInLanguage($language);
-
-    /**
-     * @return string
-     */
-    public function getMetaDescriptions();
-
-    /**
-     * @param string $language
-     *
-     * @return string
-     */
-    public function getMetaDescriptionInLanguage($language);
+    public function getMetaAuthor();
 
     /**
      * Get robotsTxt
@@ -94,7 +77,7 @@ interface ReadSiteInterface extends MetaableInterface, ReadSitemapableInterface
 
     /**
      * return main alias index in the collection
-     * 
+     *
      * @return int
      */
     public function getMainAliasId();
