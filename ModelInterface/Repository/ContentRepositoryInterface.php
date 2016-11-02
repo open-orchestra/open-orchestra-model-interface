@@ -6,6 +6,7 @@ use OpenOrchestra\ModelInterface\Model\ContentInterface;
 use OpenOrchestra\Pagination\Configuration\FinderConfiguration;
 use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 use OpenOrchestra\ModelInterface\Repository\RepositoryTrait\UseTrackableTraitInterface;
+use OpenOrchestra\ModelInterface\Model\StatusInterface;
 
 /**
  * Interface ContentRepositoryInterface
@@ -127,4 +128,10 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @return ContentInterface
      */
     public function findById($entityId);
+
+    /**
+     * @param StatusInterface $status
+     * @param string          $contentType
+     */
+    public function updateStatusByContentType(StatusInterface $status, $contentType);
 }
