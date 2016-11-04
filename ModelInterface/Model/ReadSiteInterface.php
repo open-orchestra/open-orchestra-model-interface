@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\Collection;
 /**
  * Interface ReadSiteInterface
  */
-interface ReadSiteInterface extends MetaableInterface, ReadSitemapableInterface
+interface ReadSiteInterface extends ReadSitemapableInterface
 {
     const ROBOTS_TXT_DEFAULT = "User-agent: *\nAllow: /";
     const CHANGE_FREQ_DEFAULT = 'never';

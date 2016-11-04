@@ -26,4 +26,34 @@ interface ReadSiteAliasInterface extends ReadSchemeableInterface
      * @return boolean
      */
     public function isMain();
+
+    /**
+     * @return string
+     */
+    public function getMetaDescription();
+
+    /**
+     * @return string
+     */
+    public function getGoogleMarker();
+
+    /**
+     * @return bool
+     */
+    public function isCnilCompliance();
+
+    /**
+     * @return string
+     */
+    public function getXtsd();
+
+    /**
+     * @return string
+     */
+    public function getXtside();
+
+    /**
+     * @return string
+     */
+    public function getXtn2();
 }
