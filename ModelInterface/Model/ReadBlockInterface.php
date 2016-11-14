@@ -43,11 +43,11 @@ interface ReadBlockInterface extends CacheableInterface
     public function getAttribute($name);
 
     /**
-     * Get class
+     * Get style
      *
-     * @return string $class
+     * @return string $style
      */
-    public function getClass();
+    public function getStyle();
 
     /**
      * Get private

@@ -51,11 +51,11 @@ interface BlockInterface extends ReadBlockInterface
     public function getAttribute($name);
 
     /**
-     * Set class
+     * Set style
      *
-     * @param string $class
+     * @param string $style
      */
-    public function setClass($class);
+    public function setStyle($style);
 
     /**
      * Set private
