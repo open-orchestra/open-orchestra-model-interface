@@ -271,4 +271,12 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return boolean
      */
     public function isBlockUsed($blockId);
+
+    /**
+     * @param string $siteId
+     * @param string $language
+     *
+     * @return array
+     */
+    public function findTreeNode($siteId, $language);
 }
