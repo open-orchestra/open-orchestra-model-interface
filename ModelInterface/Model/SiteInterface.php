@@ -8,6 +8,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 interface SiteInterface extends ReadSiteInterface, SitemapableInterface, SoftDeleteableInterface
 {
     const PREFIX_SITE_ALIAS = 'site-alias-';
+    const ENTITY_TYPE       = 'site';
 
     /**
      * @param SiteAliasInterface $alias
