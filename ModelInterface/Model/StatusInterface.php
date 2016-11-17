@@ -9,6 +9,8 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 interface StatusInterface
 {
+    const OUT_OF_WORKFLOW_NAME = 'outOfWorkflow';
+
     /**
      * @return string
      */

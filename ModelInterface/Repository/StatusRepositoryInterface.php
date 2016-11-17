@@ -11,6 +11,11 @@ use OpenOrchestra\Pagination\Configuration\PaginationRepositoryInterface;
 interface StatusRepositoryInterface extends PaginationRepositoryInterface
 {
     /**
+     * @return array
+     */
+    public function findNotOutOfWorkflow();
+
+    /**
      * @return StatusInterface
      */
     public function findOneByInitial();
