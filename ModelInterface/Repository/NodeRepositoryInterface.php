@@ -5,6 +5,7 @@ namespace OpenOrchestra\ModelInterface\Repository;
 use OpenOrchestra\ModelInterface\Model\AreaInterface;
 use OpenOrchestra\ModelInterface\Model\NodeInterface;
 use OpenOrchestra\ModelInterface\Model\StatusInterface;
+use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 
 /**
  * Interface NodeRepositoryInterface
@@ -279,4 +280,30 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return array
      */
     public function findTreeNode($siteId, $language);
+
+    /**
+     * @param PaginateFinderConfiguration $configuration
+     * @param string                      $siteId
+     * @param string                      $language
+     *
+     * @return int
+     */
+    public function countWithFilter(PaginateFinderConfiguration $configuration, $siteId, $language);
+
+    /**
+     * @param string  $siteId
+     * @param string  $language
+     *
+     * @return int
+     */
+    public function count($siteId, $language);
+
+    /**
+     * @param PaginateFinderConfiguration $configuration
+     * @param string                      $siteId
+     * @param string                      $language
+     *
+     * @return array
+     */
+    public function findForPaginate(PaginateFinderConfiguration $configuration, $siteId, $language);
 }
