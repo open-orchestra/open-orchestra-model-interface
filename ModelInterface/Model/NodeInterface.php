@@ -67,16 +67,6 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     public function setName($name);
 
     /**
-     * @return string
-     */
-    public function getBoLabel();
-
-    /**
-     * @param string $boLabel
-     */
-    public function setBoLabel($boLabel);
-
-    /**
      * Set language
      *
      * @param string $language
