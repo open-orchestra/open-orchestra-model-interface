@@ -109,11 +109,6 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     /**
      * @return string
      */
-    public function getMetaKeywords();
-
-    /**
-     * @return string
-     */
     public function getMetaDescription();
 
     /**
@@ -145,4 +140,9 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
      * @return AreaInterface $area
      */
     public function getArea($areaId);
+
+    /**
+     * @return string
+     */
+    public function getCanonicalPage();
 }
