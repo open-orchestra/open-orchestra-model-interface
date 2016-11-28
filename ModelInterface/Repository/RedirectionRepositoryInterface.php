@@ -25,10 +25,11 @@ interface RedirectionRepositoryInterface extends PaginationRepositoryInterface
     /**
      * @param string $nodeId
      * @param string $locale
+     * @param string $siteId
      *
      * @return array
      */
-    public function findByNode($nodeId, $locale);
+    public function findByNode($nodeId, $locale, $siteId);
 
     /**
      * @param string $siteId
