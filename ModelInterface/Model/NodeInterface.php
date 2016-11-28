@@ -149,4 +149,9 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
      * @param string $canonicalPage
      */
     public function setCanonicalPage($canonicalPage);
+
+    /**
+     * @param string $seoTitle
+     */
+    public function setSeoTitle($seoTitle);
 }

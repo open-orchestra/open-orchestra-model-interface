@@ -145,4 +145,9 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
      * @return string
      */
     public function getCanonicalPage();
+
+    /**
+     * @return string
+     */
+    public function getSeoTitle();
 }
