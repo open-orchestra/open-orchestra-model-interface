@@ -276,10 +276,11 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     /**
      * @param string $siteId
      * @param string $language
+     * @param string $parentId
      *
      * @return array
      */
-    public function findTreeNode($siteId, $language);
+    public function findTreeNode($siteId, $language, $parentId);
 
     /**
      * @param PaginateFinderConfiguration $configuration
