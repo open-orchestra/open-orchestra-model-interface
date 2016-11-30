@@ -65,4 +65,16 @@ interface StatusRepositoryInterface extends PaginationRepositoryInterface
      * @return StatusInterface
      */
     public function findOneByOutOfWorkflow();
+
+    /**
+     * @param string $name
+     *
+     * @return array
+     */
+    public function findOtherByTranslationState($name);
+
+    /**
+     * @return StatusInterface
+     */
+    public function findOneByTranslationState();
 }

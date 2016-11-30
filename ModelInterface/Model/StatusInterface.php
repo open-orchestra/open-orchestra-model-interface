@@ -141,4 +141,14 @@ interface StatusInterface
      * @param mixed $displayColor
      */
     public function setDisplayColor($displayColor);
+
+    /**
+     * @param boolean $translationState
+     */
+    public function setTranslationState($translationState);
+
+    /**
+     * @return boolean
+     */
+    public function isTranslationState();
 }

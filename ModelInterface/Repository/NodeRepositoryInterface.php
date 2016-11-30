@@ -208,6 +208,15 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     public function hasOtherNodeWithSameParentAndOrder($parentId, $order, $nodeId, $siteId);
 
     /**
+     * @param string $parentId
+     * @param int    $order
+     * @param string $siteId
+     *
+     * @return bool
+     */
+    public function hasNodeWithSameParentAndOrder($parentId, $order, $siteId);
+
+    /**
      * @param string   $nodeId
      * @param string   $language
      * @param string   $siteId
@@ -307,4 +316,14 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return array
      */
     public function findForPaginate(PaginateFinderConfiguration $configuration, $siteId, $language);
+
+    /**
+     * @param string $siteId
+     * @param string $nodeId
+     * @param int    $order
+     * @param string $parentId
+     *
+     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     */
+    public function updateOrderBrotherNode($siteId, $nodeId, $order, $parentId);
 }
