@@ -67,16 +67,6 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     public function setName($name);
 
     /**
-     * @return string
-     */
-    public function getBoLabel();
-
-    /**
-     * @param string $boLabel
-     */
-    public function setBoLabel($boLabel);
-
-    /**
      * Set language
      *
      * @param string $language
@@ -130,11 +120,6 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     public function setRoutePattern($routePattern);
 
     /**
-     * @param string $metaKeywords
-     */
-    public function setMetaKeywords($metaKeywords);
-
-    /**
      * @param string $metaDescription
      */
     public function setMetaDescription($metaDescription);
@@ -150,7 +135,7 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     public function setUnpublishDate($date);
 
     /**
-     * @param string specialPageName
+     * @param string $specialPageName
      */
     public function setSpecialPageName($specialPageName);
 
@@ -159,4 +144,14 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
      * @param AreaInterface $area
      */
     public function setArea($areaId, AreaInterface $area);
+
+    /**
+     * @param string $canonicalPage
+     */
+    public function setCanonicalPage($canonicalPage);
+
+    /**
+     * @param string $seoTitle
+     */
+    public function setSeoTitle($seoTitle);
 }
