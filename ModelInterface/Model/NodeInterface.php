@@ -81,6 +81,20 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     public function setTemplate($template);
 
     /**
+     * Set theme
+     *
+     * @param string $theme
+     */
+    public function setTheme($theme);
+
+    /**
+     * Set default theme site
+     *
+     * @param boolean $themeSiteDefault
+     */
+    public function setDefaultSiteTheme($themeSiteDefault);
+
+    /**
      * @param boolean $inFooter
      */
     public function setInFooter($inFooter);
