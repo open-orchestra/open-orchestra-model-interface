@@ -7,6 +7,8 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface KeywordInterface extends UseTrackableInterface
 {
+    const ENTITY_TYPE = 'keyword';
+
     /**
      * @return string
      */

@@ -9,6 +9,8 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 interface StatusInterface
 {
+    const ENTITY_TYPE = 'status';
+
     /**
      * @return string
      */
