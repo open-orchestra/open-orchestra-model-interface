@@ -325,5 +325,5 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      *
      * @throws \Doctrine\ODM\MongoDB\MongoDBException
      */
-    public function updateOrderBrotherNode($siteId, $nodeId, $order, $parentId);
+    public function updateOrderOfBrothers($siteId, $nodeId, $order, $parentId);
 }
