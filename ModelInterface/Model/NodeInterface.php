@@ -105,11 +105,6 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     public function setInMenu($inMenu);
 
     /**
-     * @param string $role
-     */
-    public function setRole($role);
-
-    /**
      * @param int $order
      */
     public function setOrder($order);

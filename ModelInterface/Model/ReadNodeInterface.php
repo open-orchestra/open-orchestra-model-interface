@@ -92,11 +92,6 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     public function isInMenu();
 
     /**
-     * @return string
-     */
-    public function getRole();
-
-    /**
      * @return int
      */
     public function getOrder();
