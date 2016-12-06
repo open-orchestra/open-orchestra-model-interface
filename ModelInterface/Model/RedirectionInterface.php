@@ -7,7 +7,7 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface RedirectionInterface extends ReadRedirectionInterface
 {
-    const ENTITY_TYPE = 'Redirection';
+    const ENTITY_TYPE = 'redirection';
 
     /**
      * @param string $siteId
