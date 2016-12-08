@@ -15,7 +15,17 @@ interface WorkflowTransitionInterface
     public function setStatusFrom(StatusInterface $status);
 
     /**
+     * @return StatusInterface
+     */
+    public function getStatusFrom();
+
+    /**
      * @param string $status
      */
     public function setStatusTo(StatusInterface $status);
+
+    /**
+     * @return StatusInterface
+     */
+    public function getStatusTo();
 }

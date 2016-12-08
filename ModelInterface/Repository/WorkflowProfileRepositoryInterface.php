@@ -2,7 +2,7 @@
 
 namespace OpenOrchestra\ModelInterface\Repository;
 
-use OpenOrchestra\ModelInterface\Model\WorkflowTransitionInterface;
+use OpenOrchestra\ModelInterface\Model\StatusInterface;
 
 /**
  * Interface WorkflowProfileRepositoryInterface
@@ -10,11 +10,12 @@ use OpenOrchestra\ModelInterface\Model\WorkflowTransitionInterface;
 interface WorkflowProfileRepositoryInterface
 {
     /**
-     * Test is $transition exists
+     * Test is a transition ($fromStatus, $toStatus) exists
      *
-     * @param  WorkflowTransitionInterface $transition
+     * @param StatusInterface $fromStatus
+     * @param StatusInterface $toStatus
      *
      * @return boolean
      */
-    public function hasTransition(WorkflowTransitionInterface $transition);
+    public function hasTransition(StatusInterface $fromStatus, StatusInterface $toStatus);
 }
