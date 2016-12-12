@@ -7,6 +7,8 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface WorkflowProfileInterface
 {
+    const ENTITY_TYPE = 'workflow_profile';
+
     /**
      * @param WorkflowTransitionInterface $transition
      */

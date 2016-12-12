@@ -7,6 +7,8 @@ namespace OpenOrchestra\ModelInterface\Model;
  */
 interface RoleInterface
 {
+    const ENTITY_TYPE = 'role';
+
     /**
      * @return mixed
      */
