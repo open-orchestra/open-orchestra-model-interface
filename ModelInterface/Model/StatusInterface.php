@@ -55,14 +55,14 @@ interface StatusInterface
     public function getLabel($language);
 
     /**
-     * @param boolean $published
+     * @param boolean $publishedState
      */
-    public function setPublished($published);
+    public function setPublishedState($publishedState);
 
     /**
      * @return boolean
      */
-    public function isPublished();
+    public function isPublishedState();
 
     /**
      * @param boolean $blockedEdition
@@ -85,24 +85,34 @@ interface StatusInterface
     public function isOutOfWorkflow();
 
     /**
-     * @param boolean $initial
+     * @param boolean $initialState
      */
-    public function setInitial($initial);
+    public function setInitialState($initialState);
 
     /**
      * @return boolean
      */
-    public function isInitial();
+    public function isInitialState();
+
+    /**
+     * @param boolean $autoPublishFromState
+     */
+    public function setAutoPublishFromState($autoPublishFromState);
 
     /**
      * @return boolean
      */
-    public function isAutoPublishFrom();
+    public function isAutoPublishFromState();
+
+    /**
+     * @param boolean $autoUnpublishToState
+     */
+    public function setAutoUnpublishToState($autoUnpublishToState);
 
     /**
      * @return boolean
      */
-    public function isAutoUnpublishTo();
+    public function isAutoUnpublishToState();
 
     /**
      * @return ArrayCollection
