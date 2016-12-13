@@ -13,4 +13,12 @@ interface WorkflowProfileInterface
      * @param WorkflowTransitionInterface $transition
      */
     public function addTransition(WorkflowTransitionInterface $transition);
+
+    /**
+     * @param StatusInterface $fromStatus
+     * @param StatusInterface $toStatus
+     *
+     * @return boolean
+     */
+    public function hasTransition(StatusInterface $fromStatus, StatusInterface $toStatus);
 }

@@ -77,4 +77,9 @@ interface StatusRepositoryInterface extends PaginationRepositoryInterface
      * @return StatusInterface
      */
     public function findOneByTranslationState();
+
+    /**
+     * @return array The objects.
+     */
+    public function findAll();
 }
