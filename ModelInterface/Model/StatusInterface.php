@@ -2,8 +2,6 @@
 
 namespace OpenOrchestra\ModelInterface\Model;
 
-use Doctrine\Common\Collections\ArrayCollection;
-
 /**
  * interface StatusInterface
  */
@@ -113,36 +111,6 @@ interface StatusInterface
      * @return boolean
      */
     public function isAutoUnpublishToState();
-
-    /**
-     * @return ArrayCollection
-     */
-    public function getFromRoles();
-
-    /**
-     * @param RoleInterface $role
-     */
-    public function addFromRole(RoleInterface $role);
-
-    /**
-     * @param RoleInterface $role
-     */
-    public function removeFromRole(RoleInterface $role);
-
-    /**
-     * @param RoleInterface $role
-     */
-    public function addToRole(RoleInterface $role);
-
-    /**
-     * @param RoleInterface $role
-     */
-    public function removeToRole(RoleInterface $role);
-
-    /**
-     * @return ArrayCollection
-     */
-    public function getToRoles();
 
     /**
      * @return mixed

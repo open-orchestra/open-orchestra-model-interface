@@ -2,15 +2,13 @@
 
 namespace OpenOrchestra\ModelInterface\Model;
 
-use OpenOrchestra\ModelInterface\Model\StatusInterface;
-
 /**
  * Interface WorkflowTransitionInterface
  */
 interface WorkflowTransitionInterface
 {
     /**
-     * @param string $status
+     * @param StatusInterface $status
      */
     public function setStatusFrom(StatusInterface $status);
 
@@ -20,7 +18,7 @@ interface WorkflowTransitionInterface
     public function getStatusFrom();
 
     /**
-     * @param string $status
+     * @param StatusInterface $status
      */
     public function setStatusTo(StatusInterface $status);
 
