@@ -24,11 +24,6 @@ interface StatusableInterface extends VersionableInterface
     /**
      * @return bool
      */
-    public function hasStatusChanged();
-
-    /**
-     * @return bool
-     */
     public function isCurrentlyPublished();
 
     /**
