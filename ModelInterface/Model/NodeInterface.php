@@ -13,7 +13,6 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     const ROOT_PARENT_ID = '-';
     const MAX_AGE = 1000;
     const THEME_DEFAULT = 'use_default_theme';
-    const GROUP_ROLE_TYPE = 'node';
     const DELETED_ORDER = -1;
     const TRASH_ITEM_TYPE = 'node';
 
