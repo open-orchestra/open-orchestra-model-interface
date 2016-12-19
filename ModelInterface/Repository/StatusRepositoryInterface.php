@@ -3,12 +3,12 @@
 namespace OpenOrchestra\ModelInterface\Repository;
 
 use OpenOrchestra\ModelInterface\Model\StatusInterface;
-use OpenOrchestra\Pagination\Configuration\PaginationRepositoryInterface;
+use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 
 /**
  * Interface StatusRepositoryInterface
  */
-interface StatusRepositoryInterface extends PaginationRepositoryInterface
+interface StatusRepositoryInterface
 {
     /**
      * @return array
@@ -82,4 +82,23 @@ interface StatusRepositoryInterface extends PaginationRepositoryInterface
      * @return array The objects.
      */
     public function findAll();
+
+    /**
+     * @param PaginateFinderConfiguration $configuration
+     *
+     * @return array
+     */
+    public function findForPaginate(PaginateFinderConfiguration $configuration);
+
+    /**
+     * @return int
+     */
+    public function count();
+
+    /**
+     * @param PaginateFinderConfiguration $configuration
+     *
+     * @return int
+     */
+    public function countWithFilter(PaginateFinderConfiguration $configuration);
 }
