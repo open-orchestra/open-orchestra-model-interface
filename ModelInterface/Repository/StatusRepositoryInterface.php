@@ -101,4 +101,11 @@ interface StatusRepositoryInterface
      * @return int
      */
     public function countWithFilter(PaginateFinderConfiguration $configuration);
+
+    /**
+     * @param array $statusIds
+     *
+     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     */
+    public function removeStatuses(array $statusIds);
 }
