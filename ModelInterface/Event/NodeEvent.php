@@ -18,16 +18,18 @@ class NodeEvent extends Event implements EventStatusableInterface
 
     protected $node;
     protected $area;
-    protected $block;
+    protected $blocks;
 
     /**
      * @param NodeInterface        $node
      * @param StatusInterface|null $previousStatus
+     * @param array|null           $blocks
      */
-    public function __construct(NodeInterface $node, $previousStatus = null)
+    public function __construct(NodeInterface $node, $previousStatus = null, array $blocks = null)
     {
         $this->node = $node;
         $this->previousStatus = $previousStatus;
+        $this->blocks = $blocks;
     }
 
     /**
@@ -36,6 +38,14 @@ class NodeEvent extends Event implements EventStatusableInterface
     public function getNode()
     {
         return $this->node;
+    }
+
+    /**
+     * @return array
+     */
+    public function getBlocks()
+    {
+        return $this->blocks;
     }
 
     /**
