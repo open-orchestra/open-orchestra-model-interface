@@ -2,35 +2,38 @@
 
 namespace OpenOrchestra\ModelInterface\Repository;
 
-use OpenOrchestra\Pagination\Configuration\FinderConfiguration;
 use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
-use OpenOrchestra\Pagination\Configuration\PaginationRepositoryInterface;
 
 /**
  * Interface SiteRepositoryInterface
  */
-interface SiteRepositoryInterface extends ReadSiteRepositoryInterface, PaginationRepositoryInterface
+interface SiteRepositoryInterface extends ReadSiteRepositoryInterface
 {
     /**
-     * @param boolean                     $deleted
      * @param PaginateFinderConfiguration $configuration
+     * @param array|null                  $siteIds
      *
      * @return array
      */
-    public function findByDeletedForPaginate($deleted, PaginateFinderConfiguration $configuration);
+    public function findForPaginateFilterBySiteIds(PaginateFinderConfiguration $configuration, array $siteIds = null);
 
     /**
-     * @param boolean $deleted
+     * @param array|null $siteIds
      *
      * @return int
      */
-    public function countByDeleted($deleted);
+    public function countFilterBySiteIds(array $siteIds = null);
 
     /**
-     * @param boolean             $deleted
-     * @param FinderConfiguration $configuration
+     * @param PaginateFinderConfiguration $configuration
+     * @param array|null                  $siteIds
      *
      * @return int
      */
-    public function countWithSearchFilterByDeleted($deleted, FinderConfiguration $configuration);
+    public function countWithFilterAndSiteIds(PaginateFinderConfiguration $configuration, array $siteIds = null);
+
+    /**
+     * @param array $siteIds
+     */
+    public function removeSites(array $siteIds);
 }
