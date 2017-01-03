@@ -326,4 +326,16 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @throws \Doctrine\ODM\MongoDB\MongoDBException
      */
     public function updateOrderOfBrothers($siteId, $nodeId, $order, $parentId);
+
+    /**
+     * @param string  $blockId
+     * @param string  $areaName
+     * @param string  $nodeId
+     * @param string  $siteId
+     * @param string  $language
+     * @param integer $version
+     *
+     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     */
+    public function removeBlockInArea($blockId, $areaName, $nodeId, $siteId, $language, $version);
 }
