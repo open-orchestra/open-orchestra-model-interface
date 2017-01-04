@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface BlockInterface
  */
-interface BlockInterface extends ReadBlockInterface
+interface BlockInterface extends ReadBlockInterface, TimestampableInterface
 {
     const ENTITY_TYPE = 'block';
 
@@ -77,4 +77,11 @@ interface BlockInterface extends ReadBlockInterface
      * @param array $parameter
      */
     public function setParameter(array $parameter);
+
+    /**
+     * Set site id
+     *
+     * @param string $siteId
+     */
+    public function setSiteId($siteId);
 }
