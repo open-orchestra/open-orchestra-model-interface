@@ -31,9 +31,4 @@ interface SiteRepositoryInterface extends ReadSiteRepositoryInterface
      * @return int
      */
     public function countWithFilterAndSiteIds(PaginateFinderConfiguration $configuration, array $siteIds = null);
-
-    /**
-     * @param array $siteIds
-     */
-    public function removeSites(array $siteIds);
 }
