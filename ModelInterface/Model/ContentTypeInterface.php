@@ -109,4 +109,14 @@ interface ContentTypeInterface extends FieldTypeContainerInterface, BlameableInt
      * @return boolean
      */
     public function isDefiningStatusable();
+
+    /**
+     * @param boolean $alwaysShared
+     */
+    public function setAlwaysShared($alwaysShared);
+
+    /**
+     * @return boolean
+     */
+    public function isAlwaysShared();
 }
