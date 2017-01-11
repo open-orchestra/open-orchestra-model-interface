@@ -58,37 +58,30 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
     public function findOneByLanguageAndVersion($contentId, $language, $version = null);
 
     /**
-     * @param string|null                 $contentType
      * @param PaginateFinderConfiguration $configuration
-     * @param string|null                 $siteId
+     * @param string                      $contentType
+     * @param string                      $siteId
      *
      * @return array
      */
-    public function findPaginatedLastVersionByContentTypeAndSite($contentType = null, PaginateFinderConfiguration $configuration = null, $siteId = null);
-
-    /**
-     * @param string|null         $contentType
-     * @param FinderConfiguration $configuration
-     * @param int|null            $siteId
-     *
-     * @return int
-     */
-    public function countByContentTypeInLastVersionWithFilter($contentType, FinderConfiguration $configuration = null, $siteId = null);
-
-    /**
-     * @param string      $contentType
-     * @param string|null $siteId
-     *
-     * @return int
-     */
-    public function countByContentTypeAndSiteInLastVersion($contentType, $siteId = null);
+    public function findForPaginateFilterByContentTypeAndSite(PaginateFinderConfiguration $configuration, $contentTypeId, $siteId);
 
     /**
      * @param string $contentType
+     * @param string $siteId
      *
      * @return int
      */
-    public function countByContentType($contentType);
+    public function countFilterByContentTypeAndSite($contentTypeId, $siteId);
+
+    /**
+     * @param PaginateFinderConfiguration $configuration
+     * @param string                      $contentType
+     * @param string                      $siteId
+     *
+     * @return int
+     */
+    public function countWithFilterAndContentTypeAndSite(PaginateFinderConfiguration $configuration, $contentTypeId, $siteId);
 
     /**
      * @param string       $id
