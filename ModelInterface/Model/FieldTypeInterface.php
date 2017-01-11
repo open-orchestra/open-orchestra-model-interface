@@ -92,16 +92,6 @@ Interface FieldTypeInterface
     public function isOrderable();
 
     /**
-     * @return string
-     */
-    public function getOrderDirection();
-
-    /**
-     * @param string $orderDirection
-     */
-    public function setOrderDirection($orderDirection);
-
-    /**
      * Set Listable
      *
      * @param boolean $listable
@@ -180,14 +170,4 @@ Interface FieldTypeInterface
      * @param string $fieldTypeSearchable
      */
     public function setFieldTypeSearchable($fieldTypeSearchable);
-
-    /**
-     * @return string
-     */
-    public function getPosition();
-
-    /**
-     * @param string $position
-     */
-    public function setPosition($position);
 }
