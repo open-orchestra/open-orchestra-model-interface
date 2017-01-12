@@ -61,27 +61,30 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @param PaginateFinderConfiguration $configuration
      * @param string                      $contentType
      * @param string                      $siteId
+     * @param string                      $language
      *
      * @return array
      */
-    public function findForPaginateFilterByContentTypeAndSite(PaginateFinderConfiguration $configuration, $contentTypeId, $siteId);
+    public function findForPaginateFilterByContentTypeSiteAndLanguage(PaginateFinderConfiguration $configuration, $contentType, $siteId, $language);
 
     /**
      * @param string $contentType
      * @param string $siteId
+     * @param string $language
      *
      * @return int
      */
-    public function countFilterByContentTypeAndSite($contentTypeId, $siteId);
+    public function countFilterByContentTypeSiteAndLanguage($contentType, $siteId, $language);
 
     /**
      * @param PaginateFinderConfiguration $configuration
      * @param string                      $contentType
      * @param string                      $siteId
+     * @param string                      $language
      *
      * @return int
      */
-    public function countWithFilterAndContentTypeAndSite(PaginateFinderConfiguration $configuration, $contentTypeId, $siteId);
+    public function countWithFilterAndContentTypeSiteAndLanguage(PaginateFinderConfiguration $configuration, $contentType, $siteId, $language);
 
     /**
      * @param string       $id
