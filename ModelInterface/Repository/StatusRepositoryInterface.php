@@ -11,9 +11,11 @@ use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 interface StatusRepositoryInterface
 {
     /**
+     * @parameter array $order
+     *
      * @return array
      */
-    public function findNotOutOfWorkflow();
+    public function findNotOutOfWorkflow(array $order);
 
     /**
      * @return StatusInterface
