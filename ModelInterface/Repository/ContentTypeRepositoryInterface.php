@@ -3,7 +3,6 @@
 namespace OpenOrchestra\ModelInterface\Repository;
 
 use OpenOrchestra\ModelInterface\Model\ContentTypeInterface;
-use OpenOrchestra\Pagination\Configuration\FinderConfiguration;
 use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 
 /**
@@ -26,11 +25,11 @@ interface ContentTypeRepositoryInterface
     public function findAllNotDeletedInLastVersionForPaginate(PaginateFinderConfiguration $configuration);
 
     /**
-     * @param FinderConfiguration $configuration
+     * @param PaginateFinderConfiguration $configuration
      *
      * @return int
      */
-    public function countNotDeletedInLastVersionWithSearchFilter(FinderConfiguration $configuration);
+    public function countNotDeletedInLastVersionWithSearchFilter(PaginateFinderConfiguration $configuration);
 
     /**
      * @return int
@@ -48,6 +47,13 @@ interface ContentTypeRepositoryInterface
      * @return ContentTypeInterface
      */
     public function findOneByContentTypeIdInLastVersion($contentType);
+
+    /**
+     * @param array $contentTypeIds
+     *
+     * @throws \Exception
+     */
+    public function removeByContentTypeId(array $contentTypeIds);
 
     /**
      * @param string $id
