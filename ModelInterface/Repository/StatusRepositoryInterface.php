@@ -11,6 +11,13 @@ use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 interface StatusRepositoryInterface
 {
     /**
+     * @param string $id
+     *
+     * @return StatusInterface
+     */
+     public function findOneById($id);
+
+    /**
      * @parameter array $order
      *
      * @return array
