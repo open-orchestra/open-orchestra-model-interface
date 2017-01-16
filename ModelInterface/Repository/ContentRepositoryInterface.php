@@ -87,6 +87,13 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
     public function countWithFilterAndContentTypeSiteAndLanguage(PaginateFinderConfiguration $configuration, $contentType, $siteId, $language);
 
     /**
+     * @param string $contentType
+     *
+     * @return int
+     */
+    public function countByContentType($contentType);
+
+    /**
      * @param string       $id
      * @param string       $siteId
      * @param array|null   $eventTypes
@@ -116,5 +123,5 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      *
      * @throws \Doctrine\ODM\MongoDB\MongoDBException
      */
-    public function removeContents(array $contentIds);
+    public function removeContentIds(array $contentIds);
 }
