@@ -110,4 +110,11 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @param string          $contentType
      */
     public function updateStatusByContentType(StatusInterface $status, $contentType);
+
+    /**
+     * @param array $contentIds
+     *
+     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     */
+    public function removeContents(array $contentIds);
 }
