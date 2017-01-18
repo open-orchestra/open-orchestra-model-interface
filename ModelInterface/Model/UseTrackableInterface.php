@@ -30,4 +30,9 @@ interface UseTrackableInterface
      * @return boolean
      */
     public function isUsed();
+
+    /**
+     * @return int
+     */
+    public function countUse();
 }
