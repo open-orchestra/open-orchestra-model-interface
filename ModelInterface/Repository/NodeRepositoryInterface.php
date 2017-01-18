@@ -316,6 +316,35 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     public function findForPaginate(PaginateFinderConfiguration $configuration, $siteId, $language);
 
     /**
+     * @param PaginateFinderConfiguration $configuration
+     * @param string                      $siteId
+     * @param string                      $language
+     * @param string                      $blockId
+     *
+     * @return array
+     */
+    public function findWithBlockUsedForPaginate(PaginateFinderConfiguration $configuration, $siteId, $language, $blockId);
+
+    /**
+     * @param string  $siteId
+     * @param string  $language
+     * @param string  $blockId
+     *
+     * @return int
+     */
+    public function countWithBlockUsed($siteId, $language, $blockId);
+
+    /**
+     * @param string $nodeId
+     * @param string $siteId
+     *
+     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     *
+     * @return mixed
+     */
+    public function findByNodeAndSiteSortedByVersion($nodeId, $siteId);
+
+    /**
      * @param string $siteId
      * @param string $nodeId
      * @param int    $order
