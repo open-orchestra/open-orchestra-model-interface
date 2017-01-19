@@ -54,4 +54,11 @@ interface WorkflowProfileRepositoryInterface
      * @throws \Doctrine\ODM\MongoDB\MongoDBException
      */
     public function removeWorkflowProfiles(array $workflowProfileIds);
+
+    /**
+     * @param string $currentLocale
+     *
+     * @return array
+     */
+    public function findAllOrderedByLocale($currentLocale);
 }
