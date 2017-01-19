@@ -120,8 +120,6 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
 
     /**
      * @param array $contentIds
-     *
-     * @throws \Doctrine\ODM\MongoDB\MongoDBException
      */
     public function removeContentIds(array $contentIds);
 }
