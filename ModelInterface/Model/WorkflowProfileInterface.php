@@ -28,6 +28,11 @@ interface WorkflowProfileInterface
     public function hasTransition(StatusInterface $fromStatus, StatusInterface $toStatus);
 
     /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getTransitions();
+
+    /**
      * @param string $language
      * @param string $label
      */
