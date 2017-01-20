@@ -76,4 +76,11 @@ interface ReadBlockInterface extends CacheableInterface
      * @return boolean
      */
     public function isTransverse();
+
+    /**
+     * Get site id
+     *
+     * @return string $siteId
+     */
+    public function getSiteId();
 }
