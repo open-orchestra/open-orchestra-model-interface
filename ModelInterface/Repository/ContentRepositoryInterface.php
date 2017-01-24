@@ -58,30 +58,33 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
     public function findOneByLanguageAndVersion($contentId, $language, $version = null);
 
     /**
-     * @param string|null                 $contentType
      * @param PaginateFinderConfiguration $configuration
-     * @param string|null                 $siteId
+     * @param string                      $contentType
+     * @param string                      $siteId
+     * @param string                      $language
      *
      * @return array
      */
-    public function findPaginatedLastVersionByContentTypeAndSite($contentType = null, PaginateFinderConfiguration $configuration = null, $siteId = null);
+    public function findForPaginateFilterByContentTypeSiteAndLanguage(PaginateFinderConfiguration $configuration, $contentType, $siteId, $language);
 
     /**
-     * @param string|null         $contentType
-     * @param FinderConfiguration $configuration
-     * @param int|null            $siteId
+     * @param string $contentType
+     * @param string $siteId
+     * @param string $language
      *
      * @return int
      */
-    public function countByContentTypeInLastVersionWithFilter($contentType, FinderConfiguration $configuration = null, $siteId = null);
+    public function countFilterByContentTypeSiteAndLanguage($contentType, $siteId, $language);
 
     /**
-     * @param string      $contentType
-     * @param string|null $siteId
+     * @param PaginateFinderConfiguration $configuration
+     * @param string                      $contentType
+     * @param string                      $siteId
+     * @param string                      $language
      *
      * @return int
      */
-    public function countByContentTypeAndSiteInLastVersion($contentType, $siteId = null);
+    public function countWithFilterAndContentTypeSiteAndLanguage(PaginateFinderConfiguration $configuration, $contentType, $siteId, $language);
 
     /**
      * @param string $contentType
@@ -114,4 +117,9 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @param string          $contentType
      */
     public function updateStatusByContentType(StatusInterface $status, $contentType);
+
+    /**
+     * @param array $contentIds
+     */
+    public function removeContentIds(array $contentIds);
 }
