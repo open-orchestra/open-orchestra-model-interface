@@ -52,10 +52,11 @@ interface RedirectionRepositoryInterface
 
     /**
      * @param string $pattern
+     * @param string $redirectionId
      *
      * @return int
      */
-    public function countByPattern($pattern);
+    public function countByPattern($pattern, $redirectionId);
 
     /**
      * @param PaginateFinderConfiguration $configuration
