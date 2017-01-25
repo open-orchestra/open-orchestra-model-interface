@@ -51,6 +51,13 @@ interface RedirectionRepositoryInterface
     public function count();
 
     /**
+     * @param string $pattern
+     *
+     * @return int
+     */
+    public function countByPattern($pattern);
+
+    /**
      * @param PaginateFinderConfiguration $configuration
      *
      * @return int
