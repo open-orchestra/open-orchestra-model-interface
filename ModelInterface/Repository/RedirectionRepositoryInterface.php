@@ -56,4 +56,11 @@ interface RedirectionRepositoryInterface
      * @return int
      */
     public function countWithFilter(PaginateFinderConfiguration $configuration);
+
+    /**
+     * @param array $redirectionIds
+     *
+     * @throws \Exception
+     */
+    public function removeRedirections(array $redirectionIds);
 }
