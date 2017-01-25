@@ -17,9 +17,13 @@ interface BlockRepositoryInterface
     public function findById($id);
 
     /**
+     * @param string $component
+     * @param string $siteId
+     * @param string $language
+     *
      * @return array
      */
-    public function findTransverse();
+    public function findTransverseBlock($component, $siteId, $language);
 
     /**
      * @param string                      $siteId
