@@ -24,8 +24,9 @@ interface AreaInterface extends ReadAreaInterface
 
     /**
      * @param BlockInterface $block
+     * @param int            $key
      */
-    public function addBlock(BlockInterface $block);
+    public function addBlock(BlockInterface $block, $key = 0);
 
     /**
      * Remove block
