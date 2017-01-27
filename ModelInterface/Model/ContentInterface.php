@@ -36,16 +36,6 @@ interface ContentInterface extends ReadContentInterface, StatusableInterface, Ti
     public function setContentType($contentType);
 
     /**
-     * @param int $contentTypeVersion
-     */
-    public function setContentTypeVersion($contentTypeVersion);
-
-    /**
-     * @return int
-     */
-    public function getContentTypeVersion();
-
-    /**
      * @return string
      */
     public function getId();

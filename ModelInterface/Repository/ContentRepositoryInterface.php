@@ -94,6 +94,13 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
     public function countByContentType($contentType);
 
     /**
+     * @param string $contentId
+     *
+     * @return array
+     */
+    public function findAllCurrentlyPublishedByContentId($contentId);
+
+    /**
      * @param string       $id
      * @param string       $siteId
      * @param array|null   $eventTypes
@@ -122,4 +129,10 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @param array $contentIds
      */
     public function removeContentIds(array $contentIds);
+
+    /**
+     * @param string  $contentType
+     * @param boolean $linkedToSite
+     */
+    public function updateLinkedToSite($contentType, $linkedToSite);
 }
