@@ -41,4 +41,14 @@ interface ReadContentInterface extends KeywordableInterface
      * @return string
      */
     public function getContentType();
+
+    /**
+     * @return \DateTime
+     */
+    public function getPublishDate();
+
+    /**
+     * @return \DateTime
+     */
+    public function getUnpublishDate();
 }

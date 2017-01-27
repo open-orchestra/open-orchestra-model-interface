@@ -56,4 +56,14 @@ interface ContentInterface extends ReadContentInterface, StatusableInterface, Ti
      * @param String $siteId
      */
     public function setSiteId($siteId);
+
+    /**
+     * @param \DateTime|null $date
+     */
+    public function setPublishDate($date);
+
+    /**
+     * @param \DateTime|null $date
+     */
+    public function setUnpublishDate($date);
 }
