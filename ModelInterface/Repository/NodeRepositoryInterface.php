@@ -365,4 +365,13 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @throws \Doctrine\ODM\MongoDB\MongoDBException
      */
     public function removeBlockInArea($blockId, $areaName, $nodeId, $siteId, $language, $version);
+
+    /**
+     * @param string $nodeId
+     * @param string $siteId
+     * @param string $areaId
+     *
+     * @return array
+     */
+    public function findByNodeIdAndSiteIdWithBlocksInArea($nodeId, $siteId, $areaId);
 }
