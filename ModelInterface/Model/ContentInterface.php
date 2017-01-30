@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface ContentInterface
  */
-interface ContentInterface extends ReadContentInterface, StatusableInterface, TimestampableInterface, BlameableInterface, SiteLinkableInterface, SoftDeleteableInterface, UseTrackableInterface, HistorisableInterface
+interface ContentInterface extends ReadContentInterface, StatusableInterface, TimestampableInterface, BlameableInterface, SiteLinkableInterface, SoftDeleteableInterface, UseTrackableInterface, HistorisableInterface, AutoPublishableInterface
 {
     const ENTITY_TYPE = 'content';
     const TRASH_ITEM_TYPE = 'content';
@@ -56,14 +56,4 @@ interface ContentInterface extends ReadContentInterface, StatusableInterface, Ti
      * @param String $siteId
      */
     public function setSiteId($siteId);
-
-    /**
-     * @param \DateTime|null $date
-     */
-    public function setPublishDate($date);
-
-    /**
-     * @param \DateTime|null $date
-     */
-    public function setUnpublishDate($date);
 }

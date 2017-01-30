@@ -107,16 +107,6 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     public function getMetaDescription();
 
     /**
-     * @return \DateTime
-     */
-    public function getPublishDate();
-
-    /**
-     * @return \DateTime
-     */
-    public function getUnpublishDate();
-
-    /**
      * Get areas
      *
      * @return \Doctrine\Common\Collections\Collection $areas
