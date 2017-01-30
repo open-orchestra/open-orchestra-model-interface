@@ -129,10 +129,4 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @param array $contentIds
      */
     public function removeContentIds(array $contentIds);
-
-    /**
-     * @param string  $contentType
-     * @param boolean $linkedToSite
-     */
-    public function updateLinkedToSite($contentType, $linkedToSite);
 }
