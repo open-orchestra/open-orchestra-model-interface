@@ -32,7 +32,7 @@ interface ReadNodeRepositoryInterface
      *
      * @return ReadNodeInterface
      */
-    public function findOnePublishedByLanguageAndSiteId($language, $siteId);
+    public function findPublishedByLanguageAndSiteId($language, $siteId);
 
     /**
      * @param string $language
