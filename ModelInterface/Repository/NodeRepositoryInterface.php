@@ -4,13 +4,14 @@ namespace OpenOrchestra\ModelInterface\Repository;
 
 use OpenOrchestra\ModelInterface\Model\AreaInterface;
 use OpenOrchestra\ModelInterface\Model\NodeInterface;
-use OpenOrchestra\ModelInterface\Model\StatusInterface;
+use OpenOrchestra\ModelInterface\Repository\RepositoryTrait\AutoPublishableTraitInterface;
+
 use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 
 /**
  * Interface NodeRepositoryInterface
  */
-interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface
+interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface, AutoPublishableTraitInterface
 {
     /**
      * @param NodeInterface $node
@@ -252,26 +253,6 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return array
      */
     public function findByTheme($theme);
-
-    /**
-     * Find all nodes (in all versions and all langauges) ready to be auto-published
-     *
-     * @param string $siteId
-     * @param array  $fromStatus
-     *
-     * @return array
-     */
-    public function findNodeToAutoPublish($siteId, array $fromStatus);
-
-    /**
-     * Find all nodes (in all versions and all langauges) ready to be auto-unpublished
-     *
-     * @param string          $siteId
-     * @param StatusInterface $publishedStatus
-     *
-     * @return array
-     */
-    public function findNodeToAutoUnpublish($siteId, StatusInterface $publishedStatus);
 
     /**
      * @param string $blockId
