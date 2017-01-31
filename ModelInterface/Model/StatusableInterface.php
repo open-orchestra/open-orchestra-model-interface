@@ -20,14 +20,4 @@ interface StatusableInterface extends VersionableInterface
      * @return StatusInterface
      */
     public function getStatus();
-
-    /**
-     * @return bool
-     */
-    public function isCurrentlyPublished();
-
-    /**
-     * @param bool $currentlyPublished
-     */
-    public function setCurrentlyPublished($currentlyPublished);
 }

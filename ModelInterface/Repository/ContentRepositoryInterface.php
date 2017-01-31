@@ -98,7 +98,7 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      *
      * @return array
      */
-    public function findAllCurrentlyPublishedByContentId($contentId);
+    public function findAllPublishedByContentId($contentId);
 
     /**
      * @param string       $id

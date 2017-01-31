@@ -36,5 +36,5 @@ interface ReadContentRepositoryInterface
      *
      * @return ContentInterface
      */
-    public function findLastPublishedVersion($contentId, $language);
+    public function findPublishedVersion($contentId, $language);
 }

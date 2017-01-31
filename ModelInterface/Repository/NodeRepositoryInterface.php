@@ -126,7 +126,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      *
      * @return array
      */
-    public function findLastVersionByTypeCurrentlyPublished($siteId, $type = NodeInterface::TYPE_DEFAULT);
+    public function findPublishedByType($siteId, $type = NodeInterface::TYPE_DEFAULT);
 
     /**
      * @param string $path
@@ -135,7 +135,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      *
      * @return array
      */
-    public function findByPathCurrentlyPublishedAndLanguage($path, $siteId, $language);
+    public function findPublishedByPathAndLanguage($path, $siteId, $language);
 
     /**
      * @param string $path
