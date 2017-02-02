@@ -39,7 +39,15 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      *
      * @return array
      */
-    public function findByLanguage($contentId, $language);
+    public function findNotDeletedSortByUpdatedAt($contentId, $language);
+
+    /**
+     * @param string $contentId
+     * @param string $language
+     *
+     * @return array
+     */
+    public function countNotDeletedByLanguage($contentId, $language);
 
     /**
      * @param string $contentId
@@ -129,4 +137,9 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @param array $contentIds
      */
     public function removeContentIds(array $contentIds);
+
+    /**
+     * @param array $ids
+     */
+    public function removeContentVersion(array $ids);
 }
