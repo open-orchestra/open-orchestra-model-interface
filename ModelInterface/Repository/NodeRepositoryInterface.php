@@ -99,7 +99,18 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      *
      * @return mixed
      */
-    public function findByNodeAndLanguageAndSite($nodeId, $language, $siteId);
+    public function findNotDeletedSortByUpdatedAt($nodeId, $language, $siteId);
+
+    /**
+     * @param string $nodeId
+     * @param string $language
+     * @param string $siteId
+     *
+     * @throws \Exception
+     *
+     * @return mixed
+     */
+    public function countNotDeletedVersions($nodeId, $language, $siteId);
 
     /**
      * @param string $nodeId
@@ -221,11 +232,11 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @param string   $nodeId
      * @param string   $language
      * @param string   $siteId
-     * @param int|null $version
+     * @param int      $version
      *
      * @return mixed
      */
-    public function findVersion($nodeId, $language, $siteId, $version = null);
+    public function findVersion($nodeId, $language, $siteId, $version);
 
     /**
      * @param string       $id
@@ -346,6 +357,13 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @throws \Doctrine\ODM\MongoDB\MongoDBException
      */
     public function removeBlockInArea($blockId, $areaName, $nodeId, $siteId, $language, $version);
+
+    /**
+     * @param array $nodeIds
+     *
+     * @throws \Exception
+     */
+    public function removeNodeVersions(array $nodeIds);
 
     /**
      * @param string $nodeId
