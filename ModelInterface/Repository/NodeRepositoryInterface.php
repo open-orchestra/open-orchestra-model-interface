@@ -236,7 +236,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      *
      * @return mixed
      */
-    public function findVersion($nodeId, $language, $siteId, $version);
+    public function findVersionNotDeleted($nodeId, $language, $siteId, $version);
 
     /**
      * @param string       $id
