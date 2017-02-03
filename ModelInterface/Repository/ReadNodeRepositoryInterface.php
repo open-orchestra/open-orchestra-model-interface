@@ -24,7 +24,7 @@ interface ReadNodeRepositoryInterface
      *
      * @return NodeInterface
      */
-    public function findOneCurrentlyPublished($nodeId, $language, $siteId);
+    public function findOnePublished($nodeId, $language, $siteId);
 
     /**
      * @param string $language
@@ -32,7 +32,7 @@ interface ReadNodeRepositoryInterface
      *
      * @return ReadNodeInterface
      */
-    public function findCurrentlyPublishedVersion($language, $siteId);
+    public function findPublishedByLanguageAndSiteId($language, $siteId);
 
     /**
      * @param string $language
@@ -67,25 +67,17 @@ interface ReadNodeRepositoryInterface
 
     /**
      * @param string $nodeType
-     * @param string $siteId
-     * 
-     * @return array
-     */
-    public function findAllNodesOfTypeInLastPublishedVersionForSite($nodeType, $siteId);
-
-    /**
-     * @param string $nodeType
      * @param int    $skip
      * @param int    $limit
      *
      * @return array
      */
-    public function findAllCurrentlyPublishedByTypeWithSkipAndLimit($nodeType, $skip, $limit);
+    public function findAllPublishedByTypeWithSkipAndLimit($nodeType, $skip, $limit);
 
     /**
      * @param string $nodeType
      *
      * @return int
      */
-    public function countAllCurrentlyPublishedByType($nodeType);
+    public function countAllPublishedByType($nodeType);
 }

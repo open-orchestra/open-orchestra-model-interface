@@ -16,26 +16,12 @@ interface StatusableRepositoryInterface
      *
      * @return StatusableInterface
      */
-    public function findOneCurrentlyPublished($elementId, $language, $siteId);
-
-    /**
-     * @param StatusableInterface $element
-     *
-     * @return StatusableInterface
-     */
-    public function findOneCurrentlyPublishedByElement(StatusableInterface $element);
-
-    /**
-     * @param StatusableInterface $element
-     *
-     * @return StatusableInterface
-     */
-    public function findPublishedInLastVersionWithoutFlag(StatusableInterface $element);
+    public function findOnePublished($elementId, $language, $siteId);
 
     /**
      * @param StatusableInterface $element
      *
      * @return array
      */
-    public function findAllCurrentlyPublishedByElementId(StatusableInterface $element);
+    public function findPublished(StatusableInterface $element);
 }

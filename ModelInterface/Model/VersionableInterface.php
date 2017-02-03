@@ -16,4 +16,14 @@ interface VersionableInterface
      * @return int
      */
     public function getVersion();
+
+    /**
+     * @param string $versionName
+     */
+    public function setVersionName($versionName);
+
+    /**
+     * @return string
+     */
+    public function getVersionName();
 }
