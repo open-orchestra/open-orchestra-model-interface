@@ -50,25 +50,11 @@ interface ReadBlockInterface extends CacheableInterface
     public function getStyle();
 
     /**
-     * Get private
-     *
-     * @return boolean $private
-     */
-    public function isPrivate();
-
-    /**
      * Get language
      *
      * @return string $language
      */
     public function getLanguage();
-
-    /**
-     * Get parameter
-     *
-     * @return array $parameter
-     */
-    public function getParameter();
 
     /**
      * Get transverse
