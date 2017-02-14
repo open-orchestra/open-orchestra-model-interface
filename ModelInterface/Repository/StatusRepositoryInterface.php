@@ -102,7 +102,7 @@ interface StatusRepositoryInterface
     /**
      * @return int
      */
-    public function count();
+    public function countNotOutOfWorkflow();
 
     /**
      * @param PaginateFinderConfiguration $configuration
