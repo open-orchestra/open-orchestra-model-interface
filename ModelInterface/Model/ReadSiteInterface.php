@@ -90,4 +90,11 @@ interface ReadSiteInterface extends ReadSitemapableInterface
      * @return int
      */
     public function getAliasIdForLanguage($language);
+
+    /**
+     * Get templateSet
+     *
+     * @return string $templateSet
+     */
+    public function getTemplateSet();
 }
