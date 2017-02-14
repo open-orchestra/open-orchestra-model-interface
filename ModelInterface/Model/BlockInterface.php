@@ -58,25 +58,11 @@ interface BlockInterface extends ReadBlockInterface, TimestampableInterface
     public function setStyle($style);
 
     /**
-     * Set private
-     *
-     * @param boolean $private
-     */
-    public function setPrivate($private);
-
-    /**
      * Set language
      *
      * @param string $language
      */
     public function setLanguage($language);
-
-    /**
-     * Set parameter
-     *
-     * @param array $parameter
-     */
-    public function setParameter(array $parameter);
 
     /**
      * Set site id
