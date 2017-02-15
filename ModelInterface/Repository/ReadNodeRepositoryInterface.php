@@ -32,7 +32,7 @@ interface ReadNodeRepositoryInterface
      *
      * @return array
      */
-    public function findPublishedSpecialPage($language, $siteId);
+    public function findAllPublishedSpecialPage($language, $siteId);
 
     /**
      * @param string $language
