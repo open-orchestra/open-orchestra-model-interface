@@ -171,7 +171,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @param string $nodeId
      * @param string $siteId
      *
-     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     * @throws \Exception
      *
      * @return mixed
      */
@@ -330,7 +330,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @param string $nodeId
      * @param string $siteId
      *
-     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     * @throws \Exception
      *
      * @return mixed
      */
@@ -342,7 +342,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @param int    $order
      * @param string $parentId
      *
-     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     * @throws \Exception
      */
     public function updateOrderOfBrothers($siteId, $nodeId, $order, $parentId);
 
@@ -354,7 +354,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @param string  $language
      * @param integer $version
      *
-     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     * @throws \Exception
      */
     public function removeBlockInArea($blockId, $areaName, $nodeId, $siteId, $language, $version);
 
