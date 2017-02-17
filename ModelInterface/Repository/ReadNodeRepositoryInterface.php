@@ -30,6 +30,14 @@ interface ReadNodeRepositoryInterface
      * @param string $language
      * @param string $siteId
      *
+     * @return array
+     */
+    public function findAllPublishedSpecialPage($language, $siteId);
+
+    /**
+     * @param string $language
+     * @param string $siteId
+     *
      * @return ReadNodeInterface
      */
     public function findPublishedByLanguageAndSiteId($language, $siteId);

@@ -373,4 +373,22 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return array
      */
     public function findByNodeIdAndSiteIdWithBlocksInArea($nodeId, $siteId, $areaId);
+
+    /**
+     * @param string $language
+     * @param string $siteId
+     *
+     * @return array
+     */
+    public function findAllSpecialPage($language, $siteId);
+
+    /**
+     * @param string $nodeId
+     * @param string $siteId
+     * @param string $language
+     * @param string $name
+     *
+     * @return int
+     */
+    public function countOtherNodeWithSameSpecialPageName($nodeId, $siteId, $language, $name);
 }
