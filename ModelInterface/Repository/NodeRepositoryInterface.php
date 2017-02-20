@@ -5,13 +5,13 @@ namespace OpenOrchestra\ModelInterface\Repository;
 use OpenOrchestra\ModelInterface\Model\AreaInterface;
 use OpenOrchestra\ModelInterface\Model\NodeInterface;
 use OpenOrchestra\ModelInterface\Repository\RepositoryTrait\AutoPublishableTraitInterface;
-
+use OpenOrchestra\ModelInterface\Repository\RepositoryTrait\UseTrackableTraitInterface;
 use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 
 /**
  * Interface NodeRepositoryInterface
  */
-interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface, AutoPublishableTraitInterface
+interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface, AutoPublishableTraitInterface, UseTrackableTraitInterface
 {
     /**
      * @param NodeInterface $node
@@ -171,7 +171,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @param string $nodeId
      * @param string $siteId
      *
-     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     * @throws \Exception
      *
      * @return mixed
      */
@@ -330,7 +330,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @param string $nodeId
      * @param string $siteId
      *
-     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     * @throws \Exception
      *
      * @return mixed
      */
@@ -342,7 +342,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @param int    $order
      * @param string $parentId
      *
-     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     * @throws \Exception
      */
     public function updateOrderOfBrothers($siteId, $nodeId, $order, $parentId);
 
@@ -354,7 +354,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @param string  $language
      * @param integer $version
      *
-     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     * @throws \Exception
      */
     public function removeBlockInArea($blockId, $areaName, $nodeId, $siteId, $language, $version);
 
@@ -391,4 +391,14 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return int
      */
     public function countOtherNodeWithSameSpecialPageName($nodeId, $siteId, $language, $name);
+
+    /**
+     * @param string $referenceNodeId
+     * @param string $nodeId
+     * @param string $siteId
+     * @param string $entityType
+     *
+     * @throws \Exception
+     */
+    public function updateUseReference($referenceNodeId, $nodeId, $siteId, $entityType);
 }

@@ -5,7 +5,7 @@ namespace OpenOrchestra\ModelInterface\Model;
 /**
  * Interface NodeInterface
  */
-interface NodeInterface extends ReadNodeInterface, StatusableInterface, BlameableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface, SoftDeleteableInterface, HistorisableInterface, AutoPublishableInterface
+interface NodeInterface extends ReadNodeInterface, StatusableInterface, BlameableInterface, MetaableInterface, SitemapableInterface, SchemeableInterface, SoftDeleteableInterface, HistorisableInterface, AutoPublishableInterface, UseTrackableInterface
 {
     const ENTITY_TYPE = 'node';
     const TYPE_DEFAULT = 'page';
