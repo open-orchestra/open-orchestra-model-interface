@@ -23,4 +23,9 @@ interface KeywordableInterface
      * @param KeywordInterface $keyword
      */
     public function removeKeyword(KeywordInterface $keyword);
+
+    /**
+     * Initialize keywords
+     */
+    public function initializeKeywords();
 }
