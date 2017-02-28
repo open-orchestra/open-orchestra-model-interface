@@ -68,20 +68,6 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     public function getTemplate();
 
     /**
-     * Get theme
-     *
-     * @return string $theme
-     */
-    public function getTheme();
-
-    /**
-     * Has default site theme
-     *
-     * @return boolean $themeSiteDefault
-     */
-    public function hasDefaultSiteTheme();
-
-    /**
      * @return boolean
      */
     public function isInFooter();

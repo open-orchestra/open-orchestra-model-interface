@@ -41,13 +41,6 @@ interface ReadSiteInterface extends ReadSitemapableInterface
     public function getName();
 
     /**
-     * Get theme
-     *
-     * @return ThemeInterface $theme
-     */
-    public function getTheme();
-
-    /**
      * Get metaAuthor
      *
      * @return string $metaAuthor
