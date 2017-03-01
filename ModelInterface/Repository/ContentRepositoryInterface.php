@@ -142,4 +142,11 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @param array $ids
      */
     public function removeContentVersion(array $ids);
+
+    /**
+     * @param string $contentId
+     *
+     * @return ContentInterface
+     */
+    public function findLastVersion($contentId);
 }
