@@ -74,13 +74,6 @@ interface SiteInterface extends ReadSiteInterface, SitemapableInterface, SoftDel
     public function setTemplateNodeRoot($templateNodeRoot);
 
     /**
-     * Set theme
-     *
-     * @param ThemeInterface $theme
-     */
-    public function setTheme(ThemeInterface $theme);
-
-    /**
      * Set metaAuthor
      *
      * @param string $metaAuthor

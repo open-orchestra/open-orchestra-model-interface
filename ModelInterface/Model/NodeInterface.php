@@ -12,7 +12,6 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     const ROOT_NODE_ID = 'root';
     const ROOT_PARENT_ID = '-';
     const MAX_AGE = 1000;
-    const THEME_DEFAULT = 'use_default_theme';
     const DELETED_ORDER = -1;
     const TRASH_ITEM_TYPE = 'node';
 
@@ -78,20 +77,6 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
      * @param string $template
      */
     public function setTemplate($template);
-
-    /**
-     * Set theme
-     *
-     * @param string $theme
-     */
-    public function setTheme($theme);
-
-    /**
-     * Set default theme site
-     *
-     * @param boolean $themeSiteDefault
-     */
-    public function setDefaultSiteTheme($themeSiteDefault);
 
     /**
      * @param boolean $inFooter

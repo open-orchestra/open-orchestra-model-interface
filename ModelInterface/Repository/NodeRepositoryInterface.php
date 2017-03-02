@@ -251,21 +251,6 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     public function findByHistoryAndSiteId($id, $siteId, array $eventTypes = null, $published = null, $limit = null, array $sort = null);
 
     /**
-     * @param string $siteId
-     * @param bool   $themeSiteDefault
-     *
-     * @return array
-     */
-    public function findBySiteIdAndDefaultTheme($siteId, $themeSiteDefault = true);
-
-    /**
-     * @param string $theme
-     *
-     * @return array
-     */
-    public function findByTheme($theme);
-
-    /**
      * @param string $blockId
      *
      * @return boolean
