@@ -1,5 +1,6 @@
 <?php
 
+
 namespace OpenOrchestra\ModelInterface\Event;
 
 use OpenOrchestra\ModelInterface\Model\NodeInterface;
