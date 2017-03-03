@@ -386,4 +386,30 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @throws \Exception
      */
     public function updateUseReference($referenceNodeId, $nodeId, $siteId, $entityType);
+
+    /**
+     * @param string $nodeId
+     * @param string $siteId
+     *
+     * @throws \Exception
+     */
+    public function softDeleteNode($nodeId, $siteId);
+
+    /**
+     * @param string $nodeId
+     * @param string $siteId
+     * @param string $parentId
+     * @param string $path
+     *
+     * @throws \Exception
+     */
+    public function restoreDeletedNode($nodeId, $siteId, $parentId = null , $path = null);
+
+    /**
+     * @param string $parentId
+     * @param string $siteId
+     *
+     * @return int
+     */
+    public function countByParentId($parentId, $siteId);
 }
