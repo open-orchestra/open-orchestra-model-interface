@@ -5,9 +5,9 @@ namespace OpenOrchestra\ModelInterface\Repository;
 use OpenOrchestra\ModelInterface\Model\StatusInterface;
 
 /**
- * Interface StatusableElementRepositoryInterface
+ * Interface StatusableContainerRepositoryInterface
  */
-interface StatusableElementRepositoryInterface
+interface StatusableContainerRepositoryInterface
 {
     /**
      * @param StatusInterface $status

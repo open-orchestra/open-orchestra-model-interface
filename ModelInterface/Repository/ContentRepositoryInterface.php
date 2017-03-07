@@ -11,7 +11,7 @@ use OpenOrchestra\ModelInterface\Repository\RepositoryTrait\AutoPublishableTrait
 /**
  * Interface ContentRepositoryInterface
  */
-interface ContentRepositoryInterface extends ReadContentRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface, UseTrackableTraitInterface, AutoPublishableTraitInterface
+interface ContentRepositoryInterface extends ReadContentRepositoryInterface, StatusableContainerRepositoryInterface, StatusableRepositoryInterface, UseTrackableTraitInterface, AutoPublishableTraitInterface
 {
     /**
      * @return array list of news
