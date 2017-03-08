@@ -11,7 +11,7 @@ use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 /**
  * Interface NodeRepositoryInterface
  */
-interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, StatusableElementRepositoryInterface, StatusableRepositoryInterface, AutoPublishableTraitInterface, UseTrackableTraitInterface
+interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, StatusableContainerRepositoryInterface, StatusableRepositoryInterface, AutoPublishableTraitInterface, UseTrackableTraitInterface
 {
     /**
      * @param NodeInterface $node
