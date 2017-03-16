@@ -30,12 +30,12 @@ interface TrashItemInterface
     /**
      * @return mixed
      */
-    public function getEntity();
+    public function getEntityId();
 
     /**
-     * @param mixed $entity
+     * @param string $entityId
      */
-    public function setEntity($entity);
+    public function setEntityId($entityId);
 
     /**
      * @return string

@@ -134,14 +134,23 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
     public function updateStatusByContentType(StatusInterface $status, $contentType);
 
     /**
-     * @param array $contentIds
-     */
-    public function removeContentIds(array $contentIds);
-
-    /**
      * @param array $ids
      */
     public function removeContentVersion(array $ids);
+
+    /**variab
+     * @param string $contentId
+     *
+     * @throws \Exception
+     */
+    public function softDeleteContent($contentId);
+
+    /**
+     * @param $contentId
+     *
+     * @throws \Exception
+     */
+    public function restoreDeletedContent($contentId);
 
     /**
      * @param string $contentId
@@ -149,4 +158,11 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @return ContentInterface
      */
     public function findLastVersion($contentId);
+
+    /**
+     * @param string $contentId
+     *
+     * @return int
+     */
+    public function hasContentIdWithoutAutoUnpublishToState($contentId);
 }
