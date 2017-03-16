@@ -29,14 +29,6 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @param string $contentId
      * @param string $language
      *
-     * @return ContentInterface|null
-     */
-    public function findOneByLanguage($contentId, $language);
-
-    /**
-     * @param string $contentId
-     * @param string $language
-     *
      * @return array
      */
     public function findNotDeletedSortByUpdatedAt($contentId, $language);
