@@ -30,13 +30,6 @@ interface StatusRepositoryInterface
     public function findOneByInitial();
 
     /**
-     * @param string $name
-     *
-     * @return mixed
-     */
-    public function findOtherByInitial($name);
-
-    /**
      * @return StatusInterface
      */
     public function findOneByPublished();
@@ -52,13 +45,6 @@ interface StatusRepositoryInterface
     public function findOneByAutoUnpublishTo();
 
     /**
-     * @param string $name
-     *
-     * @return array
-     */
-    public function findOtherByAutoUnpublishTo($name);
-
-    /**
      * @param string $id
      *
      * @return StatusInterface
@@ -68,19 +54,7 @@ interface StatusRepositoryInterface
     /**
      * @return StatusInterface
      */
-    public function findOneByEditable();
-
-    /**
-     * @return StatusInterface
-     */
     public function findOneByOutOfWorkflow();
-
-    /**
-     * @param string $name
-     *
-     * @return array
-     */
-    public function findOtherByTranslationState($name);
 
     /**
      * @return StatusInterface

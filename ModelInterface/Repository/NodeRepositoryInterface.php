@@ -14,14 +14,6 @@ use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, StatusableContainerRepositoryInterface, StatusableRepositoryInterface, AutoPublishableTraitInterface, UseTrackableTraitInterface
 {
     /**
-     * @param NodeInterface $node
-     * @param string        $areaId
-     *
-     * @return null|AreaInterface
-     */
-    public function findAreaInNodeByAreaId(NodeInterface $node, $areaId);
-
-    /**
      * @return array
      */
     public function findAll();
@@ -51,16 +43,6 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     public function findByParent($parentId, $siteId);
 
     /**
-     * @param string $parentId
-     * @param string $siteId
-     *
-     * @throws \Exception
-     *
-     * @return mixed
-     */
-    public function findOneByParentWithGreatestOrder($parentId, $siteId);
-
-    /**
      * @param string $path
      * @param string $siteId
      * @param string $language
@@ -70,16 +52,6 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return array
      */
     public function findByIncludedPathSiteIdAndLanguage($path, $siteId, $language);
-
-    /**
-     * @param string $path
-     * @param string $siteId
-     *
-     * @throws \Exception
-     *
-     * @return mixed
-     */
-    public function findByIncludedPathAndSiteId($path, $siteId);
 
     /**
      * @param string $nodeId
@@ -176,27 +148,6 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return mixed
      */
     public function findOneByNodeAndSite($nodeId, $siteId);
-
-    /**
-     * @param string $type
-     * @param string $siteId
-     *
-     * @throws \Exception
-     *
-     * @return array
-     */
-    public function findByNodeTypeAndSite($type, $siteId);
-
-    /**
-     * @param string $nodeId
-     * @param string $type
-     * @param string $siteId
-     *
-     * @throws \Exception
-     *
-     * @return array
-     */
-    public function findByNodeIdAndNodeTypeAndSite($nodeId, $type, $siteId);
 
     /**
      *
@@ -310,16 +261,6 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return int
      */
     public function countWithBlockUsed($siteId, $language, $blockId);
-
-    /**
-     * @param string $nodeId
-     * @param string $siteId
-     *
-     * @throws \Exception
-     *
-     * @return mixed
-     */
-    public function findByNodeAndSiteSortedByVersion($nodeId, $siteId);
 
     /**
      * @param string $siteId

@@ -18,13 +18,6 @@ interface TrashItemRepositoryInterface
     public function find($id);
 
     /**
-     * @param $entityId
-     *
-     * @return TrashItemInterface
-     */
-    public function findByEntity($entityId);
-
-    /**
      * @param PaginateFinderConfiguration $configuration
      * @param string                      $siteId
      *
