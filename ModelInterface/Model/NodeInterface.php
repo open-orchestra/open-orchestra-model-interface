@@ -2,6 +2,8 @@
 
 namespace OpenOrchestra\ModelInterface\Model;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * Interface NodeInterface
  */
@@ -125,7 +127,7 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     public function setSeoTitle($seoTitle);
 
     /**
-     * @param array $frontRoles
+     * @param ArrayCollection $frontRoles
      */
-    public function setFrontRoles(array $frontRoles);
+    public function setFrontRoles(ArrayCollection $frontRoles);
 }
