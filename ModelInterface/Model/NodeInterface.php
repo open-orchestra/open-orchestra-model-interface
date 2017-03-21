@@ -111,7 +111,7 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
     public function setSpecialPageName($specialPageName);
 
     /**
-     * @param string $areaId
+     * @param string        $areaId
      * @param AreaInterface $area
      */
     public function setArea($areaId, AreaInterface $area);
