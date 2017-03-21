@@ -2,8 +2,6 @@
 
 namespace OpenOrchestra\ModelInterface\Model;
 
-use Doctrine\Common\Collections\ArrayCollection;
-
 /**
  * Interface ReadNodeInterface
  */
@@ -125,7 +123,7 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
     public function getSeoTitle();
 
     /**
-     * @return ArrayCollection
+     * @return array
      */
     public function getFrontRoles();
 }
