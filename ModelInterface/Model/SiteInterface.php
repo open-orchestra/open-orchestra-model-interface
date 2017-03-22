@@ -41,6 +41,16 @@ interface SiteInterface extends ReadSiteInterface, SitemapableInterface, SoftDel
     public function getBlocks();
 
     /**
+     * @param array $contentTypes
+     */
+    public function setContentTypes($contentTypes);
+
+    /**
+     * @return array
+     */
+    public function getContentTypes();
+
+    /**
      * @param string $siteId
      */
     public function setSiteId($siteId);
