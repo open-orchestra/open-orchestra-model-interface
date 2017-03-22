@@ -8,6 +8,14 @@ namespace OpenOrchestra\ModelInterface\Model;
 interface BlockInterface extends ReadBlockInterface, TimestampableInterface
 {
     const ENTITY_TYPE = 'block';
+    const TEMP_ID_PREFIX = 'temp-';
+
+    /**
+     * Set id
+     *
+     * @param string $id
+     */
+    public function setId($id);
 
     /**
      * Set component
