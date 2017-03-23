@@ -123,4 +123,9 @@ interface NodeInterface extends ReadNodeInterface, StatusableInterface, Blameabl
      * @param string $seoTitle
      */
     public function setSeoTitle($seoTitle);
+
+    /**
+     * @param array $frontRoles
+     */
+    public function setFrontRoles(array $frontRoles);
 }

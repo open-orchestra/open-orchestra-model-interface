@@ -121,4 +121,9 @@ interface ReadNodeInterface extends TimestampableInterface, ReadSitemapableInter
      * @return string
      */
     public function getSeoTitle();
+
+    /**
+     * @return array
+     */
+    public function getFrontRoles();
 }
