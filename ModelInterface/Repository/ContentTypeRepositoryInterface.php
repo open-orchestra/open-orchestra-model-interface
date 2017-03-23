@@ -11,11 +11,11 @@ use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 interface ContentTypeRepositoryInterface
 {
     /**
-     * @param string|null $language
+     * @param array $contentTypes
      *
      * @return array
      */
-    public function findAllNotDeletedInLastVersion($language = null);
+    public function findAllNotDeletedInLastVersion(array $contentTypes = array());
 
     /**
      * @param PaginateFinderConfiguration $configuration
