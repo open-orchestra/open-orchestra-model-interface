@@ -78,4 +78,11 @@ interface BlockInterface extends ReadBlockInterface, TimestampableInterface
      * @param string $siteId
      */
     public function setSiteId($siteId);
+
+    /**
+     * Set Code
+     *
+     * @param string $code
+     */
+    public function setCode($code);
 }

@@ -69,4 +69,9 @@ interface ReadBlockInterface extends CacheableInterface
      * @return string $siteId
      */
     public function getSiteId();
+
+    /**
+     * Get Code
+     */
+    public function getCode();
 }
