@@ -32,7 +32,7 @@ interface BlockRepositoryInterface
      *
      * @return ReadBlockInterface|null
      */
-    public function findTransverseBlockByCodeAndLanguage($code, $language);
+    public function findOneTransverseBlockByCodeAndLanguage($code, $language);
 
     /**
      * @param string                      $siteId
