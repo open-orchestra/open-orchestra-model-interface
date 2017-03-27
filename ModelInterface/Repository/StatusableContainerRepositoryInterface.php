@@ -15,4 +15,9 @@ interface StatusableContainerRepositoryInterface
      * @return bool
      */
     public function hasStatusedElement(StatusInterface $status);
+
+    /**
+     * @param StatusInterface $status
+     */
+    public function updateEmbeddedStatus(StatusInterface $status);
 }
