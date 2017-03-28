@@ -26,13 +26,6 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     public function findVersionByDocumentId($entityId);
 
     /**
-     * @param string $nodeId
-     *
-     * @return NodeInterface
-     */
-    public function findOneByNodeId($nodeId);
-
-    /**
      * @param string $parentId
      * @param string $siteId
      *
