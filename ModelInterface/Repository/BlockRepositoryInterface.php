@@ -2,6 +2,7 @@
 
 namespace OpenOrchestra\ModelInterface\Repository;
 
+use OpenOrchestra\ModelInterface\Model\ReadBlockInterface;
 use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 
 /**
@@ -24,6 +25,14 @@ interface BlockRepositoryInterface
      * @return array
      */
     public function findTransverseBlock($component, $siteId, $language);
+
+    /**
+     * @param string $code
+     * @param string $language
+     *
+     * @return ReadBlockInterface|null
+     */
+    public function findOneTransverseBlockByCodeAndLanguage($code, $language);
 
     /**
      * @param string                      $siteId
