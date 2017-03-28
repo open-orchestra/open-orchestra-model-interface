@@ -17,6 +17,13 @@ interface ReadSiteRepositoryInterface
     public function findOneBySiteId($siteId);
 
     /**
+     * @param array $sitesIds
+     *
+     * @return array
+     */
+    public function findBySiteIds(array $sitesIds);
+
+    /**
      * @param boolean $deleted
      *
      * @return array
