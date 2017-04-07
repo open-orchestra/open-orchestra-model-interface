@@ -98,6 +98,14 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
 
     /**
      * @param string $siteId
+     * @param string $language
+     *
+     * @return array
+     */
+    public function findLastVersionByLanguage($siteId, $language);
+
+    /**
+     * @param string $siteId
      * @param string $type
      *
      * @return array
