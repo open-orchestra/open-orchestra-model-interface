@@ -17,8 +17,8 @@ class NodeEvent extends Event implements EventStatusableInterface
     use EventStatusable;
 
     protected $node;
-    protected $area;
     protected $blocks;
+    protected $previousPath = null;
 
     /**
      * @param NodeInterface        $node
@@ -46,6 +46,22 @@ class NodeEvent extends Event implements EventStatusableInterface
     public function getBlocks()
     {
         return $this->blocks;
+    }
+
+    /**
+     * @param string $path
+     */
+    public function setPreviousPath($path)
+    {
+        $this->previousPath = $path;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPreviousPath()
+    {
+        return $this->previousPath;
     }
 
     /**
