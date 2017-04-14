@@ -2,6 +2,7 @@
 
 namespace OpenOrchestra\ModelInterface\Repository;
 
+use Doctrine\Common\Collections\Collection;
 use OpenOrchestra\ModelInterface\Model\ContentInterface;
 use OpenOrchestra\Pagination\Configuration\PaginateFinderConfiguration;
 use OpenOrchestra\ModelInterface\Repository\RepositoryTrait\UseTrackableTraitInterface;
@@ -166,4 +167,11 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @return int
      */
     public function hasContentIdWithoutAutoUnpublishToState($contentId);
+
+    /**
+     * @param $siteId
+     *
+     * @return Collection
+     */
+    public function findWithUseReferences($siteId);
 }

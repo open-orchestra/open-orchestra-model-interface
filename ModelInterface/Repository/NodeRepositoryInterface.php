@@ -2,6 +2,7 @@
 
 namespace OpenOrchestra\ModelInterface\Repository;
 
+use Doctrine\Common\Collections\Collection;
 use OpenOrchestra\ModelInterface\Model\AreaInterface;
 use OpenOrchestra\ModelInterface\Model\NodeInterface;
 use OpenOrchestra\ModelInterface\Repository\RepositoryTrait\AutoPublishableTraitInterface;
@@ -362,4 +363,11 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return int
      */
     public function hasNodeIdWithoutAutoUnpublishToState($nodeId, $siteId);
+
+    /**
+     * @param $siteId
+     *
+     * @return Collection
+     */
+    public function findWithUseReferences($siteId);
 }
