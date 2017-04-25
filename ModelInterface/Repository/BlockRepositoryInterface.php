@@ -29,10 +29,11 @@ interface BlockRepositoryInterface
     /**
      * @param string $code
      * @param string $language
+     * @param string $siteId
      *
      * @return ReadBlockInterface|null
      */
-    public function findOneTransverseBlockByCodeAndLanguage($code, $language);
+    public function findOneTransverseBlockByCode($code, $language, $siteId);
 
     /**
      * @param string                      $siteId
