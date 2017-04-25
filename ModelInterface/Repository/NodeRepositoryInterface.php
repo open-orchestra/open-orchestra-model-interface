@@ -357,6 +357,14 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     public function countByParentId($parentId, $siteId);
 
     /**
+     * @param string $parentId
+     * @param string $siteId
+     *
+     * @return int
+     */
+    public function countById($id, $siteId);
+
+    /**
      * @param string $nodeId
      * @param string $siteId
      *
