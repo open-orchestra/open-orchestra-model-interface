@@ -19,5 +19,5 @@ final class NodeEvents
     const NODE_DELETE_BLOCK          = 'node.delete_block';
     const NODE_CHANGE_STATUS         = 'node.status';
     const PATH_UPDATED               = 'node.path.updated';
-    const NODE_REMOVED               = 'node.removed';
+    const NODE_HARD_DELETED          = 'node.hard_deleted';
 }
