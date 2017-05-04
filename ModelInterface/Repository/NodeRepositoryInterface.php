@@ -45,7 +45,7 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      *
      * @return array
      */
-    public function findByIncludedPathSiteIdAndLanguage($path, $siteId, $language);
+    public function findNodeIdByIncludedPathSiteIdAndLanguage($path, $siteId, $language);
 
     /**
      * @param string $nodeId
@@ -209,6 +209,14 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
      * @return boolean
      */
     public function countBlockUsed($blockId);
+
+    /**
+     * @param string $language
+     * @param string $siteId
+     *
+     * @return array
+     */
+    public function findAllRoutePattern($language, $siteId);
 
     /**
      * @param string $siteId

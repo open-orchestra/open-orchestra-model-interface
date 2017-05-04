@@ -24,10 +24,8 @@ interface RouteDocumentRepositoryInterface
 
     /**
      * @param string $redirectionId
-     *
-     * @return RouteDocumentInterface
      */
-    public function findByRedirection($redirectionId);
+    public function removeByRedirectionId($redirectionId);
 
     /**
      * @param string $pathInfo
@@ -37,18 +35,14 @@ interface RouteDocumentRepositoryInterface
     public function findByPathInfo($pathInfo);
 
     /**
-     * @param string $nodeId
+     * @param array  $nodeIds
      * @param string $siteId
      * @param string $language
-     *
-     * @return Collection
      */
-    public function findByNodeIdSiteIdAndLanguage($nodeId, $siteId, $language);
+    public function removeByNodeIdsSiteIdAndLanguage(array $nodeIds, $siteId, $language);
 
     /**
      * @param string $siteId
-     *
-     * @return Collection
      */
-    public function findBySite($siteId);
+    public function removeBySiteId($siteId);
 }
