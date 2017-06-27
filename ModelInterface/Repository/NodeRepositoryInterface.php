@@ -47,6 +47,17 @@ interface NodeRepositoryInterface extends ReadNodeRepositoryInterface, Statusabl
     public function findNodeIdByIncludedPathSiteIdAndLanguage($path, $siteId, $language);
 
     /**
+     * @param string $path
+     * @param string $siteId
+     * @param string $language
+     *
+     * @throws \Doctrine\ODM\MongoDB\MongoDBException
+     *
+     * @return array
+     */
+    public function findNodeIdByIncludedPathSiteId($path, $siteId);
+
+    /**
      * @param string $nodeId
      * @param string $language
      * @param string $siteId
