@@ -15,24 +15,24 @@ interface RedirectionInterface extends ReadRedirectionInterface
     public function setSiteId($siteId);
 
     /**
-     * @param string $locale
+     * @param string $aliasId
      */
-    public function setLocale($locale);
-
-    /**
-     * @param string $siteName
-     */
-    public function setSiteName($siteName);
-
-    /**
-     * @param string $routePattern
-     */
-    public function setRoutePattern($routePattern);
+    public function setAliasId($aliasId);
 
     /**
      * @param string $nodeId
      */
     public function setNodeId($nodeId);
+
+    /**
+     * @param array $wildcard
+     */
+    public function setWildcard($wildcard);
+
+    /**
+     * @param string $routePattern
+     */
+    public function setRoutePattern($routePattern);
 
     /**
      * @param string $url

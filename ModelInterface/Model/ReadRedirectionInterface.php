@@ -20,22 +20,22 @@ interface ReadRedirectionInterface
     /**
      * @return string
      */
-    public function getLocale();
-
-    /**
-     * @return string
-     */
-    public function getSiteName();
-
-    /**
-     * @return string
-     */
-    public function getRoutePattern();
+    public function getAliasId();
 
     /**
      * @return string
      */
     public function getNodeId();
+
+    /**
+     * @return array
+     */
+    public function getWildcard();
+
+    /**
+     * @return string
+     */
+    public function getRoutePattern();
 
     /**
      * @return string
