@@ -20,17 +20,7 @@ interface ReadRedirectionInterface
     /**
      * @return string
      */
-    public function getAliasId();
-
-    /**
-     * @return string
-     */
-    public function getNodeId();
-
-    /**
-     * @return array
-     */
-    public function getWildcard();
+    public function getLocale();
 
     /**
      * @return string
@@ -41,6 +31,11 @@ interface ReadRedirectionInterface
      * @return string
      */
     public function getUrl();
+
+    /**
+     * @return InternalUrlInterface
+     */
+    public function getInternalUrl();
 
     /**
      * @return boolean

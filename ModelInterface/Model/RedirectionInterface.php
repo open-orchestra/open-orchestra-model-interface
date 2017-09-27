@@ -15,19 +15,9 @@ interface RedirectionInterface extends ReadRedirectionInterface
     public function setSiteId($siteId);
 
     /**
-     * @param string $aliasId
+     * @param string $locale
      */
-    public function setAliasId($aliasId);
-
-    /**
-     * @param string $nodeId
-     */
-    public function setNodeId($nodeId);
-
-    /**
-     * @param array $wildcard
-     */
-    public function setWildcard($wildcard);
+    public function setLocale($locale);
 
     /**
      * @param string $routePattern
@@ -38,6 +28,11 @@ interface RedirectionInterface extends ReadRedirectionInterface
      * @param string $url
      */
     public function setUrl($url);
+
+    /**
+     * @param InternalUrlInterface $internalUrl
+     */
+    public function setInternalUrl(InternalUrlInterface $internalUrl);
 
     /**
      * @param boolean $permanent
