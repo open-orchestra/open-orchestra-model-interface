@@ -174,4 +174,12 @@ interface ContentRepositoryInterface extends ReadContentRepositoryInterface, Sta
      * @return Collection
      */
     public function findWithUseReferences($siteId);
+
+    /**
+     * @param $attributeId
+     * @param $contentTypeId
+     *
+     * @return Collection
+     */
+    public function deleteAttributeForContentType($attributeId, $contentTypeId);
 }
